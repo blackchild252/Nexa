@@ -1,0 +1,9 @@
+"use strict";
+const test=require("node:test");const assert=require("node:assert/strict");const fs=require("node:fs");const path=require("node:path");
+const policy=require('./v5_72_0_session_integrity');const root=path.join(__dirname,'..');const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+test('M7124 normalizes only bounded allowlisted device metadata',()=>{assert.deepEqual(policy.normalizeDeviceMetadata({platform:'Android',osVersion:' 14 ',appVersion:'6.1.48',deviceModel:'Phone\u0000 X',browserName:'Chrome'}),{platform:'android',osVersion:'14',appVersion:'6.1.48',deviceModel:'Phone X',browserName:'Chrome'});});
+test('M7124 rejects unknown platform and bounds untrusted metadata',()=>{const r=policy.normalizeDeviceMetadata({platform:'secret-platform',osVersion:'x'.repeat(90),deviceModel:'m'.repeat(100)});assert.equal(r.platform,null);assert.equal(r.osVersion.length,32);assert.equal(r.deviceModel.length,64);});
+test('M7124 safely parses malformed stored metadata',()=>{assert.deepEqual(policy.parseDeviceMetadata('{bad'),{platform:null,osVersion:null,appVersion:null,deviceModel:null,browserName:null});});
+test('M7124 stores sanitized metadata with sessions and returns only normalized fields',()=>{assert.match(read('server/db.js'),/deviceMetadata TEXT/);assert.match(read('server/auth.js'),/deviceMetadata:JSON\.stringify\(policy\.normalizeDeviceMetadata/);assert.match(read('server/auth.js'),/deviceLabel,deviceMetadata,ipHash/);assert.match(read('server/v5_72_0_session_integrity.js'),/deviceMetadata:parseDeviceMetadata\(row\.deviceMetadata\)/);});
+
+test('M7124 client sends platform/app metadata and auth context accepts bounded metadata headers',()=>{assert.match(read('src/api.ts'),/X-Nexa-Platform/);assert.match(read('src/api.ts'),/X-Nexa-App-Version/);assert.match(read('server/index.js'),/deviceMetadata: \{ platform: req\.headers\["x-nexa-platform"\]/);});

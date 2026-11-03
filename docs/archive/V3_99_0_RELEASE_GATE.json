@@ -1,0 +1,10 @@
+{
+  "releaseAudit": true,
+  "staticReleaseTests": true,
+  "dependencyPreflight": false,
+  "dependencyLockPresent": false,
+  "environmentBlockers": [
+    "package-lock.json present",
+    "node_modules installed"
+  ]
+}

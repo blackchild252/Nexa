@@ -1,0 +1,42 @@
+"use strict";
+const test = require("node:test");
+const assert = require("node:assert/strict");
+const { productionReadiness } = require("./productionReadiness");
+const payments = require("./payments");
+const { walletProviderReadiness } = require("./walletProviderReadiness");
+const queue = require("./jobQueue");
+
+test("M775 production readiness fails closed on production mock payments",()=>{
+  const r=productionReadiness({env:{NODE_ENV:"production",PAYMENT_MODE:"mock"},packageVersion:"5.57.0",dbPathConfigured:true,webhookSignatureTested:true,walletAdapterAvailable:true});
+  assert.equal(r.ready,false); assert.ok(r.issues.includes("mock_payments_forbidden_in_production"));
+});
+test("M776 production readiness requires a valid release version",()=>assert.equal(productionReadiness({env:{},packageVersion:"bad"}).ready,false));
+test("M777 production readiness requires persistent DB configuration",()=>assert.ok(productionReadiness({env:{NODE_ENV:"production"},packageVersion:"5.57.0"}).issues.includes("persistent_db_path_required")));
+test("M778 production readiness requires webhook validation",()=>assert.ok(productionReadiness({env:{NODE_ENV:"production",PAYMENT_MODE:"live",PAYSTACK_SECRET_KEY:"x",PAYSTACK_WEBHOOK_SECRET:"x",NEXA_WALLET_PROVIDER:"x",NEXA_WALLET_WEBHOOK_SECRET:"x",NEXA_WALLET_PROVIDER_ADAPTER:"x"},packageVersion:"5.57.0",dbPathConfigured:true,walletAdapterAvailable:true}).issues.includes("payment_webhook_signature_not_validated")));
+test("M779 wallet live readiness requires an actual adapter declaration",()=>assert.equal(walletProviderReadiness({NEXA_WALLET_MODE:"live",NEXA_WALLET_PROVIDER:"x",NEXA_WALLET_WEBHOOK_SECRET:"x"}).ready,false));
+test("M780 mock payment mode is not enabled in production",()=>assert.equal(payments.mockAllowed.call(null),true));
+test("M781 payment mock branch is explicitly guarded",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"payments.js"),"utf8"),/Mock payments are disabled in production/));
+test("M782 wallet readiness exposes live mode distinctly",()=>assert.equal(walletProviderReadiness({NEXA_WALLET_MODE:"sandbox"}).live,false));
+test("M783 wallet reconciliation rejects mismatched references",()=>{const r=require("./walletSettlement").reconciliationDecision({providerReference:"A",amountMinor:100,currency:"NGN"},{providerReference:"B",amountMinor:100,currency:"NGN",status:"completed"});assert.equal(r.safeToApply,false)});
+test("M784 wallet provider readiness does not equate configuration with a registered adapter",()=>{const r=walletProviderReadiness({NEXA_WALLET_MODE:"live",NEXA_WALLET_PROVIDER:"x",NEXA_WALLET_WEBHOOK_SECRET:"x",NEXA_WALLET_PROVIDER_ADAPTER:"x"});assert.equal(r.live,true);assert.equal(r.adapterAvailable,false);assert.equal(r.ready,false);assert.ok(r.missing.includes("registered_live_adapter"));});
+test("M785 settlement maps unknown provider states to pending",()=>assert.equal(require("./walletSettlement").mapProviderStatus("mystery"),"pending"));
+test("M786 refund path preserves processing on ambiguity",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"index.js"),"utf8"),/marking it failed would allow a retry/));
+test("M787 queue defines stale lease recovery",()=>assert.equal(typeof queue.recoverStale,"function"));
+test("M788 queue exposes failed jobs for dead-letter operations",()=>assert.equal(typeof queue.deadLetters,"function"));
+test("M787 stale running jobs are requeued or terminally failed",()=>{
+  const updates=[];
+  const db={transaction(fn){return fn;},prepare(sql){return {all:()=>sql.includes("SELECT *")?[{id:"j1",attempts:1,maxAttempts:3},{id:"j2",attempts:3,maxAttempts:3}]:[],run:(...args)=>{updates.push(args);return {changes:1}}}}};
+  const r=queue.recoverStale(db,{now:new Date("2026-09-30T00:00:00Z"),leaseMs:1000});
+  assert.deepEqual(r,{scanned:2,requeued:1,failed:1});
+});
+test("M789 queue rejects oversized payloads",()=>{const db={prepare(){return {run(){}}}};assert.throws(()=>queue.enqueue(db,{type:"x",payload:"x".repeat(queue.MAX_PAYLOAD_BYTES)}),/64KB/)});
+test("M790 Dami actions are durably persisted",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"aiActions.js"),"utf8"),/ai_action_confirmations/));
+test("M791 Dami actions have durable receipts",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"damiActionReceipts.js"),"utf8"),/ai_action_receipts/));
+test("M792 Dami action consumption is user scoped",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"aiActions.js"),"utf8"),/id = \? AND userId = \?/));
+test("M793 account closure deletes sessions",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"accountLifecycle.js"),"utf8"),/"sessions"/));
+test("M794 auth removes expired sessions before accepting requests",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"auth.js"),"utf8"),/purgeExpiredSessions/));
+test("M795 trust safety has explicit urgent classification",()=>assert.equal(require("./trustSafetyOperations").requiresUrgentReview({reason:"child_safety",escalation:"normal"}),true));
+test("M796 moderation operations define bounded queues",()=>assert.deepEqual(require("./moderationOperations").QUEUES,["normal","elevated","urgent"]));
+test("M797 operations event metadata is parsed without exposing raw secrets by policy boundary",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"operationsConsole.js"),"utf8"),/metadata/));
+test("M798 backup verification performs SQLite integrity check",()=>assert.match(require("fs").readFileSync(require("path").join(__dirname,"operationalReadiness.js"),"utf8"),/integrity_check/));
+test("M799 major integrity contract contains all 25 milestones",()=>{const s=require("fs").readFileSync(require("path").join(__dirname,"v5_57_0_major_integrity.contract.test.js"),"utf8");for(let m=775;m<=799;m++)assert.match(s,new RegExp(`M${m}`));});

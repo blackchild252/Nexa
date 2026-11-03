@@ -1,0 +1,178 @@
+{
+  "name": "NEXA Royal Fusion",
+  "version": "2.2",
+  "release": "5.20.0",
+  "layers": [
+    "environment",
+    "depth",
+    "motion"
+  ],
+  "colors": {
+    "background": "#000000",
+    "surface": "#1A1A1A",
+    "surfaceElevated": "#2A2A2A",
+    "royalGold": "#D4AF37",
+    "brightGold": "#FFD700",
+    "ivory": "#F8F5E9",
+    "muted": "#A9A9A9",
+    "borderQuiet": "#6B5A24"
+  },
+  "gradients": {
+    "app": [
+      "#000000",
+      "#1A1A1A"
+    ],
+    "gold": [
+      "#FFD700",
+      "#D4AF37"
+    ],
+    "goldSoft": [
+      "rgba(255,215,0,0.16)",
+      "rgba(212,175,55,0.03)"
+    ],
+    "readability": [
+      "rgba(0,0,0,0.46)",
+      "rgba(0,0,0,0.84)"
+    ]
+  },
+  "subscriptionVisualPolicy": {
+    "free": {
+      "environment": true,
+      "depth": true,
+      "motion": false,
+      "ambient": false,
+      "vipSpotlight": false
+    },
+    "regular": {
+      "environment": true,
+      "depth": true,
+      "motion": true,
+      "ambient": false,
+      "vipSpotlight": false
+    },
+    "premium": {
+      "environment": true,
+      "depth": true,
+      "motion": true,
+      "ambient": true,
+      "vipSpotlight": false
+    },
+    "vip": {
+      "environment": true,
+      "depth": true,
+      "motion": true,
+      "ambient": true,
+      "vipSpotlight": true
+    }
+  },
+  "materials": {
+    "base": {
+      "background": "#000000",
+      "opacity": 1
+    },
+    "surface": {
+      "background": "#1A1A1A",
+      "opacity": 0.96
+    },
+    "elevated": {
+      "background": "#2A2A2A",
+      "opacity": 0.96
+    },
+    "glass": {
+      "background": "rgba(10,10,10,0.76)",
+      "border": "rgba(212,175,55,0.28)"
+    }
+  },
+  "typography": {
+    "display": {
+      "fontSize": 28,
+      "fontWeight": 900
+    },
+    "title": {
+      "fontSize": 26,
+      "fontWeight": 900
+    },
+    "heading": {
+      "fontSize": 22,
+      "fontWeight": 900
+    },
+    "section": {
+      "fontSize": 17,
+      "fontWeight": 800
+    },
+    "body": {
+      "fontSize": 14,
+      "lineHeight": 20
+    },
+    "caption": {
+      "fontSize": 11,
+      "lineHeight": 16
+    },
+    "label": {
+      "fontSize": 12,
+      "fontWeight": 800
+    }
+  },
+  "accessibility": {
+    "minTouchTarget": 44,
+    "preferredTouchTarget": 48,
+    "reducedMotionOverridesMotion": true
+  },
+  "layerOrder": [
+    "environment",
+    "depth",
+    "readability",
+    "content"
+  ],
+  "cosmos": {
+    "component": "src/NexaCosmos.tsx",
+    "worlds": [
+      "home",
+      "dami"
+    ],
+    "layers": [
+      "nebula",
+      "stars",
+      "planet",
+      "back-mountains",
+      "horizon-glow",
+      "front-mountains-gold-rim",
+      "water-shimmer"
+    ],
+    "replacesPosterWallpaper": true
+  },
+  "damiRobot": {
+    "component": "src/NexaDamiRobot.tsx",
+    "parts": [
+      "crown",
+      "headphones",
+      "glass-face",
+      "glowing-eyes",
+      "smile",
+      "three-perspective-rings",
+      "waveform"
+    ],
+    "interaction": "drag-to-tilt",
+    "tierBehaviour": {
+      "free": "static 3D look",
+      "regular": "interaction + ambient",
+      "premium": "ambient",
+      "vip": "spotlight halo"
+    }
+  },
+  "glossyOrb": {
+    "component": "src/NexaGlossyOrb.tsx",
+    "tones": [
+      "red",
+      "blue",
+      "gold",
+      "glass"
+    ],
+    "bevelPanel": "NexaBevel"
+  },
+  "motionPreview": {
+    "env": "EXPO_PUBLIC_NEXA_MOTION_PREVIEW",
+    "value": "vip",
+    "releaseBuilds": "ignored"
+  }
+}

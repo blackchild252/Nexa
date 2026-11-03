@@ -1,0 +1,5 @@
+"use strict";
+function metrics(reports=[],appeals=[],rooms=[]){const rs=Array.isArray(reports)?reports:[],as=Array.isArray(appeals)?appeals:[],rm=Array.isArray(rooms)?rooms:[];return {reports:rs.length,openReports:rs.filter(r=>['open','triaged'].includes(String(r.status))).length,resolvedReports:rs.filter(r=>String(r.status)==='resolved').length,appeals:as.length,openAppeals:as.filter(a=>['open','pending'].includes(String(a.status))).length,rooms:rm.length,discoverableRooms:rm.filter(r=>Number(r.discoverable)===1).length};}
+function appealAging(rows=[],now=Date.now()){const out={under24h:0,'24_72h':0,'3_7d':0,over_7d:0};for(const r of Array.isArray(rows)?rows:[]){if(!['open','pending'].includes(String(r.status)))continue;const age=Math.max(0,now-(Date.parse(r.createdAt||now)||now))/3600000;if(age<24)out.under24h++;else if(age<72)out['24_72h']++;else if(age<168)out['3_7d']++;else out.over_7d++;}return out;}
+function roomAudit(rows=[]){return (Array.isArray(rows)?rows:[]).map(r=>({id:String(r.id||''),name:String(r.name||''),discoverable:Boolean(Number(r.discoverable)),updatedAt:r.updatedAt||null}));}
+module.exports={metrics,appealAging,roomAudit};

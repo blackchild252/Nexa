@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="320" viewBox="0 0 1024 320" role="img" aria-label="NEXA">
+  <rect width="1024" height="320" rx="72" fill="#000000"/>
+  <path d="M118 236V84h42l72 91V84h42v152h-40l-74-94v94h-42Zm228 0V84h125v38h-80v20h70v36h-70v20h82v38H346Zm154 0 57-76-54-76h54l28 40 28-40h54l-54 76 57 76h-55l-30-42-30 42h-55Zm192 0 58-152h54l58 152h-48l-10-29h-57l-10 29h-45Zm65-65h38l-19-55-19 55Z" fill="#FFD700"/>
+  <circle cx="906" cy="52" r="14" fill="#D4AF37"/>
+</svg>

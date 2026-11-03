@@ -1,0 +1,5 @@
+"use strict";
+function ageBucket(createdAt,now=Date.now()){const age=Math.max(0,now-(Date.parse(createdAt||now)||now));if(age<24*3600000)return 'under_24h';if(age<72*3600000)return '24_72h';if(age<7*86400000)return '3_7d';return 'over_7d';}
+function exceptionAging(rows=[],now=Date.now()){const buckets={under_24h:0,'24_72h':0,'3_7d':0,over_7d:0};const history=(Array.isArray(rows)?rows:[]).map(r=>{const bucket=ageBucket(r.createdAt,now);buckets[bucket]++;return {id:String(r.id||''),reference:r.providerReference||null,status:String(r.status||'unknown'),mappedStatus:String(r.mappedStatus||'unknown'),bucket,createdAt:r.createdAt||null};});return {buckets,history};}
+function providerHistory(rows=[]){return (Array.isArray(rows)?rows:[]).map(r=>({id:String(r.id||''),reference:r.providerReference||null,status:String(r.status||'unknown'),mappedStatus:String(r.mappedStatus||'unknown'),safeToApply:Boolean(r.safeToApply),createdAt:r.createdAt||null}));}
+module.exports={ageBucket,exceptionAging,providerHistory};

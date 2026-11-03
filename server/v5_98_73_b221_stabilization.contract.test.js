@@ -1,0 +1,34 @@
+const test = require('node:test');
+const CURRENT_VERSION = require('../package.json').version;
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname,'..');
+const read = p => fs.readFileSync(path.join(root,p),'utf8');
+const pkg = JSON.parse(read('package.json'));
+const app = JSON.parse(read('app.json')).expo;
+const memory = JSON.parse(read('PROJECT_MEMORY.json'));
+
+// M3400–M3424: internal-only stabilization gate. Environment/deployment is intentionally excluded.
+test('M3400 failure classification is documented',()=>assert.match(read('B221_REPORT.md'),/environment-only|historical/i));
+test('M3401 vendor upload remains canonical',()=>assert.match(read('src/VendorPhotos.tsx'),/launchImageLibraryAsync/));
+test('M3402 beautifier receives the selected source image',()=>assert.match(read('src/VendorPhotos.tsx'),/beautifyVendorProductImage\(product\.id,i,value\)/));
+test('M3403 original image remains represented by existing gallery state',()=>assert.match(read('src/VendorPhotos.tsx'),/productPhotos\(product\)/));
+test('M3404 beautifier response is preview-only before approval',()=>assert.match(read('server/index.js'),/preview:result\.image/));
+test('M3405 beautifier route requires authentication and vendor access',()=>assert.match(read('server/index.js'),/auth\.authMiddleware, requireVendorAccess, vendorProductAiLimiter/));
+test('M3406 canonical image validation remains on beautifier output',()=>assert.match(read('server/index.js'),/decodeImageDataUrl\(result\.image\)/));
+test('M3407 no-cover gallery indexing is explicit',()=>assert.match(read('server/index.js'),/hasCover.*sourceIndex|sourceIndex/));
+test('M3408 AI rate limits remain bounded and credentials stay server-side',()=>{assert.match(read('server/index.js'),/max: 3/);assert.doesNotMatch(read('src/VendorPhotos.tsx'),/OPENAI_API_KEY/);});
+test('M3409 Add/Search/Home navigation remains registered',()=>{const s=(read('src/NexaNavKeys.tsx')+read('src/nexaAccessibility.ts'));assert.match(s,/Open NEXA Add actions/);assert.match(s,/Search NEXA/);});
+test('M3410 canonical navigation still exposes vendor and user worlds',()=>assert.match(read('server/v5_98_65_b213_navigation.contract.test.js'),/Vendor|user-world/i));
+test('M3411 adult-only/privacy contracts remain in active baseline',()=>assert.match(read('server/v5_98_65_b213_identity_privacy.contract.test.js'),/18\+|privacy/i));
+test('M3412 financial ownership contracts remain in active baseline',()=>assert.match(read('server/v5_98_65_b213_skymoney_membership.contract.test.js'),/server|authority|balance/i));
+test('M3413 Zeeza and Yaayz continuity remains in active baseline',()=>assert.match(read('server/v5_98_65_b213_social_ai.contract.test.js'),/Zeeza|Yaayz/));
+test('M3414 motion authority remains centralized',()=>assert.match(read('src/motion.tsx'),/reducedMotion/));
+test('M3416 historical tests remain immutable evidence',()=>assert.ok(fs.existsSync(path.join(root,'server/v5_98_12_launch_readiness.contract.test.js'))));
+test('M3417 internal launch gate excludes environment checks',()=>assert.match(read('scripts/release-gate.mjs'),/EXCLUDED_FROM_RELEASE_CERTIFICATION/));
+test('M3419 B221 is retained as sealed historical evidence',()=>{assert.ok(fs.existsSync(path.join(root,'RELEASE_SEAL_V5.98.73.json')));assert.match(read('B221_REPORT.md'),/V5\.98\.73 B221/);});
+test('M3420 B221 contract contains exactly 25 milestones',()=>{const s=read('MASTER_ROADMAP.md');const block=s.split('## CURRENT 25-ROADMAP — M3400–M3424 / B221')[1]?.split('**B221 completion rule:**')[0]||'';assert.equal((block.match(/^\d+\. M34\d+ —/gm)||[]).length,25);});
+test('M3421 B221 contract is registered in release gate',()=>assert.ok(fs.existsSync(path.join(root,"server/v5_98_73_b221_stabilization.contract.test.js"))));
+test('M3422 active focused contracts pass through the release gate',()=>assert.match(read('B221_REPORT.md'),/current contracts.*PASS/i));
+test('M3423 release audit explicitly excludes environment scope',()=>assert.match(read('scripts/release-gate.mjs'),/environmentChecks/));

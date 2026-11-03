@@ -1,0 +1,16 @@
+{
+  "release": "V5.98.29",
+  "batch": "B177",
+  "milestones": "M2300–M2324",
+  "sourceBaseline": "V5.98.28 B176",
+  "archive": "NEXA-V5.98.29-B177.zip",
+  "historicalEvidence": [
+    "V5.98.28 B176",
+    "V5.98.27 B175",
+    "V5.98.26 B174",
+    "V5.98.25 B173"
+  ],
+  "nextRoadmap": "M2325–M2349 / B178",
+  "status": "SEALED",
+  "certification": "B177 focused contract 26/26 PASS; cumulative release-gate static suite 371/371 PASS; store preflight 10/10 PASS; syntax 535/535 PASS; release audit PASS; dependency preflight PASS; permanent release seal generated after final source freeze; environment-dependent runtime tests excluded from release certification"
+}

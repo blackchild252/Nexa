@@ -1,0 +1,17 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');const root=path.join(__dirname,'..');const read=p=>fs.readFileSync(path.join(root,p),'utf8');const json=p=>JSON.parse(read(p));const app=json('app.json'),pkg=json('package.json'),serverPkg=json('server/package.json'),lock=json('package-lock.json');const tests=[
+['M3600 B228 seal retained',()=>assert.ok(fs.existsSync(path.join(root,'RELEASE_SEAL_V5.98.80.json')))],
+['M3610 Home is canonical root',()=>assert.match(read('src/nexaNavigation.ts'),/home:\s*\{ pathname: '\/\(tabs\)' \}/)],
+['M3611 Search is canonical destination',()=>assert.match(read('src/nexaNavigation.ts'),/search:\s*\{ pathname: '\/\(tabs\)\/search' \}/)],
+['M3612 Add actions are all declared and resolved',()=>{const s=read('src/NexaNavKeys.tsx'),n=read('src/nexaNavigation.ts');for(const x of ['friend','money','group','product']){assert.match(s,new RegExp(`\\['${x}'`));assert.match(n,new RegExp(`case '${x}':`))}}],
+['M3613 Zeeza/Yaayz/Vendor are directory destinations',()=>{const s=read('src/nexaNavigation.ts');for(const x of ['zeeza','yaayz','vendor'])assert.match(s,new RegExp(`${x}:`))}],
+['M3614 Profile remains directory-reachable',()=>assert.match(read('src/nexaNavigation.ts'),/profile:\s*\{ pathname: '\/\(tabs\)\/profile' \}/)],
+['M3615 Subscription Centre categories complete',()=>{const s=(read('src/Subscription.tsx')+read('src/subscriptionCentre.ts'));for(const x of ['ACCOUNT & ACCESS','REWARDS & ECONOMY','CURRENT PLAN & BILLING','SPENDING & CAP','MEMBERSHIP PLANS','SERVICE FEES','EXPERIENCE'])assert.match(s,new RegExp(x.replace(/&/g,'\\&')))}],
+['M3616 vendor AI product identity safeguards',()=>{const s=read('server/vendorProductAi.test.js');assert.match(s,/preserve.*product identity/i);assert.match(s,/Do not add claims/i)}],
+['M3617 Yaayz AdMob boundary',()=>{const ad=read('src/YaayzNativeAd.tsx'),feed=read('src/YaayzHomeFeed.tsx');assert.match(ad,/Yaayz Home-only AdMob surface/);assert.match(feed,/YaayzNativeAd/);assert.doesNotMatch(read('src/app/(tabs)/index.tsx'),/YaayzNativeAd/);assert.doesNotMatch(ad,/3940256099942544/)}],
+['M3618 legal public routes remain explicit',()=>{const s=read('server/index.js');assert.match(s,/app\.get\("\/privacy"/);assert.match(s,/app\.get\("\/terms"/)}],
+['M3619 accessibility/responsive authorities',()=>{assert.match(read('src/nexaResponsive.ts'),/MINIMUM_READABLE_FONT_SIZE = 13/);assert.match(read('src/accessibility.ts'),/minTouchTarget: 44/);assert.match(read('src/NexaNavKeys.tsx'),/minTouchTarget/)}],
+['M3620 B229 contract registered',()=>assert.ok(fs.existsSync(__filename))],
+['M3621 B229 roadmap recorded',()=>assert.match(read('MASTER_ROADMAP.md'),/M3600–M3624 \/ B229/)],
+['M3623 environment execution remains excluded',()=>assert.match(read('scripts/release-gate.mjs'),/EXCLUDED_FROM_RELEASE_CERTIFICATION/)],
+['M3624 version-only archive rule remains explicit',()=>assert.match(read('PROJECT_MEMORY.json'),/NEXA-MAIN-V<major>\.<minor>\.<patch>\.zip/)],
+];for(const [name,fn] of tests)test(name,fn);

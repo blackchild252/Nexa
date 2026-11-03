@@ -1,0 +1,13 @@
+"use strict";
+const test=require("node:test"); const assert=require("node:assert/strict"); const fs=require("node:fs"); const path=require("node:path");
+const s=()=>fs.readFileSync(path.join(__dirname,"../src/YaayzHomeFeed.tsx"),"utf8");
+test("B64 adds local interest mode without backend authority",()=>{const x=s();assert.match(x,/extendedFeedModes=\[\.\.\.feedModes,'Interested'\]/);assert.match(x,/toggleInterested/);assert.doesNotMatch(x,/authedFetch/)});
+test("B64 adds deterministic discovery sorting",()=>{const x=s();assert.match(x,/discoverySorts=\['Smart','Soonest','Availability'\]/);assert.match(x,/sortedVisibleTickets/)});
+test("B64 preserves local recent-session continuity",()=>{const x=s();assert.match(x,/recentTicketIds/);assert.match(x,/Recently viewed/);assert.match(x,/local session/)});
+test("B64 adds explicit mode result rail",()=>{const x=s();assert.match(x,/Mode results/);assert.match(x,/sortedVisibleTickets\.slice\(0,6\)/)});
+test("B64 expands discovery stories",()=>{const x=s();assert.match(x,/For You/);assert.match(x,/Fresh picks/)});
+test("B64 keeps save and interest state accessible",()=>{const x=s();assert.match(x,/accessibilityState=\{\{checked:interestFor/);assert.match(x,/accessibilityState=\{\{checked:Boolean\(saved/)});
+test("B64 forbids fabricated social proof",()=>{const x=s();assert.doesNotMatch(x,/people are viewing|people viewed|\d+ people viewing|trending by \d+/i)});
+test("B64 keeps native ads bounded",()=>{const x=s();for(const k of ['native:0','native:1','native:2'])assert.match(x,new RegExp(k))});
+test("B64 keeps sponsor attribution explicit",()=>{const x=s();assert.match(x,/YAAYZADVERT · SPONSORED/);assert.match(x,/Sponsored Google ad/)});
+test("B64 keeps recovery and category continuity",()=>{const x=s();assert.match(x,/No Yaayz discovery results/);assert.match(x,/Show all/);assert.match(x,/categoryMatch/)});

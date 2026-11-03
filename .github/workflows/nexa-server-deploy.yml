@@ -1,0 +1,45 @@
+name: NEXA Server Deploy
+
+# Builds the server container image and publishes it to GitHub Container Registry.
+# The final "Roll out" step is intentionally NOT CONFIGURED: no hosting target has been chosen yet.
+# Until DEPLOY_HOOK_URL is set as a repository secret, this workflow reports the rollout as
+# "not configured" instead of pretending the server is live (AGENTS.md: BLOCKED != PASS).
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'server-v*'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/nexa-server:${{ github.sha }}
+            ghcr.io/${{ github.repository }}/nexa-server:latest
+      - name: Roll out
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK_URL" ]; then
+            echo "::warning::Rollout NOT CONFIGURED - image was built and pushed, but no hosting target is wired (set the DEPLOY_HOOK_URL secret)."
+            exit 0
+          fi
+          curl --fail --silent --show-error -X POST "$DEPLOY_HOOK_URL"

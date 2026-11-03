@@ -1,0 +1,65 @@
+name: NEXA Quality Gate
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: nexa-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  server-and-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        run: npm ci
+        env:
+          NEXA_PREVIEW_MODE: 0
+      - name: Release identity (blocks version drift)
+        run: npm run release:identity
+      - name: Dependency preflight
+        run: npm run deps:preflight
+      - name: Verification contract
+        run: npm run verify:contract
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Server regression
+        timeout-minutes: 15
+        run: npm run test:server -- --test-reporter=spec
+      - name: Playwright smoke and navigation
+        timeout-minutes: 20
+        run: npm run e2e:playwright:smoke
+      - name: Test Summary
+        if: always()
+        run: |
+          echo "Verification run completed with status: ${{ job.status }}"
+          echo "Node: $(node --version)"
+          echo "npm: $(npm --version)"
+      - name: Verification metadata artifact
+        if: always()
+        run: |
+          mkdir -p artifacts
+          node -e "require('fs').writeFileSync('artifacts/verification.json', JSON.stringify({sha:process.env.GITHUB_SHA,run:process.env.GITHUB_RUN_ID,status:process.env.GITHUB_JOB},null,2))"
+      - name: Upload verification artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexa-verification-${{ github.run_id }}
+          path: artifacts/verification.json
+          retention-days: 7
+      - name: Builder pipeline contract
+        run: node --test server/builderPipeline.contract.test.js
+      - name: Release gate
+        run: node scripts/release-gate.mjs
+      - name: Builder gate
+        run: node scripts/builder-gate.mjs
+

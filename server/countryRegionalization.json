@@ -1,0 +1,2492 @@
+[
+  {
+    "code": "AF",
+    "name": "Afghanistan",
+    "callingCode": "93",
+    "localCurrency": "AFN",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Kabul",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AL",
+    "name": "Albania",
+    "callingCode": "355",
+    "localCurrency": "ALL",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Tirane",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DZ",
+    "name": "Algeria",
+    "callingCode": "213",
+    "localCurrency": "DZD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Algiers",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AS",
+    "name": "American Samoa",
+    "callingCode": "1-684",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Pago_Pago",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AD",
+    "name": "Andorra",
+    "callingCode": "376",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Andorra",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AO",
+    "name": "Angola",
+    "callingCode": "244",
+    "localCurrency": "AOA",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Luanda",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AI",
+    "name": "Anguilla",
+    "callingCode": "1-264",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Anguilla",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AQ",
+    "name": "Antarctica",
+    "callingCode": "672",
+    "localCurrency": null,
+    "supportedDisplayCurrency": null,
+    "region": "Antarctica",
+    "timeZone": "Antarctica/Casey",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AG",
+    "name": "Antigua and Barbuda",
+    "callingCode": "1-268",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Antigua",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AR",
+    "name": "Argentina",
+    "callingCode": "54",
+    "localCurrency": "ARS",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Argentina/Buenos_Aires",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AM",
+    "name": "Armenia",
+    "callingCode": "374",
+    "localCurrency": "AMD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Yerevan",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AW",
+    "name": "Aruba",
+    "callingCode": "297",
+    "localCurrency": "AWG",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Aruba",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "callingCode": "61",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": "AUD",
+    "region": "Oceania",
+    "timeZone": "Australia/Sydney",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "callingCode": "43",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Vienna",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AZ",
+    "name": "Azerbaijan",
+    "callingCode": "994",
+    "localCurrency": "AZN",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Baku",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BS",
+    "name": "Bahamas",
+    "callingCode": "1-242",
+    "localCurrency": "BSD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Nassau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BH",
+    "name": "Bahrain",
+    "callingCode": "973",
+    "localCurrency": "BHD",
+    "supportedDisplayCurrency": "BHD",
+    "region": "Asia",
+    "timeZone": "Asia/Bahrain",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BD",
+    "name": "Bangladesh",
+    "callingCode": "880",
+    "localCurrency": "BDT",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Dhaka",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BB",
+    "name": "Barbados",
+    "callingCode": "1-246",
+    "localCurrency": "BBD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Barbados",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BY",
+    "name": "Belarus",
+    "callingCode": "375",
+    "localCurrency": "BYN",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Minsk",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "callingCode": "32",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Brussels",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BZ",
+    "name": "Belize",
+    "callingCode": "501",
+    "localCurrency": "BZD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Belize",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BJ",
+    "name": "Benin",
+    "callingCode": "229",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Porto-Novo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BM",
+    "name": "Bermuda",
+    "callingCode": "1-441",
+    "localCurrency": "BMD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "Atlantic/Bermuda",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BT",
+    "name": "Bhutan",
+    "callingCode": "975",
+    "localCurrency": "INR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Thimphu",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BO",
+    "name": "Bolivia, Plurinational State of",
+    "callingCode": "591",
+    "localCurrency": "BOB",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/La_Paz",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BQ",
+    "name": "Bonaire, Sint Eustatius and Saba",
+    "callingCode": "599",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Kralendijk",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "callingCode": "387",
+    "localCurrency": "BAM",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Sarajevo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BW",
+    "name": "Botswana",
+    "callingCode": "267",
+    "localCurrency": "BWP",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Gaborone",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BV",
+    "name": "Bouvet Island",
+    "callingCode": "47",
+    "localCurrency": "NOK",
+    "supportedDisplayCurrency": null,
+    "region": "Antarctica",
+    "timeZone": "Europe/Oslo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "callingCode": "55",
+    "localCurrency": "BRL",
+    "supportedDisplayCurrency": "BRL",
+    "region": "South America",
+    "timeZone": "America/Sao_Paulo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IO",
+    "name": "British Indian Ocean Territory",
+    "callingCode": "246",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Indian/Chagos",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BN",
+    "name": "Brunei Darussalam",
+    "callingCode": "673",
+    "localCurrency": "BND",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Brunei",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "callingCode": "359",
+    "localCurrency": "BGN",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Sofia",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BF",
+    "name": "Burkina Faso",
+    "callingCode": "226",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Ouagadougou",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BI",
+    "name": "Burundi",
+    "callingCode": "257",
+    "localCurrency": "BIF",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Bujumbura",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CV",
+    "name": "Cabo Verde",
+    "callingCode": "238",
+    "localCurrency": "CVE",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Atlantic/Cape_Verde",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KH",
+    "name": "Cambodia",
+    "callingCode": "855",
+    "localCurrency": "KHR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Phnom_Penh",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CM",
+    "name": "Cameroon",
+    "callingCode": "237",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Douala",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "callingCode": "1",
+    "localCurrency": "CAD",
+    "supportedDisplayCurrency": "CAD",
+    "region": "North America",
+    "timeZone": "America/Toronto",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KY",
+    "name": "Cayman Islands",
+    "callingCode": "1-345",
+    "localCurrency": "KYD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Cayman",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CF",
+    "name": "Central African Republic",
+    "callingCode": "236",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Bangui",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TD",
+    "name": "Chad",
+    "callingCode": "235",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Ndjamena",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CL",
+    "name": "Chile",
+    "callingCode": "56",
+    "localCurrency": "CLP",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Santiago",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CN",
+    "name": "China",
+    "callingCode": "86",
+    "localCurrency": "CNY",
+    "supportedDisplayCurrency": "CNY",
+    "region": "Asia",
+    "timeZone": "Asia/Shanghai",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CX",
+    "name": "Christmas Island",
+    "callingCode": "61",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Indian/Christmas",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CC",
+    "name": "Cocos (Keeling) Islands",
+    "callingCode": "61",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Indian/Cocos",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CO",
+    "name": "Colombia",
+    "callingCode": "57",
+    "localCurrency": "COP",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Bogota",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KM",
+    "name": "Comoros",
+    "callingCode": "269",
+    "localCurrency": "KMF",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Comoro",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CG",
+    "name": "Congo",
+    "callingCode": "242",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Brazzaville",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CD",
+    "name": "Congo, The Democratic Republic of the",
+    "callingCode": "243",
+    "localCurrency": "CDF",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Lubumbashi",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CK",
+    "name": "Cook Islands",
+    "callingCode": "682",
+    "localCurrency": "NZD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Rarotonga",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CR",
+    "name": "Costa Rica",
+    "callingCode": "506",
+    "localCurrency": "CRC",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Costa_Rica",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "callingCode": "385",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Zagreb",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CU",
+    "name": "Cuba",
+    "callingCode": "53",
+    "localCurrency": "CUP",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Havana",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CW",
+    "name": "Curaçao",
+    "callingCode": "599",
+    "localCurrency": "XCG",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Curacao",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "callingCode": "357",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Asia",
+    "timeZone": "Asia/Famagusta",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CZ",
+    "name": "Czechia",
+    "callingCode": "420",
+    "localCurrency": "CZK",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Prague",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CI",
+    "name": "Côte d'Ivoire",
+    "callingCode": "225",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Abidjan",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "callingCode": "45",
+    "localCurrency": "DKK",
+    "supportedDisplayCurrency": "DKK",
+    "region": "Europe",
+    "timeZone": "Europe/Copenhagen",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DJ",
+    "name": "Djibouti",
+    "callingCode": "253",
+    "localCurrency": "DJF",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Djibouti",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DM",
+    "name": "Dominica",
+    "callingCode": "1-767",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Dominica",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DO",
+    "name": "Dominican Republic",
+    "callingCode": "1-809",
+    "localCurrency": "DOP",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Santo_Domingo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "EC",
+    "name": "Ecuador",
+    "callingCode": "593",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "Pacific/Galapagos",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "EG",
+    "name": "Egypt",
+    "callingCode": "20",
+    "localCurrency": "EGP",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Cairo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SV",
+    "name": "El Salvador",
+    "callingCode": "503",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/El_Salvador",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GQ",
+    "name": "Equatorial Guinea",
+    "callingCode": "240",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Malabo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ER",
+    "name": "Eritrea",
+    "callingCode": "291",
+    "localCurrency": "ERN",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Asmara",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "callingCode": "372",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Tallinn",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SZ",
+    "name": "Eswatini",
+    "callingCode": "268",
+    "localCurrency": "SZL",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Mbabane",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ET",
+    "name": "Ethiopia",
+    "callingCode": "251",
+    "localCurrency": "ETB",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Addis_Ababa",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FK",
+    "name": "Falkland Islands (Malvinas)",
+    "callingCode": "500",
+    "localCurrency": "FKP",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "Atlantic/Stanley",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FO",
+    "name": "Faroe Islands",
+    "callingCode": "298",
+    "localCurrency": "DKK",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Atlantic/Faroe",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FJ",
+    "name": "Fiji",
+    "callingCode": "679",
+    "localCurrency": "FJD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Fiji",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "callingCode": "358",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Helsinki",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "callingCode": "33",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Paris",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GF",
+    "name": "French Guiana",
+    "callingCode": "594",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Cayenne",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PF",
+    "name": "French Polynesia",
+    "callingCode": "689",
+    "localCurrency": "XPF",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Gambier",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TF",
+    "name": "French Southern Territories",
+    "callingCode": "262",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Kerguelen",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GA",
+    "name": "Gabon",
+    "callingCode": "241",
+    "localCurrency": "XAF",
+    "supportedDisplayCurrency": "XAF",
+    "region": "Africa",
+    "timeZone": "Africa/Libreville",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GM",
+    "name": "Gambia",
+    "callingCode": "220",
+    "localCurrency": "GMD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Banjul",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GE",
+    "name": "Georgia",
+    "callingCode": "995",
+    "localCurrency": "GEL",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Tbilisi",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "callingCode": "49",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Berlin",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GH",
+    "name": "Ghana",
+    "callingCode": "233",
+    "localCurrency": "GHS",
+    "supportedDisplayCurrency": "GHS",
+    "region": "Africa",
+    "timeZone": "Africa/Accra",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GI",
+    "name": "Gibraltar",
+    "callingCode": "350",
+    "localCurrency": "GIP",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Gibraltar",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "callingCode": "30",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Athens",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GL",
+    "name": "Greenland",
+    "callingCode": "299",
+    "localCurrency": "DKK",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Danmarkshavn",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GD",
+    "name": "Grenada",
+    "callingCode": "1-473",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Grenada",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GP",
+    "name": "Guadeloupe",
+    "callingCode": "590",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Guadeloupe",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GU",
+    "name": "Guam",
+    "callingCode": "1-671",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Guam",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GT",
+    "name": "Guatemala",
+    "callingCode": "502",
+    "localCurrency": "GTQ",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Guatemala",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GG",
+    "name": "Guernsey",
+    "callingCode": "44-1481",
+    "localCurrency": "GBP",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Guernsey",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GN",
+    "name": "Guinea",
+    "callingCode": "224",
+    "localCurrency": "GNF",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Conakry",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GW",
+    "name": "Guinea-Bissau",
+    "callingCode": "245",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Bissau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GY",
+    "name": "Guyana",
+    "callingCode": "592",
+    "localCurrency": "GYD",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Guyana",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HT",
+    "name": "Haiti",
+    "callingCode": "509",
+    "localCurrency": "HTG",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Port-au-Prince",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HM",
+    "name": "Heard Island and McDonald Islands",
+    "callingCode": "672",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Australia/Perth",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VA",
+    "name": "Holy See (Vatican City State)",
+    "callingCode": "379",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Vatican",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HN",
+    "name": "Honduras",
+    "callingCode": "504",
+    "localCurrency": "HNL",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Tegucigalpa",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HK",
+    "name": "Hong Kong",
+    "callingCode": "852",
+    "localCurrency": "HKD",
+    "supportedDisplayCurrency": "HKD",
+    "region": "Asia",
+    "timeZone": "Asia/Hong_Kong",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "callingCode": "36",
+    "localCurrency": "HUF",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Budapest",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "callingCode": "354",
+    "localCurrency": "ISK",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Atlantic/Reykjavik",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "callingCode": "91",
+    "localCurrency": "INR",
+    "supportedDisplayCurrency": "INR",
+    "region": "Asia",
+    "timeZone": "Asia/Kolkata",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ID",
+    "name": "Indonesia",
+    "callingCode": "62",
+    "localCurrency": "IDR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Jakarta",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IR",
+    "name": "Iran, Islamic Republic of",
+    "callingCode": "98",
+    "localCurrency": "IRR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Tehran",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IQ",
+    "name": "Iraq",
+    "callingCode": "964",
+    "localCurrency": "IQD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Baghdad",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "callingCode": "353",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Dublin",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IM",
+    "name": "Isle of Man",
+    "callingCode": "44-1624",
+    "localCurrency": "GBP",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Isle_of_Man",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IL",
+    "name": "Israel",
+    "callingCode": "972",
+    "localCurrency": "ILS",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Jerusalem",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "callingCode": "39",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Rome",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "JM",
+    "name": "Jamaica",
+    "callingCode": "1-876",
+    "localCurrency": "JMD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Jamaica",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "callingCode": "81",
+    "localCurrency": "JPY",
+    "supportedDisplayCurrency": "JPY",
+    "region": "Asia",
+    "timeZone": "Asia/Tokyo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "JE",
+    "name": "Jersey",
+    "callingCode": "44-1534",
+    "localCurrency": "GBP",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Jersey",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "JO",
+    "name": "Jordan",
+    "callingCode": "962",
+    "localCurrency": "JOD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Amman",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "callingCode": "7",
+    "localCurrency": "KZT",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Aqtau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KE",
+    "name": "Kenya",
+    "callingCode": "254",
+    "localCurrency": "KES",
+    "supportedDisplayCurrency": "KES",
+    "region": "Africa",
+    "timeZone": "Africa/Nairobi",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KI",
+    "name": "Kiribati",
+    "callingCode": "686",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Kiritimati",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KP",
+    "name": "Korea, Democratic People's Republic of",
+    "callingCode": "850",
+    "localCurrency": "KPW",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Pyongyang",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KR",
+    "name": "Korea, Republic of",
+    "callingCode": "82",
+    "localCurrency": "KRW",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Seoul",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KW",
+    "name": "Kuwait",
+    "callingCode": "965",
+    "localCurrency": "KWD",
+    "supportedDisplayCurrency": "KWD",
+    "region": "Asia",
+    "timeZone": "Asia/Kuwait",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KG",
+    "name": "Kyrgyzstan",
+    "callingCode": "996",
+    "localCurrency": "KGS",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Bishkek",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LA",
+    "name": "Lao People's Democratic Republic",
+    "callingCode": "856",
+    "localCurrency": "LAK",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Vientiane",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "callingCode": "371",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Riga",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LB",
+    "name": "Lebanon",
+    "callingCode": "961",
+    "localCurrency": "LBP",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Beirut",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LS",
+    "name": "Lesotho",
+    "callingCode": "266",
+    "localCurrency": "ZAR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Maseru",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LR",
+    "name": "Liberia",
+    "callingCode": "231",
+    "localCurrency": "LRD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Monrovia",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LY",
+    "name": "Libya",
+    "callingCode": "218",
+    "localCurrency": "LYD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Tripoli",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "callingCode": "423",
+    "localCurrency": "CHF",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Vaduz",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "callingCode": "370",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Vilnius",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "callingCode": "352",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Luxembourg",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MO",
+    "name": "Macao",
+    "callingCode": "853",
+    "localCurrency": "MOP",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Macau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MG",
+    "name": "Madagascar",
+    "callingCode": "261",
+    "localCurrency": "MGA",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Antananarivo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MW",
+    "name": "Malawi",
+    "callingCode": "265",
+    "localCurrency": "MWK",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Blantyre",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MY",
+    "name": "Malaysia",
+    "callingCode": "60",
+    "localCurrency": "MYR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Kuala_Lumpur",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MV",
+    "name": "Maldives",
+    "callingCode": "960",
+    "localCurrency": "MVR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Indian/Maldives",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ML",
+    "name": "Mali",
+    "callingCode": "223",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Bamako",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "callingCode": "356",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Malta",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MH",
+    "name": "Marshall Islands",
+    "callingCode": "692",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Kwajalein",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MQ",
+    "name": "Martinique",
+    "callingCode": "596",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Martinique",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MR",
+    "name": "Mauritania",
+    "callingCode": "222",
+    "localCurrency": "MRU",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Nouakchott",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MU",
+    "name": "Mauritius",
+    "callingCode": "230",
+    "localCurrency": "MUR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Mauritius",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "YT",
+    "name": "Mayotte",
+    "callingCode": "262",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Mayotte",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "callingCode": "52",
+    "localCurrency": "MXN",
+    "supportedDisplayCurrency": "MXN",
+    "region": "North America",
+    "timeZone": "America/Mexico_City",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "FM",
+    "name": "Micronesia, Federated States of",
+    "callingCode": "691",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Kosrae",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MD",
+    "name": "Moldova, Republic of",
+    "callingCode": "373",
+    "localCurrency": "MDL",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Chisinau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MC",
+    "name": "Monaco",
+    "callingCode": "377",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Monaco",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MN",
+    "name": "Mongolia",
+    "callingCode": "976",
+    "localCurrency": "MNT",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Hovd",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ME",
+    "name": "Montenegro",
+    "callingCode": "382",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Podgorica",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MS",
+    "name": "Montserrat",
+    "callingCode": "1-664",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Montserrat",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MA",
+    "name": "Morocco",
+    "callingCode": "212",
+    "localCurrency": "MAD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Casablanca",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MZ",
+    "name": "Mozambique",
+    "callingCode": "258",
+    "localCurrency": "MZN",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Maputo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MM",
+    "name": "Myanmar",
+    "callingCode": "95",
+    "localCurrency": "MMK",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Yangon",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NA",
+    "name": "Namibia",
+    "callingCode": "264",
+    "localCurrency": "ZAR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Windhoek",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NR",
+    "name": "Nauru",
+    "callingCode": "674",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Nauru",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NP",
+    "name": "Nepal",
+    "callingCode": "977",
+    "localCurrency": "NPR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Kathmandu",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "callingCode": "31",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Amsterdam",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NC",
+    "name": "New Caledonia",
+    "callingCode": "687",
+    "localCurrency": "XPF",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Noumea",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "callingCode": "64",
+    "localCurrency": "NZD",
+    "supportedDisplayCurrency": "NZD",
+    "region": "Oceania",
+    "timeZone": "Pacific/Auckland",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NI",
+    "name": "Nicaragua",
+    "callingCode": "505",
+    "localCurrency": "NIO",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Managua",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NE",
+    "name": "Niger",
+    "callingCode": "227",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Niamey",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NG",
+    "name": "Nigeria",
+    "callingCode": "234",
+    "localCurrency": "NGN",
+    "supportedDisplayCurrency": "NGN",
+    "region": "Africa",
+    "timeZone": "Africa/Lagos",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NU",
+    "name": "Niue",
+    "callingCode": "683",
+    "localCurrency": "NZD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Niue",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NF",
+    "name": "Norfolk Island",
+    "callingCode": "672",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Norfolk",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MK",
+    "name": "North Macedonia",
+    "callingCode": "389",
+    "localCurrency": "MKD",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Skopje",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MP",
+    "name": "Northern Mariana Islands",
+    "callingCode": "1-670",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Saipan",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "callingCode": "47",
+    "localCurrency": "NOK",
+    "supportedDisplayCurrency": "NOK",
+    "region": "Europe",
+    "timeZone": "Europe/Oslo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "OM",
+    "name": "Oman",
+    "callingCode": "968",
+    "localCurrency": "OMR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Muscat",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PK",
+    "name": "Pakistan",
+    "callingCode": "92",
+    "localCurrency": "PKR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Karachi",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PW",
+    "name": "Palau",
+    "callingCode": "680",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Palau",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PS",
+    "name": "Palestine, State of",
+    "callingCode": "970",
+    "localCurrency": "ILS",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Gaza",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PA",
+    "name": "Panama",
+    "callingCode": "507",
+    "localCurrency": "PAB",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Panama",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PG",
+    "name": "Papua New Guinea",
+    "callingCode": "675",
+    "localCurrency": "PGK",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Port_Moresby",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PY",
+    "name": "Paraguay",
+    "callingCode": "595",
+    "localCurrency": "PYG",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Asuncion",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PE",
+    "name": "Peru",
+    "callingCode": "51",
+    "localCurrency": "PEN",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Lima",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PH",
+    "name": "Philippines",
+    "callingCode": "63",
+    "localCurrency": "PHP",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Manila",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PN",
+    "name": "Pitcairn",
+    "callingCode": "64",
+    "localCurrency": "NZD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Pitcairn",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "callingCode": "48",
+    "localCurrency": "PLN",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Warsaw",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "callingCode": "351",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Lisbon",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PR",
+    "name": "Puerto Rico",
+    "callingCode": "1-787",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Puerto_Rico",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "QA",
+    "name": "Qatar",
+    "callingCode": "974",
+    "localCurrency": "QAR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Qatar",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "callingCode": "40",
+    "localCurrency": "RON",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Bucharest",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "RU",
+    "name": "Russian Federation",
+    "callingCode": "7",
+    "localCurrency": "RUB",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Moscow",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "RW",
+    "name": "Rwanda",
+    "callingCode": "250",
+    "localCurrency": "RWF",
+    "supportedDisplayCurrency": "RWF",
+    "region": "Africa",
+    "timeZone": "Africa/Kigali",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "RE",
+    "name": "Réunion",
+    "callingCode": "262",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Reunion",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "BL",
+    "name": "Saint Barthélemy",
+    "callingCode": "590",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/St_Barthelemy",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SH",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "callingCode": "290",
+    "localCurrency": "SHP",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Atlantic/St_Helena",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "KN",
+    "name": "Saint Kitts and Nevis",
+    "callingCode": "1-869",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/St_Kitts",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LC",
+    "name": "Saint Lucia",
+    "callingCode": "1-758",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/St_Lucia",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "MF",
+    "name": "Saint Martin (French part)",
+    "callingCode": "590",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Marigot",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "PM",
+    "name": "Saint Pierre and Miquelon",
+    "callingCode": "508",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Miquelon",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VC",
+    "name": "Saint Vincent and the Grenadines",
+    "callingCode": "1-784",
+    "localCurrency": "XCD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/St_Vincent",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "WS",
+    "name": "Samoa",
+    "callingCode": "685",
+    "localCurrency": "WST",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Apia",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SM",
+    "name": "San Marino",
+    "callingCode": "378",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/San_Marino",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ST",
+    "name": "Sao Tome and Principe",
+    "callingCode": "239",
+    "localCurrency": "STN",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Sao_Tome",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "callingCode": "966",
+    "localCurrency": "SAR",
+    "supportedDisplayCurrency": "SAR",
+    "region": "Asia",
+    "timeZone": "Asia/Riyadh",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SN",
+    "name": "Senegal",
+    "callingCode": "221",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Dakar",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "RS",
+    "name": "Serbia",
+    "callingCode": "381",
+    "localCurrency": "RSD",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Belgrade",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SC",
+    "name": "Seychelles",
+    "callingCode": "248",
+    "localCurrency": "SCR",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Indian/Mahe",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SL",
+    "name": "Sierra Leone",
+    "callingCode": "232",
+    "localCurrency": "SLE",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Freetown",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SG",
+    "name": "Singapore",
+    "callingCode": "65",
+    "localCurrency": "SGD",
+    "supportedDisplayCurrency": "SGD",
+    "region": "Asia",
+    "timeZone": "Asia/Singapore",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SX",
+    "name": "Sint Maarten (Dutch part)",
+    "callingCode": "1-721",
+    "localCurrency": "XCG",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Lower_Princes",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "callingCode": "421",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Bratislava",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "callingCode": "386",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Ljubljana",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SB",
+    "name": "Solomon Islands",
+    "callingCode": "677",
+    "localCurrency": "SBD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Guadalcanal",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SO",
+    "name": "Somalia",
+    "callingCode": "252",
+    "localCurrency": "SOS",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Mogadishu",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ZA",
+    "name": "South Africa",
+    "callingCode": "27",
+    "localCurrency": "ZAR",
+    "supportedDisplayCurrency": "ZAR",
+    "region": "Africa",
+    "timeZone": "Africa/Johannesburg",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "callingCode": "500",
+    "localCurrency": "GBP",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "Atlantic/South_Georgia",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SS",
+    "name": "South Sudan",
+    "callingCode": "211",
+    "localCurrency": "SSP",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Juba",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "callingCode": "34",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": "EUR",
+    "region": "Europe",
+    "timeZone": "Europe/Madrid",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "LK",
+    "name": "Sri Lanka",
+    "callingCode": "94",
+    "localCurrency": "LKR",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Colombo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SD",
+    "name": "Sudan",
+    "callingCode": "249",
+    "localCurrency": "SDG",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Khartoum",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SR",
+    "name": "Suriname",
+    "callingCode": "597",
+    "localCurrency": "SRD",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Paramaribo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SJ",
+    "name": "Svalbard and Jan Mayen",
+    "callingCode": "47",
+    "localCurrency": "NOK",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Arctic/Longyearbyen",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "callingCode": "46",
+    "localCurrency": "SEK",
+    "supportedDisplayCurrency": "SEK",
+    "region": "Europe",
+    "timeZone": "Europe/Stockholm",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "callingCode": "41",
+    "localCurrency": "CHF",
+    "supportedDisplayCurrency": "CHF",
+    "region": "Europe",
+    "timeZone": "Europe/Zurich",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "SY",
+    "name": "Syrian Arab Republic",
+    "callingCode": "963",
+    "localCurrency": "SYP",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Damascus",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TW",
+    "name": "Taiwan, Province of China",
+    "callingCode": "886",
+    "localCurrency": "TWD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Taipei",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TJ",
+    "name": "Tajikistan",
+    "callingCode": "992",
+    "localCurrency": "TJS",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Dushanbe",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TZ",
+    "name": "Tanzania, United Republic of",
+    "callingCode": "255",
+    "localCurrency": "TZS",
+    "supportedDisplayCurrency": "TZS",
+    "region": "Africa",
+    "timeZone": "Africa/Dar_es_Salaam",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TH",
+    "name": "Thailand",
+    "callingCode": "66",
+    "localCurrency": "THB",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Bangkok",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TL",
+    "name": "Timor-Leste",
+    "callingCode": "670",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Dili",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TG",
+    "name": "Togo",
+    "callingCode": "228",
+    "localCurrency": "XOF",
+    "supportedDisplayCurrency": "XOF",
+    "region": "Africa",
+    "timeZone": "Africa/Lome",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TK",
+    "name": "Tokelau",
+    "callingCode": "690",
+    "localCurrency": "NZD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Fakaofo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TO",
+    "name": "Tonga",
+    "callingCode": "676",
+    "localCurrency": "TOP",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Tongatapu",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TT",
+    "name": "Trinidad and Tobago",
+    "callingCode": "1-868",
+    "localCurrency": "TTD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Port_of_Spain",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TN",
+    "name": "Tunisia",
+    "callingCode": "216",
+    "localCurrency": "TND",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Tunis",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TM",
+    "name": "Turkmenistan",
+    "callingCode": "993",
+    "localCurrency": "TMT",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Ashgabat",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TC",
+    "name": "Turks and Caicos Islands",
+    "callingCode": "1-649",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Grand_Turk",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TV",
+    "name": "Tuvalu",
+    "callingCode": "688",
+    "localCurrency": "AUD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Funafuti",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "TR",
+    "name": "Türkiye",
+    "callingCode": "90",
+    "localCurrency": "TRY",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Europe/Istanbul",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "UG",
+    "name": "Uganda",
+    "callingCode": "256",
+    "localCurrency": "UGX",
+    "supportedDisplayCurrency": "UGX",
+    "region": "Africa",
+    "timeZone": "Africa/Kampala",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "callingCode": "380",
+    "localCurrency": "UAH",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Kyiv",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "callingCode": "971",
+    "localCurrency": "AED",
+    "supportedDisplayCurrency": "AED",
+    "region": "Asia",
+    "timeZone": "Asia/Dubai",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "callingCode": "44",
+    "localCurrency": "GBP",
+    "supportedDisplayCurrency": "GBP",
+    "region": "Europe",
+    "timeZone": "Europe/London",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "US",
+    "name": "United States",
+    "callingCode": "1",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": "USD",
+    "region": "North America",
+    "timeZone": "America/New_York",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "UM",
+    "name": "United States Minor Outlying Islands",
+    "callingCode": "1",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Wake",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "UY",
+    "name": "Uruguay",
+    "callingCode": "598",
+    "localCurrency": "UYU",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Montevideo",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "UZ",
+    "name": "Uzbekistan",
+    "callingCode": "998",
+    "localCurrency": "UZS",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Samarkand",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VU",
+    "name": "Vanuatu",
+    "callingCode": "678",
+    "localCurrency": "VUV",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Efate",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VE",
+    "name": "Venezuela, Bolivarian Republic of",
+    "callingCode": "58",
+    "localCurrency": "VES",
+    "supportedDisplayCurrency": null,
+    "region": "South America",
+    "timeZone": "America/Caracas",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VN",
+    "name": "Viet Nam",
+    "callingCode": "84",
+    "localCurrency": "VND",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Ho_Chi_Minh",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VG",
+    "name": "Virgin Islands, British",
+    "callingCode": "1-284",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/Tortola",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "VI",
+    "name": "Virgin Islands, U.S.",
+    "callingCode": "1-340",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "North America",
+    "timeZone": "America/St_Thomas",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "WF",
+    "name": "Wallis and Futuna",
+    "callingCode": "681",
+    "localCurrency": "XPF",
+    "supportedDisplayCurrency": null,
+    "region": "Oceania",
+    "timeZone": "Pacific/Wallis",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "EH",
+    "name": "Western Sahara",
+    "callingCode": "212",
+    "localCurrency": "MAD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/El_Aaiun",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "YE",
+    "name": "Yemen",
+    "callingCode": "967",
+    "localCurrency": "YER",
+    "supportedDisplayCurrency": null,
+    "region": "Asia",
+    "timeZone": "Asia/Aden",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ZM",
+    "name": "Zambia",
+    "callingCode": "260",
+    "localCurrency": "ZMW",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Lusaka",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "ZW",
+    "name": "Zimbabwe",
+    "callingCode": "263",
+    "localCurrency": "USD",
+    "supportedDisplayCurrency": null,
+    "region": "Africa",
+    "timeZone": "Africa/Harare",
+    "directoryStatus": "listed"
+  },
+  {
+    "code": "AX",
+    "name": "Åland Islands",
+    "callingCode": "358-18",
+    "localCurrency": "EUR",
+    "supportedDisplayCurrency": null,
+    "region": "Europe",
+    "timeZone": "Europe/Mariehamn",
+    "directoryStatus": "listed"
+  }
+]

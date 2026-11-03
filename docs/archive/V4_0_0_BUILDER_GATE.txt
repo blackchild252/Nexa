@@ -1,0 +1,25 @@
+{
+  "version": "4.0.0",
+  "checks": [
+    {
+      "name": "application release gate",
+      "status": "PASS",
+      "detail": "{\n  \"releaseAudit\": true,\n  \"staticReleaseTests\": true,\n  \"dependencyPreflight\": false,\n  \"dependencyLockPresent\": false,\n  \"environmentBlockers\": [\n    \"package-lock.json present\",\n    \"node_modules installed\"\n  ]\n}"
+    },
+    {
+      "name": "Playwright",
+      "status": "BLOCKED",
+      "detail": "Playwright is configured, but @playwright/test is not installed in this environment."
+    },
+    {
+      "name": "Sentry",
+      "status": "BLOCKED",
+      "detail": "Sentry integration is wired but no real DSN/project credentials are supplied in this environment."
+    },
+    {
+      "name": "project memory",
+      "status": "PASS",
+      "detail": "Current version 4.0.0"
+    }
+  ]
+}

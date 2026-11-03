@@ -1,0 +1,9 @@
+# NEXA Main B461 Report
+
+## Block 22 — Platform Integration Implementation & Security Validation
+
+Release V6.1.15 B461 adds a canonical, fail-closed integration-evidence policy for semantic search, OAuth, extension webhooks, executable sandbox and production acceptance. Main readiness now distinguishes explicit configuration, protocol/provider validation, independent security review and live acceptance. Literal boolean evidence only is accepted; missing gates are listed, secret values are not returned, and evidence completeness never enables a capability. Admin's separate owner-only readiness page displays these evidence states and exports them without mutation controls. Main Block 21 was reconciled as completed in the canonical roadmap set; Block 22 M6941–M6965 is synchronized across MASTER_ROADMAP.md, PRIORITY_ROADMAP.md and TEMPORARY_ROADMAP.md.
+
+TESTED/PASSED: Main contract gate 816/816; focused Block 22 policy/contract suite 30/30; Admin full suite 641/641; Admin Block 22 focused readiness suite 54/54; Admin roadmap check PASS for M8276–M8300; Main Devil's Walk clean (830 JS syntax, 221 TS syntax files, 748 relative imports, 55 route targets); Admin Devil's Walk clean (104 JS syntax, 144 routes); God Hand verify passed for both; Angels Duty reports zero blockers and no safe junk removed.
+
+DEFERRED/BLOCKED/NOT TESTED: semantic provider/index, OAuth exchange, signed webhook delivery, executable sandbox, independent security review and live production acceptance remain unactivated. Main full server suite was attempted for 120 seconds and did not complete a final summary; it is NOT TESTED as a full-suite pass. Main dependency-backed typecheck is NOT RUN because root node_modules is absent. Live HTTP, deployed database, browser/device acceptance and external provider behavior remain NOT TESTED. No credentials requested or activated; no production launch performed. Main and Admin remain separate products and roadmaps.

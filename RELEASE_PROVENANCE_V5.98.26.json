@@ -1,0 +1,14 @@
+{
+  "release": "V5.98.26",
+  "batch": "B174",
+  "milestones": "M2225\u2013M2249",
+  "sourceBaseline": "V5.98.25 B173",
+  "archive": "NEXA-V5.98.26-B174.zip",
+  "historicalEvidence": [
+    "V5.98.25 B173",
+    "V5.98.24 B172",
+    "V5.98.23 B171"
+  ],
+  "status": "SEALED",
+  "certification": "B174 focused contract 26/26 PASS; cumulative release-gate static suite 293/293 PASS; store preflight 10/10 PASS; syntax 532/532 PASS; release audit PASS"
+}

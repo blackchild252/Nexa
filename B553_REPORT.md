@@ -1,0 +1,7 @@
+# B553 execution report — NEXA Main V6.2.7 B553
+
+- **Change:** new signed server-to-server receiver `POST /zeeza/v1/central/commit-factor` (`server/centralFactorCommit.js`), registered in `server/index.js`. It records the second factor (`zeeza_2fa` or `email_2fa`) that AAMI Central reports for an activated Administrative Director.
+- **Rules enforced:** HMAC over sorted-key JSON with its own key set `NEXA_CENTRAL_ZEEZA_COMMIT_KEYS`; exact envelope and data keys; issuer, audience, type and version; 5-minute freshness; the user must be active; an ACTIVE grant with `activationConfirmed = 1` must exist for the same application, user and company; one commit per application; same event is a replay; a different factor, user or event is refused; always HTTP 200 with fixed reason codes, 500 with nothing from the request on a fault.
+- **TESTED/PASSED:** `server/centralFactorCommit.test.js` 9/9; the full server suite log shows these 9 passing. Interop: Central's real `factor-commit` client against this receiver (first commit, retry, conflict, wrong key).
+- **NOT TESTED / excluded:** the route under real `express` and `better-sqlite3` (not installed offline; 24 other suite files fail to load for that reason and are unrelated), a live Central call over HTTP, sign-in use of the committed factor (not built), browser/device acceptance, deployment, Devil's Walk.
+- **Not touched:** version, Batch and build code were changed only by `npm run release:bump`; no release was shipped.

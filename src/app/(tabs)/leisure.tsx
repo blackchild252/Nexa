@@ -1,0 +1,1 @@
+import React from 'react'; import {LeisureArenaScreen} from '../../LeisureArenaScreen'; import {NexaWorldBackground} from '../../NexaWorldBackground'; export default function Leisure(){return <NexaWorldBackground world="leisure"><LeisureArenaScreen/></NexaWorldBackground>;}

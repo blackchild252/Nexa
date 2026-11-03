@@ -1,0 +1,3 @@
+"use strict";
+const test=require("node:test");const assert=require("node:assert/strict");const {safeAiEvent}=require("./aiObservability");
+test("AI telemetry carries profile/version metadata without sensitive content",()=>{const e=safeAiEvent({event:"ai.request",provider:"openai",model:"ft-v1",profileId:"admin_operations",profileVersion:"3",evaluationState:"promoted",correlationId:"corr-1",prompt:"secret password=abc",success:true});assert.equal(e.profileId,"admin_operations");assert.equal(e.profileVersion,"3");assert.equal(e.evaluationState,"promoted");assert.equal(e.correlationId,"corr-1");assert.equal(e.prompt,undefined);});

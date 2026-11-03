@@ -1,0 +1,4 @@
+"use strict";
+function normalizeEvidence(input={}){return {kind:String(input.kind||'other').slice(0,40),note:String(input.note||'').trim().slice(0,1000),reference:String(input.reference||'').trim().slice(0,200)};}
+function slaTrend(rows=[],now=Date.now()){const buckets={within_sla:0,at_risk:0,breached:0,unknown:0};const history=(Array.isArray(rows)?rows:[]).map(r=>{const age=Math.max(0,now-(Date.parse(r.createdAt||now)||now));const slaMs=Number(r.slaMs||0);let bucket='unknown';if(Number.isFinite(slaMs)&&slaMs>0) bucket=age>slaMs?'breached':age>slaMs*0.8?'at_risk':'within_sla';buckets[bucket]++;return {orderId:String(r.orderId||r.id||''),status:String(r.status||r.orderStatus||'unknown'),ageMs:age,slaMs,bucket,createdAt:r.createdAt||null};});return {buckets,history};}
+module.exports={normalizeEvidence,slaTrend};

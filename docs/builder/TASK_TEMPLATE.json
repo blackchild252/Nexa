@@ -1,0 +1,14 @@
+{
+  "taskId": "NEXA-TASK-YYYYMMDD-001",
+  "request": "",
+  "affectedAreas": [],
+  "architectureConstraints": [
+    "Inspect existing architecture first",
+    "Preserve functioning code and UI"
+  ],
+  "preserve": [],
+  "testsRequired": [],
+  "destructiveChanges": [],
+  "approvalRequired": false,
+  "acceptanceCriteria": []
+}

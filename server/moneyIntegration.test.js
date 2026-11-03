@@ -1,0 +1,5 @@
+"use strict";
+const test=require("node:test"); const assert=require("node:assert/strict"); const fs=require("node:fs"); const path=require("node:path");
+const root=path.join(__dirname,".."); const read=p=>fs.readFileSync(path.join(root,p),"utf8");
+test("Money aggregates payment-bearing NEXA modules without replacing core Money records",()=>{ const s=read("server/index.js"); const ui=read("src/MoneyDashboard.tsx"); assert.match(s,/app\.get\("\/api\/money\/summary", auth\.authMiddleware/); for(const table of ["mall_orders","yaayz_ticket_orders","kitchen_orders","kitchen_cashback_ledger"]) assert.match(s,new RegExp(table)); assert.match(s,/status='paid'/); assert.match(s,/receiptImage/); assert.match(ui,/\/api\/money\/summary/); assert.match(ui,/Paid across NEXA/); assert.match(ui,/Kitchen referral rewards/); assert.match(ui,/illustrated receipts/); });
+test("Payment authorization URLs are actionable in Yaayz and Kitchen",()=>{ const y=read("src/YaayzScreen.tsx"), k=read("src/LeisureKitchenScreen.tsx"); assert.match(y,/authorization_url/); assert.match(y,/openPaymentUrl/); assert.match(k,/authorization_url/); assert.match(k,/openPaymentUrl/); });

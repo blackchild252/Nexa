@@ -1,0 +1,46 @@
+"use strict";
+const test = require("node:test");
+const assert = require("node:assert/strict");
+const fs = require("fs");
+const path = require("path");
+const root = path.join(__dirname, "..");
+const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
+
+test("B134 production release configuration integrity", () => {
+  const api = read("src/api.ts");
+  const app = JSON.parse(read("app.json"));
+  const pkg = JSON.parse(read("package.json"));
+  const serverPkg = JSON.parse(read("server/package.json"));
+  const lock = JSON.parse(read("package-lock.json"));
+  const theme = read("src/theme.ts");
+  const releaseGate = read("scripts/release-gate.mjs");
+  assert.match(api, /typeof __DEV__ !== ['\"]undefined['\"] \? !__DEV__ : process\.env\.NODE_ENV === ['\"]production['\"]/);
+  assert.match(api, /EXPO_PUBLIC_API_URL must be configured for production builds/);
+  assert.match(api, /EXPO_PUBLIC_API_URL must use HTTPS in production builds/);
+  assert.match(api, /const API_BASE = configuredApiBase \|\| ['\"]http:\/\/localhost:3000['\"]/);
+  assert.equal(app.expo.version, pkg.version);
+  assert.equal(app.expo.version, pkg.version);
+  assert.equal(app.expo.android.version, pkg.version);
+  assert.ok(Number.isInteger(app.expo.android.versionCode) && app.expo.android.versionCode >= 6008);
+  assert.equal(app.expo.ios.version, pkg.version);
+  assert.equal(app.expo.ios.version, pkg.version);
+  assert.ok(Number(app.expo.ios.buildNumber) >= 6008);
+  assert.equal(app.version, pkg.version);
+  assert.equal(serverPkg.version, pkg.version);
+  assert.equal(lock.version, pkg.version);
+  assert.equal(lock.packages[""] .version, pkg.version);
+  assert.match(theme, new RegExp(`release: ['\"]${pkg.version.replace(/\./g, "\\.")}['\"]`));
+  assert.equal((api.match(/EXPO_PUBLIC_API_URL/g) || []).length >= 3, true);
+  assert.match(api, /embedded credentials/);
+  assert.match(api, /absolute HTTP\(S\) URL/);
+  assert.match(app.expo.android.package, /^com\./);
+  assert.match(app.expo.ios.bundleIdentifier, /^com\./);
+  assert.equal(app.expo.plugins.some((p) => Array.isArray(p) && p[0] === "react-native-google-mobile-ads"), true);
+  assert.equal(app.expo.scheme, "nexa");
+});
+
+test("local-only app builds reject external API hosts", () => {
+  const api = read("src/api.ts");
+  assert.match(api, /NEXA local-only mode permits loopback API endpoints only/);
+  assert.match(api, /\['localhost', '127\.0\.0\.1', '::1', '10\.0\.2\.2', '10\.0\.3\.2'\]/);
+});

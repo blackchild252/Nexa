@@ -1,0 +1,17 @@
+{
+  "release": "V5.98.30",
+  "batch": "B178",
+  "milestones": "M2325–M2349",
+  "sourceBaseline": "V5.98.29 B177",
+  "archive": "NEXA-V5.98.30-B178.zip",
+  "historicalEvidence": [
+    "V5.98.29 B177",
+    "V5.98.28 B176",
+    "V5.98.27 B175",
+    "V5.98.26 B174",
+    "V5.98.25 B173"
+  ],
+  "nextRoadmap": "M2350–M2374 / B179",
+  "status": "SOURCE CERTIFIED — PERMANENT RELEASE SEAL PENDING",
+  "certification": "B178 focused contract 26/26 PASS; cumulative release-gate static suite 397/397 PASS; store preflight 10/10 PASS; JS/MJS/CJS syntax 536/536 PASS; TS/TSX/JS/JSX parser 693/693 PASS; dependency preflight PASS with no blockers; release audit PASS; permanent release seal pending final source freeze; environment-dependent runtime tests excluded from release certification."
+}

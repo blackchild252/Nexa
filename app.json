@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "NEXA",
+    "slug": "nexa",
+    "version": "6.2.54",
+    "scheme": "nexa",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "NEXA uses your camera for encrypted video calls in Zeeza.",
+          "microphonePermission": "NEXA uses your microphone for encrypted voice and video calls in Zeeza."
+        }
+      ],
+      "@sentry/react-native/expo",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow NEXA to upload an image to Dami for analysis and to post photos and videos to Lifestyle.",
+          "cameraPermission": "NEXA uses your camera to take photos and videos for Lifestyle.",
+          "microphonePermission": "NEXA uses your microphone to record sound in Lifestyle videos."
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-9908588255141470~9214914497",
+          "iosAppId": "ca-app-pub-9908588255141470~7557929889",
+          "userTrackingPermission": "NEXA shows ads in Yaayz. Allowing tracking lets Google show you ads that are more relevant. You can change this any time in iOS Settings."
+        }
+      ],
+      "./plugins/withKotlinMetadataSkip"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_LOCATION_EXTRA_COMMANDS"
+      ],
+      "package": "com.aami.nexa",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/branding/app-icon-adaptive-foreground.png",
+        "backgroundColor": "#000000"
+      },
+      "versionCode": 6419,
+      "version": "6.2.54"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "NEXA uses your camera for encrypted video calls in Zeeza.",
+        "NSMicrophoneUsageDescription": "NEXA uses your microphone for encrypted voice and video calls in Zeeza.",
+        "NSLocationWhenInUseUsageDescription": "NEXA uses your approximate location to show relevant nearby vendors, sellers, services, advertisers and people. Device geolocation is used only with your permission."
+      },
+      "version": "6.2.54",
+      "bundleIdentifier": "com.aami.nexa",
+      "buildNumber": "6419"
+    },
+    "icon": "./assets/branding/app-icon.png",
+    "owner": "primenexas-team",
+    "extra": {
+      "eas": {
+        "projectId": "07042204-0808-455d-a149-7ca2ff45b2a9"
+      },
+      "nexaVersion": "6.2.54",
+      "versionName": "6.2.54",
+      "version": "6.2.54",
+      "versionCode": 6419
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/branding/app-icon.png"
+    }
+  },
+  "version": "6.2.54",
+  "versionCode": 6419
+}

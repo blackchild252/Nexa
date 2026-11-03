@@ -1,0 +1,16 @@
+"use strict";
+const STYLE_PROMPTS = Object.freeze({
+ premium:"Create a polished premium marketplace product photo with clean studio lighting, controlled reflections, subtle depth, and a refined neutral backdrop.",
+ "3d_render":"Create a high-end 3D product-render presentation while preserving the exact product identity, proportions, colors, materials, logos, labels, ports, buttons, and distinctive details.",
+ luxury:"Create an elegant luxury-commerce presentation with sophisticated lighting, tasteful shadows, premium material definition, and an uncluttered background.",
+ food_hero:"Create an appetizing food-commerce hero image with natural appetizing light, clean styling, realistic texture, and a tasteful restaurant-quality presentation.",
+ clean_marketplace:"Create a clean marketplace product photo with even lighting, crisp edges, a simple uncluttered background, and accurate product color.",
+ lifestyle:"Place the exact product in a tasteful, realistic lifestyle setting that supports the product without adding misleading features or changing the product itself.",
+ illustrated:"Create a polished commercial illustration inspired by the uploaded product while preserving its recognizable identity, silhouette, colors, branding, and important details.",
+ seasonal:"Create a tasteful seasonal campaign presentation for the product with subtle relevant atmosphere while keeping the exact product identity and commercial accuracy intact."
+});
+const ALLOWED_STYLES=Object.freeze(Object.keys(STYLE_PROMPTS));
+function normalizeStyle(style){const v=String(style||"clean_marketplace").trim().toLowerCase();return ALLOWED_STYLES.includes(v)?v:"clean_marketplace";}
+function buildPrompt(style){return ["You are NEXA's vendor product-image beautifier.",STYLE_PROMPTS[normalizeStyle(style)],"Edit the supplied product photograph; do not invent a different product.","Preserve product identity, proportions, shape, color, material, logo/brand marks, labels, text, model-specific details, and functional features.","Do not add claims, accessories, quantities, packaging, text, badges, prices, people, or features that are not supported by the source photo.","Improve presentation only: lighting, composition, background, depth, tasteful styling, and visual polish.","Return one square, marketplace-ready product image."].join(" ");}
+async function beautifyProductImage({imageDataUrl,style,env=process.env,dependencies={}}={}){if(typeof imageDataUrl!=="string"||!/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(imageDataUrl)){const e=new Error("A valid JPEG, PNG or WebP product image is required.");e.statusCode=400;throw e;}const grok=dependencies.grok||require("./grokProvider");const model=String(env.VENDOR_IMAGE_AI_MODEL||grok.models(env).image);const timeout=Number(env.VENDOR_IMAGE_AI_TIMEOUT_MS||60000);const result=await grok.editImage({prompt:buildPrompt(style),imageDataUrl,model},{env,dependencies:dependencies.fetch?{fetch:dependencies.fetch}:{},timeoutMs:Number.isInteger(timeout)?timeout:60000});const b64=result?.b64;if(!b64||typeof b64!=="string"){const e=new Error("The image service did not return an edited product image.");e.statusCode=502;throw e;}return {image:`data:image/jpeg;base64,${b64}`,style:normalizeStyle(style),model};}
+module.exports={STYLE_PROMPTS,ALLOWED_STYLES,normalizeStyle,buildPrompt,beautifyProductImage};

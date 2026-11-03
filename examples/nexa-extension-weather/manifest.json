@@ -1,0 +1,18 @@
+{
+  "manifestVersion": "1.0",
+  "name": "Weather Helper",
+  "slug": "weather-helper",
+  "version": "1.0.0",
+  "description": "Example extension showing the NEXA controlled-capability contract.",
+  "requestedScopes": [
+    "profile.read",
+    "market.read"
+  ],
+  "publicConfig": {
+    "units": "metric"
+  },
+  "compatibility": {
+    "minNexaVersion": "3.59.0",
+    "maxNexaVersion": ""
+  }
+}

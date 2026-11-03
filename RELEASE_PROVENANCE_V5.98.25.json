@@ -1,0 +1,13 @@
+{
+  "release": "V5.98.25",
+  "batch": "B173",
+  "milestones": "M2200\u2013M2224",
+  "sourceBaseline": "V5.98.24 B172",
+  "archive": "NEXA-V5.98.25-B173.zip",
+  "historicalEvidence": [
+    "V5.98.24 B172",
+    "V5.98.23 B171"
+  ],
+  "status": "SEALED",
+  "nextRoadmap": "M2225\u2013M2249 / B174"
+}

@@ -1,0 +1,6 @@
+const test=require('node:test'); const assert=require('node:assert/strict'); const fs=require('fs');
+const src=fs.readFileSync('server/adminStaffWork.js','utf8'); const care=fs.readFileSync('server/customerCare.js','utf8');
+test('source intake has explicit allow-listed source to capability mapping',()=>{for(const x of ['customer_care','subscription','payment','verification','buyer_dispute','seller_dispute','user_violation','vendor_violation','report'])assert.match(src,new RegExp(x)); for(const x of ['support_investigation','subscription_review','payment_review','verification_review','buyer_dispute_review','seller_dispute_review','user_violation_review','vendor_violation_review','report_investigation'])assert.match(src,new RegExp(x));});
+test('source intake persists deterministic source identity and idempotency',()=>{assert.match(src,/sourceKey/);assert.match(src,/idx_admin_work_source_key/);assert.match(src,/idempotent/);assert.match(care,/sourceKey/);});
+test('unsupported source cannot select an arbitrary capability',()=>{assert.match(src,/SOURCE_CAPABILITY_MAP\.get\(sourceType\)/);assert.match(src,/supported sourceType/);});
+test('source metadata is bounded and audited',()=>{assert.match(src,/sourceMetadata/);assert.match(src,/admin_staff_work_intake/);});

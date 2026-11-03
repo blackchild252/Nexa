@@ -1,0 +1,9 @@
+{
+  "release": "V5.98.33",
+  "batch": "B181",
+  "milestones": "M2400\u2013M2424",
+  "sourceBaseline": "V5.98.32 B180",
+  "nextRoadmap": "M2425\u2013M2449 / B182",
+  "theme": "Cross-Module Navigation, Control-State Semantics & User-Facing Action Integrity",
+  "status": "COMPLETED / VALIDATED"
+}

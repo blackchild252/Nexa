@@ -1,0 +1,190 @@
+TAP version 13
+# Subtest: V3.98.0 Kitchen fee boundary uses the shared service engine
+ok 1 - V3.98.0 Kitchen fee boundary uses the shared service engine
+  ---
+  duration_ms: 1.682724
+  type: 'test'
+  ...
+# Subtest: Kitchen fee preview is server-priced from submitted menu items
+ok 2 - Kitchen fee preview is server-priced from submitted menu items
+  ---
+  duration_ms: 0.979772
+  type: 'test'
+  ...
+# Subtest: Kitchen orders persist provider verification and fee settlement state
+ok 3 - Kitchen orders persist provider verification and fee settlement state
+  ---
+  duration_ms: 1.473003
+  type: 'test'
+  ...
+# Subtest: Kitchen payment verification requires provider verification before fee settlement
+ok 4 - Kitchen payment verification requires provider verification before fee settlement
+  ---
+  duration_ms: 0.770652
+  type: 'test'
+  ...
+# Subtest: Kitchen fee failure remains pending instead of falsely charging or rejecting provider payment
+ok 5 - Kitchen fee failure remains pending instead of falsely charging or rejecting provider payment
+  ---
+  duration_ms: 1.311133
+  type: 'test'
+  ...
+# Subtest: Kitchen has an authenticated fee retry boundary
+ok 6 - Kitchen has an authenticated fee retry boundary
+  ---
+  duration_ms: 0.772094
+  type: 'test'
+  ...
+# Subtest: Kitchen webhook settlement also applies the NEXA fee boundary
+ok 7 - Kitchen webhook settlement also applies the NEXA fee boundary
+  ---
+  duration_ms: 0.993612
+  type: 'test'
+  ...
+# Subtest: Kitchen UI requires fee preview before order confirmation
+ok 8 - Kitchen UI requires fee preview before order confirmation
+  ---
+  duration_ms: 0.171744
+  type: 'test'
+  ...
+# Subtest: Kitchen UI exposes pending fee retry without exposing fee control to the client
+ok 9 - Kitchen UI exposes pending fee retry without exposing fee control to the client
+  ---
+  duration_ms: 0.312443
+  type: 'test'
+  ...
+# Subtest: Kitchen price and fee remain separate
+ok 10 - Kitchen price and fee remain separate
+  ---
+  duration_ms: 0.333865
+  type: 'test'
+  ...
+# Subtest: V3.87.1 L.A. and Kitchen surfaces are wired into the active Expo shell
+ok 11 - V3.87.1 L.A. and Kitchen surfaces are wired into the active Expo shell
+  ---
+  duration_ms: 1.544769
+  type: 'test'
+  ...
+# Subtest: Kitchen menu and order validation are server-side
+ok 12 - Kitchen menu and order validation are server-side
+  ---
+  duration_ms: 0.732265
+  type: 'test'
+  ...
+# Subtest: Kitchen referral rules and cashback rate are explicit
+ok 13 - Kitchen referral rules and cashback rate are explicit
+  ---
+  duration_ms: 3.160333
+  type: 'test'
+  ...
+# Subtest: AI receipts are authenticated and order-specific
+ok 14 - AI receipts are authenticated and order-specific
+  ---
+  duration_ms: 1.400585
+  type: 'test'
+  ...
+# Subtest: Kitchen referral deep links use the NEXA scheme
+ok 15 - Kitchen referral deep links use the NEXA scheme
+  ---
+  duration_ms: 0.835168
+  type: 'test'
+  ...
+# Subtest: Store Ajo locks an item price, reserves one unit, zero interest and zero discount
+ok 16 - Store Ajo locks an item price, reserves one unit, zero interest and zero discount
+  ---
+  duration_ms: 0.689792
+  type: 'test'
+  ...
+# Subtest: Store Ajo term is strictly 2 to 6 months
+ok 17 - Store Ajo term is strictly 2 to 6 months
+  ---
+  duration_ms: 0.777853
+  type: 'test'
+  ...
+# Subtest: Store Ajo only unlocks pickup after full contribution
+ok 18 - Store Ajo only unlocks pickup after full contribution
+  ---
+  duration_ms: 0.115561
+  type: 'test'
+  ...
+# Subtest: Store Ajo contribution verifies reference, currency and exact amount
+ok 19 - Store Ajo contribution verifies reference, currency and exact amount
+  ---
+  duration_ms: 0.139066
+  type: 'test'
+  ...
+# Subtest: Store Ajo is exposed from Money UI and preserves existing group Ajo
+ok 20 - Store Ajo is exposed from Money UI and preserves existing group Ajo
+  ---
+  duration_ms: 0.115782
+  type: 'test'
+  ...
+# Subtest: Store Ajo contribution exposes the same server-authoritative fee preview and Wallet-backed fee boundary
+ok 21 - Store Ajo contribution exposes the same server-authoritative fee preview and Wallet-backed fee boundary
+  ---
+  duration_ms: 0.099527
+  type: 'test'
+  ...
+# Subtest: Store Ajo does not silently bundle the service fee into the item price
+ok 22 - Store Ajo does not silently bundle the service fee into the item price
+  ---
+  duration_ms: 0.23603
+  type: 'test'
+  ...
+# Subtest: Wallet uses an append-only ledger rather than a mutable balance field
+ok 23 - Wallet uses an append-only ledger rather than a mutable balance field
+  ---
+  duration_ms: 1.448396
+  type: 'test'
+  ...
+# Subtest: Wallet transactions are authenticated, idempotent and user-scoped
+ok 24 - Wallet transactions are authenticated, idempotent and user-scoped
+  ---
+  duration_ms: 0.211724
+  type: 'test'
+  ...
+# Subtest: Wallet transfers are restricted to accepted Zeeza friends and are atomic
+ok 25 - Wallet transfers are restricted to accepted Zeeza friends and are atomic
+  ---
+  duration_ms: 0.144303
+  type: 'test'
+  ...
+# Subtest: Sandbox wallet clearly separates simulated funds from provider-backed money
+ok 26 - Sandbox wallet clearly separates simulated funds from provider-backed money
+  ---
+  duration_ms: 0.135821
+  type: 'test'
+  ...
+# Subtest: Wallet is a dedicated route linked from Money without replacing Money
+ok 27 - Wallet is a dedicated route linked from Money without replacing Money
+  ---
+  duration_ms: 0.153267
+  type: 'test'
+  ...
+# Subtest: Wallet transfer and withdrawal expose a server-calculated fee preview before confirmation
+ok 28 - Wallet transfer and withdrawal expose a server-calculated fee preview before confirmation
+  ---
+  duration_ms: 0.145867
+  type: 'test'
+  ...
+# Subtest: Wallet fee integration is atomic and idempotency-scoped
+ok 29 - Wallet fee integration is atomic and idempotency-scoped
+  ---
+  duration_ms: 0.185014
+  type: 'test'
+  ...
+# Subtest: Wallet UI requires a fee preview before confirming metered transfers or withdrawals
+ok 30 - Wallet UI requires a fee preview before confirming metered transfers or withdrawals
+  ---
+  duration_ms: 0.092457
+  type: 'test'
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 183.943052

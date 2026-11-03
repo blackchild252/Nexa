@@ -1,0 +1,1046 @@
+{
+  "project": "NEXA",
+  "assistantIdentity": "Dami",
+  "platformIdentity": "NEXA",
+  "currentVersion": "6.2.54",
+  "archiveNaming": "NEXA-MAIN-V<major>.<minor>.<patch>.zip",
+  "baseline": "NEXA_V3.86.1_CUMULATIVE_CHECKPOINT",
+  "engineeringRules": [
+    "Inspect existing architecture before making changes.",
+    "Never rewrite functioning code unnecessarily.",
+    "Preserve existing UI and functionality unless explicitly instructed otherwise.",
+    "Make the smallest safe change.",
+    "Run tests after modifications and check for regressions.",
+    "Never claim a feature is complete until it has been tested.",
+    "Keep components modular and organized.",
+    "Record important architectural decisions.",
+    "Ask before destructive changes.",
+    "Do not provide or paste any project file/archive until every slice of the active 25-milestone roadmap block has been completed, tested and verified; deliver one final complete cumulative project archive only after block closure."
+  ],
+  "deliveryPipeline": [
+    "USER",
+    "APP BUILDER CHAT",
+    "PLANNER",
+    "PROJECT MEMORY",
+    "CODING AGENT",
+    "GITHUB REPO",
+    "PLAYWRIGHT",
+    "SENTRY",
+    "CODE REVIEW",
+    "FIX / REFACTOR",
+    "TEST AGAIN",
+    "RELEASE GATE",
+    "SEAL"
+  ],
+  "designSystem": {
+    "name": "Royal Dark",
+    "background": "#050403",
+    "surface": "#0D0B08",
+    "surfaceElevated": "#15110A",
+    "gold": "#D4AF37",
+    "goldBright": "#FFD75A",
+    "text": "#F8F4E8",
+    "textSecondary": "#C6C0B2",
+    "principles": [
+      "premium dark foundation",
+      "controlled royal-gold accents",
+      "warm ivory typography",
+      "consistent rounded surfaces",
+      "clear hierarchy",
+      "subtle elevation",
+      "smooth transitions",
+      "accessible contrast"
+    ],
+    "reference": "assets/design/NEXA_ROYAL_DARK_VISUAL_REFERENCE.png",
+    "goldHot": "#FFE7A0",
+    "borderGold": "#B88927"
+  },
+  "activeArchitecture": {
+    "frontend": "Expo Router under src/app/",
+    "legacyShell": "app/index.tsx remains recoverable and must not be deleted without approval",
+    "server": "Express under server/",
+    "primaryNavigation": [
+      "Home",
+      "Sky Money",
+      "Zeeza",
+      "Dream Marketplace",
+      "Yaayz",
+      "L.A.",
+      "Profile"
+    ],
+    "hiddenRoutes": [
+      "Dami AI compatibility route; primary Dami surface is Home"
+    ],
+    "securityPrinciple": "server-side authorization and user/resource ownership checks",
+    "homeExperience": "Canonical Home command center: Market Watch rail, NEXA Updates rail, Dami centerpiece, Zeeza Friends and Calls controls; destination modules remain sidebar-first.",
+    "skyMoneyExperience": "Sky Money is the single financial destination. It presents two balances together: SkyMoney Cash (real financial ledger) and Aami (internal reward ledger). Subscription Centre is a management sub-block inside Sky Money; it controls membership, renewal, spending limits and subscription redemption without becoming a separate money ledger."
+  },
+  "validation": {
+    "currentState": "V6.2.54 B600",
+    "internalRun": "M5941–M5965 / B403",
+    "typographyAuthority": "Shared NEXA font-family authority introduced; theme and responsive typography now consume the same NEXA_FONTS source.",
+    "typographyRegression": "21/21 PASS",
+    "navigationResponsive": "36/36 PASS",
+    "internalCumulative": "474/474 PASS",
+    "javascriptSyntax": "578/578 PASS",
+    "relativeSourceImports": "172 source files / 0 missing relative imports (previous verified baseline)",
+    "broaderInternalContracts": "M1875–M1899 focused launch-readiness source contract 25/25 PASS; static release suite 40/40 PASS; dependency-backed runtime checks remain environment-dependent.",
+    "excludedScope": "Environment/deployment configuration, device builds, live providers, Playwright and EAS checks are explicitly excluded from this run.",
+    "stageNamingCleanup": "Active source Checkpoint/CP stage labels removed; historical records preserved as history.",
+    "fontAuthority": "Shared NEXA font-family authority remains canonical; direct consumers now import from nexaFonts.",
+    "internalContractRun": "87/87 PASS",
+    "currentRun": "B600",
+    "typescriptParser": "NOT TESTED — Expo/React dependencies are unavailable in the workspace; tsc falls back to unresolved framework/type errors",
+    "storePreflight": "10/10 PASS",
+    "dependencyPreflight": "PASS; blockers empty; reproducible true; workspaceDependenciesInstalled false",
+    "releaseAudit": "PASS",
+    "releaseCertification": "V6.2.54 B600 unsealed local checkpoint; Admin AAMI dedicated company namespace guards added; focused tests 15/15 PASS; Devil’s Walk 903 JS syntax, 227 TS syntax files, 774 imports, 56 route targets; roadmap and release identity PASS. Full contract suite 1209 PASS / 1 FAIL / 1 SKIP due to unrelated server/growthLifecycle.test.js:38 activation qualification assertion; npm dependency installation blocked by registry DNS EAI_AGAIN. Main server suite, dependency-backed typecheck, actual company business route handlers, live Central/Main integration, browser activation/login and Vendor-to-Staff browser acceptance NOT TESTED; no seal, production deployment or launch.",
+    "cumulativeStatic": "B228 internal cumulative certification complete; environment/deployment checks excluded.",
+    "b190FocusedContract": "27/27 PASS",
+    "b191FocusedContract": "27/27 PASS",
+    "b192FocusedContract": "27/27 PASS",
+    "b195FocusedContract": "25/25 PASS",
+    "marketplaceOrderContracts": "70/70 PASS",
+    "b202FocusedContract": "25/25 PASS",
+    "marketplaceTrustContracts": "100/100 PASS",
+    "b213FocusedContracts": "48/48 PASS",
+    "b214FocusedContract": "10/10 PASS",
+    "b214MotionRegression": "18/18 PASS",
+    "b218FocusedContract": "25/25 PASS",
+    "b219FocusedContract": "25/25 PASS",
+    "b220FocusedContract": "25/25 PASS",
+    "activeInternalGate": "B248 Subscription navigation authority contract 25/25 PASS; active cumulative 206/206 PASS; release audit PASS; environment checks excluded",
+    "projectVersion": "6.2.54",
+    "batch": "B600",
+    "currentRoadmap": "M7416–M7440 — Data Lifecycle, Observability, Recovery and Release Hardening — next local block; browser/device/native acceptance remains parked.",
+    "lastCompletedMilestones": "M7266–M7290 — Dependency Recovery, Test Runner Reliability and Local Build Gates — local preflight/contract/source checks pass; missing root/server packages and runtime/device/native acceptance parked",
+    "lastValidatedSuite": "B503 implementation pass: 1016/1016 contract tests passed; Devil’s Walk CLEAN (JS 873/873, TS syntax 225 files, imports 767/767, routes 55/55); release audit and roadmap check PASS before identity bump; runtime suite/typecheck/browser/device/native acceptance NOT TESTED due absent dependencies/tools",
+    "nextRoadmap": "M7416–M7440 — Data Lifecycle, Observability, Recovery and Release Hardening — next local block; browser/device/native acceptance remains parked.",
+    "serverSuite": "NOT PASSED — 5,846 tests: 5,748 passed, 53 failed, 45 skipped. Several integration tests require missing dotenv/better-sqlite3; failures remain open.",
+    "dependencyFreeContracts": "499/499 PASS",
+    "focusedB407": "36 PASS / 7 historical identity checks SKIPPED",
+    "launchPreflight": "BLOCKED — EXPO_PUBLIC_API_URL, EXPO_PUBLIC_PRIVACY_POLICY_URL and EXPO_PUBLIC_TERMS_URL are missing/invalid HTTPS URLs",
+    "devilsWalk": "CLEAN — JS syntax 836/836, TS syntax 221 files, relative imports 748/748, route targets 55/55; dependency-backed typecheck unavailable.",
+    "angelsDuty": "0 blockers; 5 exact-duplicate groups retained for manual review without deletion.",
+    "godHand": "PASS — ordered product traversal and verify passed for Block 24.",
+    "zeezaAdminAiFeed": "Read-only adapter calls the existing owner-gated Zeeza referral-followup and authenticated notification APIs; output bounded, sanitized JSON; no reward/billing/attribution/message mutations; Kitchen Hub excluded; polling only, no guaranteed push delivery.",
+    "zeezaPopupQueue": "Recent eligible popup notifications are queued oldest-first, capped at 100 pending items, deduplicated, and advanced after timeout/dismiss/open; auth routes suppress popup display; dismissal does not mark server notification read."
+  },
+  "externalValidation": {
+    "playwright": "NOT RUN — @playwright/test is not installed",
+    "device": "NOT RUN in this environment",
+    "sentry": "NOT LIVE-VERIFIED — no project DSN/credentials supplied"
+  },
+  "observability": {
+    "sentry": {
+      "codeWired": true,
+      "connected": false,
+      "dsnRequired": true,
+      "piiDefault": false
+    },
+    "playwright": {
+      "codeWired": true,
+      "executionBlocked": true
+    }
+  },
+  "milestones": [
+    {
+      "version": "3.89.0",
+      "name": "Money Store Ajo Terms + Market Insights",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Store Ajo 2–6 month term",
+        "Store Ajo zero interest and 0% discount",
+        "item price lock and one-unit reservation",
+        "full-contribution pickup gate",
+        "Market Insights research signals",
+        "server-side optional NGX market-data adapter",
+        "no broker/trading/custody integration"
+      ]
+    },
+    {
+      "version": "3.90.0",
+      "name": "Money Intelligence / Research Matches",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "authenticated Market Insights",
+        "recent NEXA spending-theme context",
+        "transparent research candidates",
+        "server-side market-data boundary",
+        "no broker/trading/custody integration"
+      ]
+    },
+    {
+      "version": "3.91.0",
+      "name": "Market Data Intelligence",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "provider/source/timestamp/data-status metadata",
+        "30-point historical trend statistics and volatility context",
+        "gainers and losers snapshot",
+        "optional server-side CBN FX adapter boundary",
+        "optional server-side approved gold-data adapter boundary",
+        "user-controlled Market Intelligence preferences",
+        "account lifecycle and portability coverage",
+        "no broker/trading/custody integration"
+      ]
+    },
+    {
+      "version": "3.92.0",
+      "name": "NEXA Wallet / Financial Core",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "dedicated Wallet route and UI",
+        "server-owned wallet account",
+        "append-only wallet ledger with derived balance",
+        "sandbox deposit and withdrawal",
+        "friend-only NEXA Wallet transfers",
+        "receive-money identity and transaction history",
+        "idempotency and atomic transfers",
+        "provider adapter boundary for future bank/PSP attachment",
+        "explicit sandbox/non-bank labeling"
+      ]
+    },
+    {
+      "version": "3.93.0",
+      "name": "Subscription & Monetization Core",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Free, Regular, Premium and VIP server-defined subscription tiers",
+        "transparent server-side service fee catalog",
+        "monthly spend target and cap meter",
+        "Wallet-funded membership activation",
+        "explicit Wallet auto-pay preference",
+        "due renewal evaluation with past-due fail-closed state",
+        "idempotent subscription/service charge ledger entries",
+        "account lifecycle cleanup for subscription state while retaining financial charge anchors",
+        "Royal-dark VIP presentation and additive subscription route",
+        "no automatic feature fee is wired into existing commerce/social actions yet; module integration remains the next step"
+      ]
+    },
+    {
+      "version": "3.95.0",
+      "name": "Store Ajo Fee Integration",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Store Ajo contribution fee preview",
+        "Wallet-backed service-fee settlement",
+        "provider verification retained for fee retry",
+        "2–6 month term, zero interest and no discount preserved"
+      ]
+    },
+    {
+      "version": "3.96.0",
+      "name": "Dream Marketplace Service-Fee Integration",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Marketplace fee preview before checkout confirmation",
+        "server-authoritative fee recalculation",
+        "direct-seller fee settlement in checkout transaction",
+        "online provider verification separated from Wallet fee settlement",
+        "providerVerified/feeStatus/feeChargeId persistence",
+        "pending-fee retry after Wallet funding",
+        "Marketplace UI fee disclosure and confirmation gate"
+      ]
+    },
+    {
+      "version": "3.97.0",
+      "name": "Yaayz Ticket Service-Fee Integration",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Yaayz ticket fee preview before confirmation",
+        "server-authoritative yaayz_service fee recalculation",
+        "provider verification separated from Wallet fee settlement",
+        "providerVerified/feeStatus/feeChargeId persistence",
+        "idempotent pending-fee retry",
+        "My Tickets fee-state visibility"
+      ]
+    },
+    {
+      "version": "4.7.0",
+      "name": "Foundation Navigation, Naming & Royal Dark Visual Upgrade",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "bottom navigation is the single primary module-entry surface; Home shortcut grid removed",
+        "canonical public naming foundation introduced for Sky Money and Sky sub-brands; legacy internal route/API identifiers retained for compatibility",
+        "Royal Dark palette upgraded with richer gold, champagne text, stronger borders and gold glow/elevation tokens",
+        "Dami Home remains the front door with voice/text entry and no conflicting module shortcut list"
+      ]
+    },
+    {
+      "version": "4.13.0",
+      "title": "Zeeza Explore & Safer Stranger Adds",
+      "status": "complete",
+      "summary": "Explicit Explore consent, coarse location discovery, server-side stranger-add friction, and first-class Explore UI."
+    },
+    {
+      "version": "4.15.0",
+      "name": "Chase Preferences, L.A. Experiences & Fitness Directory",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "Chase preference filters: age, nationality, town/city, height and job type",
+        "optional Chase profile attributes with 18+ requirement and updated consent terms",
+        "L.A. Ball House, Game House and Fitness sections",
+        "Yaayz ticket discovery links for Ball House and Game House",
+        "bundled fitness PDF resources",
+        "authenticated gym submissions, admin review and approved public directory"
+      ]
+    },
+    {
+      "version": "5.54.7",
+      "batch": "B247",
+      "status": "implemented",
+      "summary": "Web authentication token survives browser reload via sessionStorage; server bearer-token architecture unchanged."
+    }
+  ],
+  "serverRegression": "V4.3.0 full server regression 345/345 passed; targeted Sky Money branding contracts 3/3 passed.",
+  "releases": [
+    {
+      "version": "3.98.0",
+      "name": "Kitchen Service-Fee Integration",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "server-priced Kitchen fee preview from menu items",
+        "server-authoritative kitchen_service fee settlement",
+        "provider verification separated from Wallet fee settlement",
+        "providerVerified/feeStatus/feeChargeId persistence",
+        "idempotent pending-fee retry",
+        "Paystack webhook fee settlement",
+        "Kitchen UI fee disclosure and retry"
+      ]
+    },
+    {
+      "version": "4.0.0",
+      "name": "Subscription Plan Lifecycle",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "server-owned nextPlanId scheduling",
+        "authenticated schedule/cancel plan-change endpoints",
+        "next-renewal plan application with new monthly cap",
+        "atomic membership charge at renewal",
+        "Royal Dark pending-plan UI"
+      ]
+    },
+    {
+      "version": "4.1.0",
+      "name": "Wallet Provider Lifecycle & Reconciliation Readiness",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "provider adapter create/verify/status/reconciliation contracts",
+        "authenticated user-scoped provider-status verification",
+        "sandbox verification explicitly simulated",
+        "fail-closed unconnected provider lifecycle",
+        "Wallet history provider-status check"
+      ]
+    },
+    {
+      "version": "4.14.0",
+      "name": "Zeeza Chase & Subscription Reach",
+      "status": "IMPLEMENTED",
+      "scope": [
+        "user-facing Explore renamed to Chase",
+        "subscription Chase Reach category across Free/Regular/Premium/VIP",
+        "server-side plan gating for discovery and stranger requests",
+        "Chase-mode safety-first social UX",
+        "72-hour coarse-location change cooldown"
+      ]
+    },
+    {
+      "version": "4.15.0",
+      "name": "Chase Preferences, L.A. Experiences & Fitness Directory",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "version": "4.16.0",
+      "name": "Auth Bootstrap & Session Foundation",
+      "status": "IN PROGRESS / VALIDATION OPEN"
+    },
+    {
+      "batch": "B247",
+      "version": "5.76.0",
+      "milestones": "M1250–M1274",
+      "theme": "Managed Transient Audio Upload Lifecycle Integrity",
+      "status": "IMPLEMENTED / VALIDATED",
+      "focusedContract": "25/25 PASS"
+    },
+    {
+      "version": "5.98.33",
+      "batch": "B247",
+      "milestones": "M2400–M2424",
+      "sourceBaseline": "V5.98.32 B180",
+      "status": "COMPLETED / VALIDATED"
+    }
+  ],
+  "recentUserPriorities": [
+    "Continue local-first NEXA development in 25-milestone blocks; park external blockers; bump release identity after every successful implementation run.",
+    "Ajo must have a visible Back button when opened from Money.",
+    "Home must be interactive and immediately actionable.",
+    "Dami must be visible and easy to find.",
+    "AI Chat is Dami; Dami must accept voice prompts.",
+    "Dami chat block is the primary Home experience.",
+    {
+      "version": "4.3.0",
+      "priority": "Complete Sky Money public rebrand and related Sky sub-brand naming before the next major brainstorm/refill; preserve Dami-first Home."
+    },
+    {
+      "version": "4.7.0",
+      "priority": "Make bottom navigation the single module-entry surface, centralize canonical public naming while preserving legacy API IDs, and upgrade the Royal Dark gold visual system to the richer reference direction."
+    },
+    {
+      "version": "5.98.64",
+      "priority": "Aami is the sole active reward-balance name; historical B209/B210 evidence remains frozen."
+    }
+  ],
+  "architecturalDecisions": [
+    {
+      "version": "4.2.0",
+      "decision": "Make Dami the primary Home experience and keep standalone social messaging inside Zeeza; do not restore generic standalone Chat as a competing primary destination.",
+      "reason": "User requested immediate AI entry and reported Dami was not discoverable."
+    },
+    {
+      "version": "4.3.0",
+      "decision": "Public financial identity is Sky Money; preserve existing internal financial architecture and Ajo API compatibility."
+    },
+    {
+      "version": "4.3.0",
+      "decision": "Money public identity is Sky Money. Ajo is Sky Savings, Group Ajo is Sky Group Savings, Store Ajo is Sky Store Savings, Market Watch is Sky Market Watch, Market Insights is Sky Insights, and Wallet is Sky Wallet. Existing internal APIs and identifiers remain compatible; no duplicate financial architecture."
+    },
+    {
+      "version": "4.69.0",
+      "decision": "Vendor subscription lifecycle is a server-side projection/control layer over the existing vendor, payment and notification authorities.",
+      "details": [
+        "First 10 FREE_LAUNCH slots are transactionally allocated in vendor_launch_allocations.",
+        "Paid entry and renewal use existing payment provider verification and webhook event idempotency.",
+        "Vendor access is active only when the server-controlled subscription state permits it.",
+        "Day-25 reminders use the durable platform job queue and existing NEXA notification/inbox delivery path.",
+        "Permanent NEXA logo assets are local first-party assets referenced from src/brand.ts."
+      ]
+    }
+  ],
+  "damiExperience": {
+    "homeOnly": true,
+    "embeddedCapabilities": [
+      "text",
+      "recorded voice",
+      "live voice",
+      "screenshot upload",
+      "Quick ScamCheck"
+    ],
+    "legacyChatRoute": "resolves to Dami; Zeeza owns friend/community messaging"
+  },
+  "latestValidation": {
+    "status": "local contracts and static checks passed",
+    "version": "6.2.54",
+    "batch": "B600",
+    "milestones": "M7366–M7390",
+    "contractSuite": "1048/1048 PASS",
+    "javascriptSyntax": "880/880 PASS",
+    "relativeImports": "768/768 PASS",
+    "routeTargets": "56/56 PASS",
+    "releaseAudit": "PASS",
+    "roadmapCheck": "PASS",
+    "typecheck": "NOT RUN (node_modules unavailable)",
+    "externalAcceptance": "NOT TESTED"
+  },
+  "recentMilestones": [
+    {
+      "batch": "B247",
+      "version": "5.94.0",
+      "range": "M1700–M1724",
+      "theme": "Cross-Module Navigation Continuity & Home Actionability",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.93.0",
+      "range": "M1675–M1699",
+      "theme": "Account Lifecycle, Privacy & Data Portability Maturity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.92.0",
+      "range": "M1650–M1674",
+      "theme": "Production Release Configuration Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "version": "5.22.0",
+      "focus": "Batch B58: visual fidelity and release hygiene; M136 Home cinematic environment implemented."
+    },
+    {
+      "version": "4.79.0",
+      "focus": "Batch B22: vendor subscription entitlement guard unification, failed-payment recovery, NEXA Inbox reminder continuity, admin launch-offer operations visibility, and account-closure vendor cleanup"
+    },
+    {
+      "version": "4.16.0",
+      "focus": "Auth Bootstrap & Session Foundation: active login/signup, session restoration, SecureStore native persistence, protected routes, 401 expiry, logout, multi-session controls, offline recovery and browser-safe memory-only auth adapter"
+    },
+    {
+      "version": "4.15.0",
+      "focus": "Chase preference filters, L.A. Ball House/Game House/Fitness, Yaayz ticket links, fitness PDFs and moderated gym directory"
+    },
+    {
+      "version": "4.14.0",
+      "focus": "Zeeza Chase, subscription-based location reach, safety-first social discovery, and coarse-location cooldown"
+    },
+    {
+      "version": "4.12.0",
+      "focus": "Zeeza shareable profile links and link-based friend requests"
+    },
+    {
+      "version": "4.10.0",
+      "focus": "Zeeza social polish, native profile photo and navigation badges"
+    },
+    {
+      "version": "5.22.0",
+      "focus": "M314 Gemini streaming through server-side @google/genai generateContentStream; bounded timeout; provider-gateway/Dami text seam; focused contracts 25/25 PASS; full cumulative regression 1,059/1,059 PASS"
+    },
+    {
+      "batch": "B247",
+      "version": "5.74.0",
+      "range": "M1175-M1199",
+      "theme": "Disaster Recovery & Backup Certification",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.75.0",
+      "milestones": "M1225–M1249",
+      "theme": "Safe External Navigation & Payment/Ad URL Integrity"
+    },
+    {
+      "batch": "B247",
+      "version": "5.76.0",
+      "milestones": "M1250–M1274",
+      "theme": "Managed Transient Audio Upload Lifecycle Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.77.0",
+      "milestones": "M1275–M1299",
+      "theme": "Account Closure & Post-Closure Isolation Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.21",
+      "milestones": "M2100–M2124",
+      "theme": "Production Launch Handoff & External Validation Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "milestones": "M2400–M2424",
+      "batch": "B247",
+      "theme": "Cross-Module Navigation, Control-State Semantics & User-Facing Action Integrity"
+    }
+  ],
+  "latest": "B508 / V6.1.62 / M7366–M7390 marketplace integrity and currency precision",
+  "latestMilestone": "M7390",
+  "lastMilestoneBatch": "B508",
+  "architectureDecisions": [
+    {
+      "version": "5.71.0",
+      "decision": "B112 establishes a deterministic CI/test verification boundary so dependency-backed verification has a reproducible execution path outside the authoring workspace.",
+      "details": [
+        "CI installs from the lockfile before verification.",
+        "Server and E2E suites have explicit bounded execution budgets.",
+        "Verification metadata is retained as a build artifact while production preview fixtures remain disabled."
+      ]
+    },
+    {
+      "version": "5.69.0",
+      "decision": "B110 centralizes mobile network resilience in a shared client policy without changing server authority.",
+      "details": [
+        "Idempotent requests may retry within bounded attempts; ordinary mutations do not automatically retry.",
+        "Requests carry bounded correlation metadata and payload/response size guards.",
+        "Auth failures remain non-retryable and continue through the existing auth-expiry handler."
+      ]
+    },
+    {
+      "version": "5.22.0",
+      "decision": "M312 adds Gemini multimodal analysis behind the existing Dami ScamCheck image boundary without replacing the OpenAI default.",
+      "details": [
+        "DAMI_AI_PROVIDER/NEXA_AI_PROVIDER selects the provider server-side; Gemini remains disabled unless explicitly enabled and configured.",
+        "Gemini vision uses a dedicated GEMINI_VISION_MODEL setting with GEMINI_MODEL fallback.",
+        "NEXA validates JPEG/PNG/WebP base64 input and applies a 12 MB raw-image cap before loading the Gemini SDK.",
+        "ScamCheck remains analysis-only and receives no action-execution authority from the provider."
+      ]
+    },
+    {
+      "version": "4.79.0",
+      "decision": "Vendor subscription hardening preserves a strict separation from NEXA Membership while centralizing vendor entitlement, payment recovery, Inbox reminders, launch-offer operations and account-closure cleanup.",
+      "details": [
+        "Marketplace vendor access uses vendorEntitlement as the canonical server-side guard; legacy active vendor state is accepted only when no subscription history exists.",
+        "Failed or cancelled vendor payment attempts can be retried without creating a subscription period until provider verification succeeds.",
+        "Day-25 reminders route through the existing NEXA Inbox notification action with a stable subscription-period dedupe key.",
+        "Launch-offer allocation counts and individual allocation records are exposed only through an administrator operations endpoint.",
+        "Closing an account deactivates its vendor, expires active vendor periods and cancels pending vendor subscription payments while retaining historical records."
+      ]
+    }
+  ],
+  "latestRelease": "6.2.54",
+  "currentBatch": "B600",
+  "lastCompletedMilestones": "M7366–M7390 — locally complete with evidence; product price currency precision and boolean coercion fixed; checkout/payment ownership/idempotency and informational market-watch boundaries verified; live payment and licensed market-data acceptance NOT TESTED.",
+  "lastValidatedSuite": "B507: npm run verify:contract 1036/1036 PASS; focused 2FA SQLite and push privacy tests 7/7 PASS; Devil’s Walk CLEAN (877 JS syntax, 226 TS files, 768 imports, 56 routes); release audit and roadmap validation PASS. Real SQLite engine, production route wiring, live providers, full runtime server suite, dependency-backed typecheck, browser/device/native acceptance and penetration testing NOT TESTED.",
+  "lastReleaseAudit": "PASS — V6.1.56 pre-bump source audit",
+  "version": "6.2.54",
+  "releaseArchive": "NEXA-MAIN-V6.2.54.zip",
+  "releaseSha256": "See external sidecar NEXA-MAIN-V6.2.54.zip.sha256; checkpoint archive remains unsealed",
+  "releaseCertification": "V6.2.54 B600 unsealed local checkpoint; Admin AAMI dedicated company namespace guards added; focused tests 15/15 PASS; Devil’s Walk 903 JS syntax, 227 TS syntax files, 774 imports, 56 route targets; roadmap and release identity PASS. Full contract suite 1209 PASS / 1 FAIL / 1 SKIP due to unrelated server/growthLifecycle.test.js:38 activation qualification assertion; npm dependency installation blocked by registry DNS EAI_AGAIN. Main server suite, dependency-backed typecheck, actual company business route handlers, live Central/Main integration, browser activation/login and Vendor-to-Staff browser acceptance NOT TESTED; no seal, production deployment or launch.",
+  "history": [
+    {
+      "batch": "B247",
+      "version": "5.98.72",
+      "milestones": "M3375–M3399",
+      "status": "implemented/tested/sealed",
+      "summary": "Market Watch and Yaayz sponsored-ad retry controls migrated to shared NexaPressable authority; unused navigation touch import removed; authentication touch surfaces preserved for separate controlled review."
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.72",
+      "milestones": "M3350–M3374",
+      "status": "implemented/tested/sealed"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.70",
+      "milestones": "M3325–M3349",
+      "status": "IMPLEMENTED / VALIDATED / SEALED",
+      "summary": "Controlled interaction-surface expansion across ten high-use screens; shared NexaPressable authority and accessibility/reduced-motion preservation."
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.69",
+      "milestones": "M3300–M3324",
+      "summary": "Controlled interaction-surface expansion across ten high-use screens; shared NexaPressable, accessibility and motion authority preserved."
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.68",
+      "milestones": "M3275–M3299",
+      "theme": "Global Interaction Motion Adoption & Control Consistency",
+      "status": "COMPLETED / VALIDATED / SEALED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.67",
+      "milestones": "M3250–M3274",
+      "theme": "Visual World Fidelity, Interaction Authority & Design-System Reconciliation",
+      "status": "COMPLETED / VALIDATED / SEALED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.66",
+      "milestones": "M3225–M3249",
+      "theme": "Global Visual Motion & Design Harmonization",
+      "status": "COMPLETED / VALIDATED / SEALED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.57",
+      "milestones": "M3000–M3024",
+      "theme": "Marketplace Trust Freshness, Discovery Consistency & Cache Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.31",
+      "milestones": "M2350–M2374",
+      "theme": "Cross-Module Accessibility Completion, Social/Group Action Reachability & Release Identity Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.30",
+      "milestones": "M2325–M2349",
+      "theme": "Cross-Module Accessibility Completion, Navigation Resilience & TSX Integrity",
+      "status": "SOURCE CERTIFIED — PERMANENT RELEASE SEAL PENDING"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.29",
+      "milestones": "M2300–M2324",
+      "theme": "Cross-Module Action Semantics, Form Validation & Responsive Interaction Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.25",
+      "milestones": "M2200–M2224",
+      "theme": "Cumulative Release Provenance, Roadmap Authority & Current-State Integrity",
+      "status": "IN CERTIFICATION"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.24",
+      "milestones": "M2175–M2199",
+      "theme": "Release Identity Synchronization, Provenance & Historical Evidence Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.23",
+      "milestones": "M2150–M2174",
+      "theme": "Current-State Governance, Historical Contract Reconciliation & Launch-Readiness Drift Control",
+      "status": "COMPLETED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.22",
+      "milestones": "M2125–M2149",
+      "theme": "Production Launch Candidate Integrity & External Readiness",
+      "status": "COMPLETED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.21",
+      "milestones": "M2100–M2124",
+      "theme": "Production Launch Handoff & External Validation Integrity",
+      "status": "COMPLETED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.20",
+      "milestones": "M2075–M2099",
+      "theme": "Legal Publication Governance, Policy Acceptance & Privacy Runtime Readiness",
+      "status": "COMPLETED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.19",
+      "milestones": "M2050–M2074",
+      "summary": "18+ age restriction, children prohibition, in-app data-transfer privacy controls and legal/privacy launch readiness"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.17",
+      "milestones": "M2000–M2024",
+      "theme": "Store Submission Configuration Integrity & Production Build Readiness",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "V5.98.16",
+      "milestones": "M1975–M1999",
+      "theme": "Production Launch Boundary Remediation, Release Identity Integrity & Environment Safety"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.15",
+      "milestones": "M1950–M1974",
+      "theme": "Production Environment Contract, Launch Boundary Hardening & Release Identity Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.14",
+      "milestones": "M1925–M1949",
+      "theme": "Production Configuration Reconciliation, Recovery Verification & Release Automation Integrity",
+      "status": "IMPLEMENTED / VALIDATED — focused source contract PASS; dependency-backed runtime validation environment-dependent"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.13",
+      "milestones": "M1900–M1924",
+      "theme": "Production Observability, Runtime Resilience & Recovery Readiness",
+      "status": "IMPLEMENTED / VALIDATED — focused source contract PASS; dependency-backed runtime validation environment-dependent"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.12",
+      "milestones": "M1875–M1899",
+      "theme": "Launch Readiness Source Integrity & Production Configuration",
+      "status": "IMPLEMENTED / VALIDATED — focused source contract PASS; dependency-backed runtime validation environment-dependent"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.11",
+      "milestones": "M1825–M1849",
+      "theme": "Navigation, Visual Authority, Module Continuity & Internal Ownership Integrity",
+      "status": "IMPLEMENTED / VALIDATED — source contracts PASS; HTTP runtime validation environment-blocked"
+    },
+    {
+      "batch": "B247",
+      "version": "5.95.0",
+      "milestones": "M1725–M1749",
+      "theme": "Dami Cross-Module Workflow & Knowledge Reliability",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.94.0",
+      "milestones": "M1700–M1724",
+      "theme": "Cross-Module Navigation Continuity & Home Actionability",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.93.0",
+      "milestones": "M1675–M1699",
+      "theme": "Account Lifecycle, Privacy & Data Portability Maturity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.92.0",
+      "milestones": "M1650–M1674",
+      "theme": "Production Release Configuration Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.91.0",
+      "milestones": "M1625–M1649",
+      "theme": "Retained Yaayz Seller Commerce Lifecycle Integrity",
+      "status": "IMPLEMENTED / VALIDATED — RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.90.0",
+      "milestones": "M1600–M1624",
+      "theme": "Account Closure Ownership Predicate Integrity",
+      "status": "IMPLEMENTED / VALIDATED — RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.89.0",
+      "milestones": "M1575–M1599",
+      "theme": "User-Owned Action Artifact Lifecycle Integrity",
+      "status": "IMPLEMENTED / VALIDATED — RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.88.0",
+      "milestones": "M1550–M1574",
+      "theme": "External Identity / Authentication Lifecycle Integrity",
+      "status": "IMPLEMENTED / VALIDATED — block closure pending"
+    },
+    {
+      "batch": "B247",
+      "version": "5.87.0",
+      "milestones": "M1525–M1549",
+      "theme": "Account Lifecycle / Privacy / Data Portability Maturity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.86.0",
+      "milestones": "M1500–M1524",
+      "theme": "Push Token Retirement / Cross-Account Cleanup Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.85.0",
+      "milestones": "M1475–M1499",
+      "theme": "Push Token Ownership / Registration Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.84.0",
+      "milestones": "M1450–M1474",
+      "theme": "Notification Event Idempotency / Dedupe Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.81.0",
+      "milestones": "M1375–M1399",
+      "theme": "Zeeza Room Invitation Lifecycle & Abuse Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.79.0",
+      "milestones": "M1325–M1349",
+      "theme": "Public Marketplace Visibility & Cache Integrity",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "version": "5.98.32",
+      "batch": "B247",
+      "milestones": "M2375–M2399",
+      "theme": "Financial/Form Interaction Semantics, Group Lifecycle Reachability & Subscription Control Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.50",
+      "milestones": "M2825–M2849",
+      "theme": "Marketplace Review Abuse Prevention, Reporting & Moderation Integrity",
+      "status": "COMPLETED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.52",
+      "milestones": "M2875–M2899",
+      "theme": "Marketplace Seller Reputation, Review Quality & Trust Signals",
+      "status": "SOURCE CERTIFICATION IN PROGRESS"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.86",
+      "roadmap": "M3700–M3724 / B233"
+    },
+    {
+      "version": "6.1.61",
+      "batch": "B507",
+      "build": 6326,
+      "summary": "Parked-issue audit: SQLite-backed Zeeza 2FA state adapter and push payload privacy hardening. Contract suite 1036/1036 PASS; focused tests 7/7 PASS; runtime/provider/device acceptance NOT TESTED; unsealed checkpoint."
+    }
+  ],
+  "latestVerifiedRelease": "6.0.28",
+  "releaseStatus": "UNSEALED DEVELOPMENT CHECKPOINT — B508; local contracts passed; external/live acceptance remains untested",
+  "currentRun": "B600",
+  "currentState": "V6.2.54 B600",
+  "internalRun": "M5566–M5590 / B374",
+  "projectVersion": "6.2.54",
+  "batch": "B600",
+  "nextRoadmap": "M7466–M7490 — Observability Pipeline, Correlation and Health Boundaries — registered next block; NOT STARTED.",
+  "currentRoadmap": "M7466–M7490 — Observability Pipeline, Correlation and Health Boundaries — registered next block; NOT STARTED.",
+  "b196FocusedContract": "25/25 PASS",
+  "b197FocusedContract": "25/25 PASS",
+  "b198FocusedContract": "25/25 PASS",
+  "b199FocusedContract": "25/25 PASS",
+  "aamiEarningEconomy": "Centralized server-authoritative Aami earning engine across Yaayz, Kitchen referrals, Marketplace activity, referrals, streaks, challenges, learning, feedback, verified bug reports, community achievements, seller activity and controlled promotions; Aami is the sole reward-balance name.",
+  "releaseHistory": [
+    {
+      "batch": "B600",
+      "version": "6.2.54",
+      "milestones": "M6841–M6865",
+      "theme": "Owner Analytics & Business Intelligence",
+      "status": "IMPLEMENTATION IN PROGRESS — local analytics contracts pass; release pending"
+    },
+    {
+      "batch": "B600",
+      "version": "6.2.54",
+      "milestones": "M5991–M6015",
+      "theme": "Admin authority governance, launch handoff reconciliation and dependency-free release certification",
+      "status": "INTERNAL GATES VERIFIED / RELEASE PENDING"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.87",
+      "milestones": "M3725–M3749",
+      "theme": "Navigation accessibility-label authority and global quick-access semantic reconciliation",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.81",
+      "milestones": "M3600–M3624",
+      "theme": "Current-source launch-readiness hardening and Home Design release-authority reconciliation",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.80",
+      "milestones": "M3575–M3599",
+      "theme": "Release identity, launch-handoff governance and current-state reconciliation",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.79",
+      "milestones": "M3550–M3574",
+      "theme": "Release-state, navigation reachability and cumulative metadata reconciliation",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.76",
+      "milestones": "M3475–M3499",
+      "theme": "Hosted legal pages and internal launch-handoff reconciliation",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.74",
+      "milestones": "M3425–M3449",
+      "theme": "Navigation, Readability, Accessibility, Motion & Cumulative Integrity Reconciliation",
+      "status": "IMPLEMENTED / VALIDATED"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.86",
+      "roadmap": "M3700–M3724 / B233"
+    },
+    {
+      "version": "5.98.88",
+      "batch": "B247",
+      "roadmap": "M3750–M3774 / B235",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED",
+      "theme": "Vendor AI product-image lifecycle and stale-preview approval integrity"
+    },
+    {
+      "version": "5.98.89",
+      "batch": "B247",
+      "roadmap": "M3775–M3799 / B236",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED",
+      "theme": "Server-owned vendor AI preview tokens and approval integrity"
+    },
+    {
+      "version": "5.98.93",
+      "batch": "B247",
+      "roadmap": "M3875–M3899 / B240",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED",
+      "theme": "Subscription Centre structural section authority and presentation-label reconciliation"
+    },
+    {
+      "version": "5.98.94",
+      "batch": "B247",
+      "roadmap": "M3900–M3924 / B241",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED",
+      "theme": "Subscription Centre stable section-ID presentation authority"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.95",
+      "milestones": "M3925–M3949",
+      "theme": "Subscription Centre service-fee stable typed-code authority",
+      "status": "IMPLEMENTED / VALIDATED / RELEASED"
+    },
+    {
+      "version": "5.98.96",
+      "batch": "B247",
+      "roadmap": "M3950–M3974 / B243",
+      "status": "SOURCE CERTIFICATION IN PROGRESS",
+      "theme": "Subscription Centre fee presentation integrity and typed server-response authority"
+    },
+    {
+      "version": "5.98.97",
+      "batch": "B247",
+      "roadmap": "M3975–M3999 / B244",
+      "status": "SOURCE CERTIFICATION IN PROGRESS",
+      "theme": "Subscription Centre category-order authority consolidation and seven-section structural integrity"
+    },
+    {
+      "batch": "B247",
+      "version": "5.98.98",
+      "roadmap": "M4000–M4024 / B245",
+      "theme": "Canonical user-facing Subscription Centre navigation with legacy-route compatibility preservation",
+      "status": "SOURCE CERTIFICATION IN PROGRESS"
+    }
+  ],
+  "activeInternalGate": "Block 18 Owner Analytics & Business Intelligence: aggregate-only metrics; owner-only route; source-dependent metrics explicitly DEFERRED; release gates pending",
+  "namingAuthorityReference": "AGENTS.md — Naming and versioning (PERMANENT NEXA RULE — LOCKED)",
+  "roadmap": {
+    "currentRoadmap": "M7491–M7515 — Referral Reward Auditability and Notification Recovery — registered next block; NOT STARTED.",
+    "lastCompletedMilestones": "M7466–M7490 — Zeeza Referral Programme and Popup Notification Integrity; 1117 contract tests PASS, focused referral/popup tests 36/36 PASS, Devil’s Walk clean; full server suite blocked by missing better-sqlite3.",
+    "nextRoadmap": "M7491–M7515 — Referral Reward Auditability and Notification Recovery — registered next block; NOT STARTED."
+  },
+  "devilsWalk": "CLEAN — JS syntax 884/884, TS syntax 227 files, relative imports 773/773, route targets 56/56; dependency-backed typecheck not run because node_modules is absent.",
+  "angelsDuty": "0 blockers; 5 exact-duplicate groups reviewed without deletion",
+  "godHand": "Internal master roadmap validation PASS; M7191–M7215 and M7216–M7240 locally processed; external Central provider/events and Admin AAMI companion navigation are parked. Current block M7241–M7265.",
+  "roadmapAuthority": "MASTER_ROADMAP.md — permanent internal single authority; external PDFs are reference-only",
+  "forwardRoadmapQueue": "M7491–M7740; 10 blocks x 25 milestones; future items remain NOT STARTED until evidenced.",
+  "current_checkpoint": {
+    "version": "V6.1.66",
+    "batch": "B600",
+    "build": 6331,
+    "summary": "Zeeza central referral links and 30-day campaign tracking; activation-qualified vendor/user thresholds; owner-only admin follow-up screen; popup first-load, dedupe and visibility fixes. 1117 contract tests passed; full server suite blocked by missing better-sqlite3; actual subscription-month credit, typecheck and device/native acceptance parked."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "release": "V5.98.35",
+  "batch": "B183",
+  "milestones": "M2450–M2474",
+  "sourceBaseline": "V5.98.34 B182",
+  "nextRoadmap": "M2475–M2499 / B184",
+  "environmentChecks": "EXCLUDED_FROM_RELEASE_CERTIFICATION"
+}

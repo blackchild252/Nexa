@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root = process.cwd();
+const read = p => fs.readFileSync(path.join(root, p), 'utf8');
+const pkg = JSON.parse(read('package.json'));
+const serverPkg = JSON.parse(read('server/package.json'));
+const expo = JSON.parse(read('app.json'));
+const failures = [];
+const requiredVersion = pkg.version;
+const memory = JSON.parse(read('PROJECT_MEMORY.json'));
+const requiredBatch = memory.currentBatch;
+if (memory.currentVersion !== requiredVersion || memory.latestRelease !== requiredVersion) failures.push('PROJECT_MEMORY version drift');
+if (!/^B\d+$/.test(String(requiredBatch || ''))) failures.push('invalid current Batch');
+if (!/NEXA-MAIN-V<major>\.<minor>\.<patch>\.zip/.test(String(memory.archiveNaming || ''))) failures.push('archive naming contract drift');
+if (String(memory.archiveNaming || '').includes('-B<batch>')) failures.push('current archive naming must not include Batch');
+if (!/^\d+\.\d+\.\d+$/.test(requiredVersion)) failures.push('invalid release version');
+if (serverPkg.version !== requiredVersion || expo.expo.version !== requiredVersion) failures.push('release metadata drift');
+const lock = JSON.parse(read('package-lock.json'));
+if (lock.version !== requiredVersion || lock.packages?.['']?.version !== requiredVersion) failures.push('package-lock version drift');
+if (!/release:\s*['\"]\d+\.\d+\.\d+['\"]/.test(read('src/theme.ts'))) failures.push('theme release field missing');
+if (!read('src/theme.ts').includes(`release: '${requiredVersion}'`)) failures.push('theme release version drift');
+if (!read('README.md').startsWith(`# NEXA — Current status (V${requiredVersion} ${requiredBatch})`)) failures.push('README active release heading drift');
+if (!read('VERSION.md').startsWith(`# NEXA V${requiredVersion} ${requiredBatch}`)) failures.push('VERSION active release heading drift');
+const handoffHeading = read('LAUNCH_HANDOFF.md').split('\n',1)[0].trim();
+if (!(handoffHeading === `# NEXA launch hand-off — V${requiredVersion} ${requiredBatch}` || handoffHeading === `# NEXA launch hand-off (V${requiredVersion} ${requiredBatch})`)) failures.push('LAUNCH_HANDOFF active release heading drift');
+if (memory.currentState !== `V${requiredVersion} ${requiredBatch}` || memory.projectVersion !== requiredVersion || memory.batch !== requiredBatch) failures.push('PROJECT_MEMORY active state drift');
+if (memory.namingAuthorityReference !== 'AGENTS.md — Naming and versioning (PERMANENT NEXA RULE — LOCKED)' || Object.prototype.hasOwnProperty.call(memory,'permanentNamingVersioningRule')) failures.push('PROJECT_MEMORY contains competing naming authority text');
+if (pkg.main !== 'expo-router/entry') failures.push('Expo Router is not the active entrypoint');
+for (const p of ['src/app/_layout.tsx','src/app/(tabs)/_layout.tsx','src/app/(tabs)/index.tsx','src/app/(tabs)/money.tsx','src/app/(tabs)/zeeza.tsx','src/app/(tabs)/marketplace.tsx','src/app/dami.tsx','src/app/(tabs)/profile.tsx','src/app/extensions.tsx','src/app/developer.tsx','src/app/staff.tsx','src/app/zeeza/inbox.tsx','FRONTEND_ARCHITECTURE_V3_61_3.md']) if (!fs.existsSync(path.join(root,p))) failures.push(`missing ${p}`);
+if (!/expo-router\/entry/.test(read('FRONTEND_ARCHITECTURE_V3_61_3.md')) || !/not an active route surface/.test(read('FRONTEND_ARCHITECTURE_V3_61_3.md'))) failures.push('frontend architecture contract missing');
+const recon = read('ARCHITECTURE_RECONCILIATION_V3_60_41.md');
+if (!/New screens\/routes must be added under `src\/app\//.test(recon)) failures.push('frontend route ownership contract missing');
+const roadmapCheck = await import('node:child_process').then(({spawnSync}) => spawnSync(process.execPath, [path.join(root, 'scripts/roadmap-check.mjs')], {cwd: root, encoding: 'utf8'}));
+if (roadmapCheck.status !== 0) failures.push(`internal master roadmap check failed: ${(roadmapCheck.stderr || roadmapCheck.stdout || '').trim()}`);
+for (const p of ['server/accountLifecycle.test.js','server/frontendArchitecture61.test.js','server/crossModuleE2E.contract.test.js','server/v3_69_1_releaseAudit.test.js','server/v3_72_1_releaseAudit.test.js','server/v3_72_1_dependency.test.js','server/v3_72_1_frontend.test.js','server/v3_72_1_releaseGate.test.js','server/v3_79_1_hardening.test.js','server/v3_79_1_releaseAudit.test.js','server/v3_82_1_hardening.test.js','server/v3_82_1_releaseAudit.test.js']) if (!fs.existsSync(path.join(root,p))) failures.push(`missing regression contract: ${p}`);
+for (const p of ['server/search.js.tmp']) if (fs.existsSync(path.join(root,p))) failures.push(`temporary source artifact must be removed: ${p}`);
+
+for (const p of ['server/index.js','server/accountPortability.js','src/api.ts']) { const s = read(p); if (/(sk-[A-Za-z0-9]{20,}|PAYSTACK_SECRET_KEY\s*[:=]\s*['"][^'"$]{8,})/.test(s)) failures.push(`possible literal credential in ${p}`); }
+if (failures.length) { console.error('RELEASE AUDIT FAILED'); failures.forEach(x => console.error('-',x)); process.exit(1); }
+console.log(`NEXA release audit PASS — ${pkg.version}`);

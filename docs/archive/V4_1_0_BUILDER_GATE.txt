@@ -1,0 +1,10 @@
+{
+  "version": "4.1.0",
+  "checks": [
+    {"name":"application release gate","status":"PASS","detail":"Release consistency, targeted contracts and full server regression pass."},
+    {"name":"Playwright","status":"BLOCKED","detail":"Configured but browser/dependency tree is unavailable in the validation environment."},
+    {"name":"Sentry","status":"BLOCKED","detail":"Integration is wired but no real DSN/project credentials are supplied."},
+    {"name":"live Wallet provider","status":"DEFERRED","detail":"No licensed/authorized bank or PSP has been selected/connected yet."},
+    {"name":"project memory","status":"PASS","detail":"Current version 4.1.0"}
+  ]
+}

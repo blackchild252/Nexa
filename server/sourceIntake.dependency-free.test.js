@@ -1,0 +1,4 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('fs');
+const src=fs.readFileSync('server/adminStaffWork.js','utf8');
+test('source-aware work exposes capability and source workload aggregates',()=>{assert.match(src,/capabilityCounts/);assert.match(src,/sourceCounts/);assert.match(src,/COALESCE\(sourceType,kind\)/);});
+test('all mapped source capabilities remain server-owned',()=>{const pairs=[['customer_care','support_investigation'],['subscription','subscription_review'],['payment','payment_review'],['verification','verification_review'],['buyer_dispute','buyer_dispute_review'],['seller_dispute','seller_dispute_review'],['user_violation','user_violation_review'],['vendor_violation','vendor_violation_review'],['report','report_investigation']];for(const [a,b] of pairs){assert.match(src,new RegExp(`\\['${a}','${b}'\\]`));}});

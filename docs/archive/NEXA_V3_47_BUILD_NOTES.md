@@ -1,0 +1,1 @@
+V3.47.1 implementation increment: catalog search filters, price sorting, sort-aware cursor pagination, public active-product detail endpoint, and search rate limiting. See NEXA_V3_47_1_IMPLEMENTATION_REPORT.md for scope and validation limits.

@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: Dami is the sealed NEXA AI assistant identity
+ok 1 - Dami is the sealed NEXA AI assistant identity
+  ---
+  duration_ms: 2.752218
+  type: 'test'
+  ...
+# Subtest: Dami branding is present in the assistant surface and Home entry
+ok 2 - Dami branding is present in the assistant surface and Home entry
+  ---
+  duration_ms: 0.641206
+  type: 'test'
+  ...
+# Subtest: the product identity contract explicitly keeps NEXA as platform and Dami as assistant
+ok 3 - the product identity contract explicitly keeps NEXA as platform and Dami as assistant
+  ---
+  duration_ms: 0.739632
+  type: 'test'
+  ...
+# Subtest: release metadata stays synchronized across package, server, Expo, and VERSION.md
+ok 4 - release metadata stays synchronized across package, server, Expo, and VERSION.md
+  ---
+  duration_ms: 1.300428
+  type: 'test'
+  ...
+# Subtest: server health and boot diagnostics do not carry stale hard-coded release versions
+ok 5 - server health and boot diagnostics do not carry stale hard-coded release versions
+  ---
+  duration_ms: 3.011867
+  type: 'test'
+  ...
+# Subtest: Expo Router is the active UI architecture and legacy root shell is explicitly quarantined
+ok 6 - Expo Router is the active UI architecture and legacy root shell is explicitly quarantined
+  ---
+  duration_ms: 0.958124
+  type: 'test'
+  ...
+# Subtest: V4.2.0 Home is Dami-first and exposes immediate text and voice entry
+ok 7 - V4.2.0 Home is Dami-first and exposes immediate text and voice entry
+  ---
+  duration_ms: 4.908184
+  type: 'test'
+  ...
+# Subtest: V4.2.0 Store Ajo has an explicit back action when opened from Money
+ok 8 - V4.2.0 Store Ajo has an explicit back action when opened from Money
+  ---
+  duration_ms: 0.350665
+  type: 'test'
+  ...
+# Subtest: V4.2.0 hidden AI route resolves to the same Dami assistant surface
+ok 9 - V4.2.0 hidden AI route resolves to the same Dami assistant surface
+  ---
+  duration_ms: 0.196155
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 375.739642

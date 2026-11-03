@@ -1,0 +1,44 @@
+# dependencies
+node_modules/
+server/node_modules/
+
+# environment / secrets (never commit)
+.env
+.env.*
+!.env.example
+!server/.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# local databases and backups
+*.db
+*.db-*
+*.sqlite
+server/backups/
+
+# Expo / build output
+.expo/
+dist/
+web-build/
+ios/
+android/
+expo-env.d.ts
+*.tsbuildinfo
+
+# test output
+playwright-report/
+test-results/
+blob-report/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

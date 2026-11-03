@@ -1,0 +1,37 @@
+const { test } = require('node:test');
+const fs = require('fs');
+const assert = require('assert');
+const index = fs.readFileSync(require('path').join(__dirname,'index.js'), 'utf8');
+const discovery = fs.readFileSync(require('path').join(__dirname,'marketplaceDiscovery.js'), 'utf8');
+const has = (s, r) => assert.match(s, r);
+const routeBody = (route, span = 700) => {
+  const i = index.indexOf(route);
+  assert.ok(i >= 0, `route missing: ${route}`);
+  return index.slice(i, i + span);
+};
+
+test('M3000 — product detail public share route exists', () => has(index, /app\.get\("\/p\/:id"/));
+test('M3001 — seller public share route exists', () => has(index, /app\.get\("\/s\/:vendorId"/));
+test('M3002 — dynamic share pages are never publicly cached', () => has(index, /function sendSharePage\(res, status, html\)[\s\S]{0,420}Cache-Control": "no-store"/));
+test('M3003 — product share page cannot use max-age caching', () => assert.doesNotMatch(routeBody('app.get("/p/:id"', 1000), /public, max-age=/));
+test('M3004 — seller share page cannot use max-age caching', () => assert.doesNotMatch(routeBody('app.get("/s/:vendorId"', 1400), /public, max-age=/));
+test('M3005 — product share page renders product rating only from server product state', () => has(index, /ratingText\(p\.ratingAvg, p\.ratingCount\)/));
+test('M3006 — product share page renders seller rating from server product state', () => has(index, /ratingText\(p\.vendorRatingAvg, p\.vendorRatingCount\)/));
+test('M3007 — seller share page calculates rating from server social summary', () => has(index, /social\.summarize\("vendorId", vendor\.id\)/));
+test('M3008 — seller share page uses authoritative rating count', () => has(index, /ratingText\(vr\.ratingAvg, vr\.ratingCount\)/));
+test('M3009 — share pages remain public-read only', () => { has(index, /app\.get\("\/p\/:id"/); has(index, /app\.get\("\/s\/:vendorId"/); });
+test('M3010 — product visibility remains server-authoritative', () => has(index, /publicMarketVisibility\.publicProductQuery\(req\.params\.id\)/));
+test('M3011 — seller visibility remains server-authoritative', () => has(index, /publicMarketVisibility\.publicVendorQuery\(req\.params\.vendorId\)/));
+test('M3012 — unavailable product share pages are no-store', () => has(index, /return sendSharePage\(res, 404, notFoundPage\(\)\)/));
+test('M3013 — unavailable seller share pages are no-store', () => assert.ok((index.match(/return sendSharePage\(res, 404, notFoundPage\(\)\)/g) || []).length >= 2));
+test('M3014 — product share page exposes no buyer identity', () => assert.doesNotMatch(routeBody('app.get("/p/:id"', 1800), /buyer|email|userId/i));
+test('M3015 — seller share page exposes no buyer identity', () => assert.doesNotMatch(routeBody('app.get("/s/:vendorId"', 1800), /buyer|email|userId/i));
+test('M3016 — product share page uses escaped seller name', () => has(index, /escHtml\(row\.vendorName\)/));
+test('M3017 — seller share page uses escaped shop name', () => has(index, /escHtml\(vendor\.shopName\)/));
+test('M3018 — dynamic Marketplace API catalog remains no-store', () => has(routeBody('app.get("/api/mall/products"', 900), /Cache-Control", "no-store"/));
+test('M3019 — dynamic Marketplace API vendor directory remains no-store', () => has(routeBody('app.get("/api/mall/vendors"', 700), /Cache-Control", "no-store"/));
+test('M3020 — discovery remains no-store', () => has(routeBody('app.get("/api/mall/discovery"', 400), /Cache-Control", "no-store"/));
+test('M3021 — storefront remains no-store', () => has(routeBody('app.get("/api/mall/storefront"', 600), /Cache-Control", "no-store"/));
+test('M3022 — discovery remains published-review-only', () => has(discovery, /moderationStatus='published'/));
+test('M3023 — inactive sellers remain excluded from discovery', () => has(discovery, /COALESCE\(v\.status,'active'\)='active'/));
+test('M3024 — B205 freshness contract closes cache/reputation lifecycle boundary', () => { has(index, /function sendSharePage/); has(index, /Cache-Control": "no-store"/); has(discovery, /sellerBadge/); });

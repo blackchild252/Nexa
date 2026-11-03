@@ -1,0 +1,20 @@
+{
+  "name": "nexa-server",
+  "private": true,
+  "version": "6.2.54",
+  "scripts": {
+    "start": "node index.js",
+    "test": "cd .. && node scripts/run-server-suite.mjs",
+    "e2e:contract": "cd .. && node --test server/crossModuleE2E.contract.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "@sentry/node": "10.75.2",
+    "@google/genai": "2.24.0"
+  }
+}

@@ -1,0 +1,8 @@
+# B551 execution report — NEXA Main V6.2.5 B551
+
+- **Change:** Grok (xAI) replaces OpenAI as the AI provider. New `server/grokProvider.js` (plain `fetch`, no SDK) covers text, web search, image reading, voice out, voice in and image generate/edit. Chat, search, scam-screenshot, speak, transcribe, kitchen-receipt image and vendor photo beautifier all go through it. The `openai` dependency is removed from both package files and both lock files.
+- **Config:** `XAI_API_KEY` replaces `OPENAI_API_KEY` in `.env.example`, secret lists and launch checks. With no key the server still starts and AI calls report "Grok is not set up yet". A legacy `openai` provider value now means Grok and logs a warning.
+- **TESTED/PASSED:** `grokProvider.test.js` (8 tests, fake `fetch`, no network); full server suite run: 6,121 passed, 28 failed, 47 skipped. 22 of the failures are missing packages and `better-sqlite3` load errors; M1130 fails only because `node_modules` is absent; `b144_topup_reconciler` fails to load `better-sqlite3`. The 3 B374 report checks failed because this report was missing and are fixed by this file.
+- **NOT TESTED / excluded:** the full suite with dependencies installed, `verify:contract`, Devil's Walk, the TypeScript check, anything against real Grok (no key).
+- **ASSUMED from xAI docs:** `store:false` and `reasoning.effort` on Responses, base64 output on image edit, `quality:"low"`. Voices `ara` (female) and `rex` (male) are a guess; override with `XAI_TTS_FEMALE_VOICE` / `XAI_TTS_MALE_VOICE`.
+- **DEFERRED:** live voice-agent route `/api/realtime/client-secret` (off in local-only mode); real-key capability tests.

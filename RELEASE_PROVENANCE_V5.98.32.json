@@ -1,0 +1,9 @@
+{
+  "release": "V5.98.32",
+  "batch": "B180",
+  "milestones": "M2375\u2013M2399",
+  "sourceBaseline": "V5.98.31 B179",
+  "nextRoadmap": "M2400\u2013M2424 / B181",
+  "theme": "Financial/Form Interaction Semantics, Group Lifecycle Reachability & Subscription Control Integrity",
+  "status": "COMPLETED / VALIDATED"
+}

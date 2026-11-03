@@ -1,0 +1,13 @@
+V4.8.0 key changes
+- src/app/(tabs)/index.tsx — Dami-only Home shell; product destinations removed from Home; search/notifications moved into Dami header.
+- src/NexaAI.tsx — Dami quick actions for Type/Speak/Upload/Quick ScamCheck; embedded screenshot ScamCheck; settings collapsed; specialist marketplace entry no longer duplicates bottom navigation.
+- src/api.ts — authenticated scamCheckImage client boundary.
+- src/app/(tabs)/chat.tsx — former Chat compatibility route redirects to Dami Home.
+- src/app/(tabs)/ai.tsx — hidden AI compatibility route redirects to Dami Home; no duplicate Dami surface.
+- src/groups.ts — public Ajo group label updated to Sky Savings while preserving internal kind ID.
+- src/theme.ts and common src styles — Royal Dark palette consistency strengthened across legacy muted-gold surfaces.
+- package.json / app.json — Expo SDK 54-compatible expo-image-picker dependency/configuration for Dami screenshot upload.
+- package.json / server/package.json / app.json / server/subscriptions.js — version 4.8.0.
+- VERSION.md / MASTER_ROADMAP.md / TEMPORARY_ROADMAP.md / PROJECT_MEMORY.json / V4_8_0_IMPLEMENTATION_REPORT.md — milestone, naming, roadmap and validation records.
+- server/v4_8_0_dami_home_foundation.test.js — new Dami-only Home, upload/ScamCheck, compatibility-route, naming and Back-navigation contracts.
+- historical contract tests updated only where their assertions described the superseded Dami Home/compatibility-route implementation.

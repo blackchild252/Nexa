@@ -1,0 +1,1 @@
+NEXA V3.48.1 adds marketplace favorites, buyer/seller inquiries, inquiry messages, seller close/reopen controls, and report submission APIs. See NEXA_V3_48_1_IMPLEMENTATION_REPORT.md for scope and validation caveats.

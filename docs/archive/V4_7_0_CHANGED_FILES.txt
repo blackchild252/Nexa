@@ -1,0 +1,38 @@
+V4.7.0 key changes
+
+Foundation / naming
+- src/brand.ts
+- src/theme.ts
+- src/styles.ts
+
+Navigation / Dami Home
+- src/app/(tabs)/_layout.tsx
+- src/app/(tabs)/index.tsx
+- src/NexaAI.tsx
+
+Sky Money public naming / visual cleanup
+- src/MoneyDashboard.tsx
+- src/Wallet.tsx
+- src/StoreAjo.tsx
+- src/GroupsTab.tsx
+- src/GroupScreen.tsx
+- src/FinancialPlanning.tsx
+- src/MarketWatch.tsx
+- src/MarketInsights.tsx
+- src/UnifiedSearch.tsx
+- src/Subscription.tsx
+- src/YaayzScreen.tsx
+- src/MarketplaceScreen.tsx
+- src/ExtensionsScreen.tsx
+
+Release / QA
+- server/v4_7_0_foundation_contract.test.js
+- updated historical/static contracts for intentional V4.7 architecture changes
+- VERSION.md
+- TEMPORARY_ROADMAP.md
+- MASTER_ROADMAP.md
+- PROJECT_MEMORY.json
+- V4_7_0_IMPLEMENTATION_REPORT.md
+- package.json
+- server/package.json
+- app.json

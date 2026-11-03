@@ -1,0 +1,22 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.join(__dirname,'..');
+const read=f=>fs.readFileSync(path.join(root,f),'utf8');
+const lifecycle=require('./accountLifecycleReadiness');
+const delivery=require('./notificationDeliveryHealth');
+const wallet=require('./walletReconciliationPlan');
+const workflow=require('./damiWorkflowSafety');
+const motion=require('./motionCoverage');
+
+test('B66 account lifecycle preserves commerce and financial retention boundaries',()=>{for(const table of ['mall_orders','mall_payment_events','mall_refunds','wallet_accounts','wallet_transactions','wallet_ledger_entries']) assert.ok(lifecycle.REQUIRED_RETAINED.includes(table),`missing retained table: ${table}`);assert.match(read('server/accountLifecycle.js'),/RETAINED_USER_TABLES/);});
+test('B66 notification health detects stale workers without sending',()=>{const now=new Date(Date.now()-16*60*1000).toISOString();const s=delivery.summarize([{status:'sending',updatedAt:now},{status:'retry'},{status:'delivered'}]);assert.equal(s.staleSending,1);assert.equal(s.actionRequired,true);});
+test('B66 notification delivery still claims rows before provider work',()=>{assert.match(read('server/notificationDelivery.js'),/status='sending'/);assert.match(read('server/notificationDelivery.js'),/WHERE id=\? AND status IN/);});
+test('B66 wallet reconciliation separates verification, review and mismatch',()=>{const p=wallet.plan([{id:'a',safeToApply:true,mappedStatus:'completed'},{id:'b',safeToApply:true,mappedStatus:'pending'},{id:'c',safeToApply:false,mappedStatus:'failed'},{id:'d',source:'internal'}]);assert.deepEqual(p.verify,['a']);assert.deepEqual(p.review,['b']);assert.deepEqual(p.mismatch,['c']);assert.deepEqual(p.internal,['d']);});
+test('B66 wallet provider remains fail-closed when unconnected',()=>{const s=read('server/walletProvider.js');assert.match(s,/reconcile\(\) \{ return unavailable\(\"Reconciliation\"\); \}/);assert.match(s,/getTransactionStatus\(\) \{ return unavailable\(\"Provider status\"\); \}/);assert.match(s,/PROVIDER_ADAPTER_UNAVAILABLE/);});
+test('B66 Dami dependency readiness blocks incomplete prerequisites',()=>{const r=workflow.readiness([{intent:'general'},{intent:'money',dependsOn:[0],requiresConfirmation:true}],[0]);assert.equal(r[1].ready,true);assert.equal(r[1].requiresConfirmation,true);assert.equal(r[1].consequenceSafe,true);});
+test('B66 Dami consequence execution requires explicit confirmation',()=>{const r=workflow.audit([{intent:'money',requiresConfirmation:true}],[],false);assert.equal(r[0].executable,false);const ok=workflow.audit([{intent:'money',requiresConfirmation:true}],[],true);assert.equal(ok[0].executable,true);});
+test('B66 workflow helper preserves current instruction priority',()=>{const s=read('server/damiWorkflow.js');assert.match(s,/CURRENT USER MESSAGE has priority/);assert.match(s,/Never use memory to authorize an action/);});
+test('B66 motion coverage uses shared subscription authority',()=>{assert.ok(motion.coverage().length>=8);assert.match(read('src/motion.tsx'),/motionLevelFor/);assert.match(read('src/motion.tsx'),/reducedMotion/);});
+test('B66 release scope does not add AdMob outside Yaayz Home',()=>{assert.doesNotMatch(read('src/NexaDarkHome.tsx'),/YaayzNativeAd/);assert.doesNotMatch(read('src/NexaDarkProfile.tsx'),/YaayzNativeAd/);assert.match(read('src/YaayzHomeFeed.tsx'),/YaayzNativeAd/);});

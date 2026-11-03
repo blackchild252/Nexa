@@ -1,0 +1,7 @@
+const test=require('node:test'); const assert=require('node:assert/strict');
+const {previousPeriod,comparison,unusualSpending,goalExplanations,buildIntelligence}=require('./intelligence');
+test('previousPeriod creates an equal-length preceding period',()=>{assert.deepEqual(previousPeriod('2026-03-01','2026-03-31'),{start:'2026-01-29',end:'2026-02-28'});});
+test('comparison explains current versus previous spending',()=>{const r=comparison({total:150},{total:100});assert.equal(r.delta,50);assert.equal(r.percentChange,50);assert.equal(r.direction,'up');});
+test('unusual spending flags a statistical daily-spend signal',()=>{const e=[{date:'2026-03-01',amount:10},{date:'2026-03-02',amount:12},{date:'2026-03-03',amount:11},{date:'2026-03-04',amount:100}];const r=unusualSpending(e,'2026-03-01','2026-03-04');assert.equal(r.flags.length,1);assert.equal(r.flags[0].date,'2026-03-04');});
+test('goal explanations are informational',()=>{const r=goalExplanations([{id:'g',name:'Emergency',targetAmount:1000,currentAmount:400,targetDate:'2026-04-10'}],'2026-04-01');assert.equal(r[0].remaining,600);assert.ok(r[0].suggestedDailyAmount>0);assert.match(r[0].explanation,/choose/);});
+test('buildIntelligence exposes source context and safety boundaries',()=>{const r=buildIntelligence([{date:'2026-03-01',amount:100,category:'food'}],[],[],'2026-03-01','2026-03-01','2026-03-01');assert.equal(r.sourceContext.source,"Authenticated user's NEXA expense, budget, and goal records.");assert.ok(r.sourceContext.excluded.includes('investment recommendations'));});

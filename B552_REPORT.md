@@ -1,0 +1,8 @@
+# B552 execution report — NEXA Main V6.2.6 B552
+
+- **Change:** the 14 NEXA calls outside `/api/admin/` that Admin AAMI could not bridge for a NEXA grant (Mall status, reviews, review reports, disputes, launch offer; Lifestyle post and comment reports) are now reachable at `/api/admin-aami/nexa/x/<path after /api/>`. An explicit allowlist (`NEXA_SCOPED_EXTERNAL_ALLOWLIST`) names each real path and its permission; everything else, including encoded slashes and `..`, returns 404.
+- **Authorization:** a scoped request is decided only by its grant (`adminAccess.allowRoute`); the owner list never widens it. Administrative Director gets `mall_disputes`, `mall_reviews_write`, `social_reports_write`. General Manager and Group Director stay read-only (`mall`, `violations`). Writes run the step-up check (`scopedGate`) and are audited with the grant's role. Unscoped callers keep the owner-list check unchanged.
+- **Left closed (owner-only, no Director permission):** Fitness gyms (2 calls), Leisure operations, Kitchen Hub (3 calls), YouTube config. `/api/regional/countries` needs only a sign-in and is not a company route.
+- **TESTED/PASSED:** `adminAamiExternalBridge.test.js` 9/9 (a mutation widening `allowRoute` was caught); `adminAamiAccess`, `adminAccess.aami`, `centralPrivilegedAccess` and the Lifestyle contract tests pass. Four contract tests that pinned the old guard name were updated.
+- **NOT TESTED / excluded:** the real route handlers over HTTP (no `express` or `better-sqlite3` offline), step-up behavior on a live server, browser/device acceptance, `verify:contract`, Devil's Walk.
+- **Not touched:** version, Batch and build code were changed only by `npm run release:bump`; no release was shipped.

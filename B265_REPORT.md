@@ -1,0 +1,123 @@
+# B265 — V5.99.19 (hidden test failures, first repair)
+
+## What was done
+- Fresh sweep of all 429 server test files (25 s each, no node_modules). Result: 108 failing, 3 hang (v5_98_83, v5_98_96, v5_99_1 were killed at 30 s).
+- Found a hidden cause: tests that use the folder they were started from as the project root. The official command runs them from `server/`, so they could never pass.
+- **Repaired and re-run from `server/`: TESTED/PASSED**
+  - v5_98_40, v5_98_41, v5_98_43 (27/27 each), v5_98_56, v5_98_57 (25/25 each): now find the project root from their own file location.
+  - v5_98_42 (27/27): same fix, plus the directory-tab pattern now accepts a computed label. The app still has tab role and selected state.
+
+## Still failing (NOT repaired in this checkpoint): 102 files
+Causes seen in the logs (362 failing checks in 103 files):
+- About 110 checks pin an old version, Batch or build code. AGENTS.md says tests must not hard-code a release version.
+- About 143 checks look for exact text that later releases changed (old release-gate lists, old UI wording, old sidebar order).
+- 31 checks need packages that are not installed here (dotenv, better-sqlite3, fonts build). **BLOCKED** until `npm ci` can run.
+- 8 checks are count drift (for example inline-style count 181 vs 187).
+- `b155_launch_config` says `expo.versionCode` must NOT exist, but the locked rule says it must exist and equal the build code. The test is wrong; AGENTS.md wins. Not yet changed.
+
+Files still failing:
+- b138_responsive_navigation.contract.test.js
+- b139_production_interaction.contract.test.js
+- b144_payment_flow.http.test.js
+- b144_route_ownership.http.test.js
+- b144_topup_reconciler.contract.test.js
+- b144_wallet_hardening.contract.test.js
+- b144_wallet_topup.http.test.js
+- b155_launch_config.contract.test.js
+- b91_marketplace_shops.contract.test.js
+- docsTruth.test.js
+- e2e_smoke_source.contract.test.js
+- v3_66_1_releaseAudit.test.js
+- v3_72_1_releaseGate.test.js
+- v3_73_1_releaseAudit.test.js
+- v3_76_1_releaseAudit.test.js
+- v3_79_1_releaseAudit.test.js
+- v3_82_1_releaseAudit.test.js
+- v4_92_0_batch_b27.test.js
+- v5_17_0_royal_fusion_visual.contract.test.js
+- v5_19_0_navigation_keys.contract.test.js
+- v5_21_0_access_block.contract.test.js
+- v5_21_0_design_layer.contract.test.js
+- v5_21_0_developer_block.contract.test.js
+- v5_21_0_dual_theme.contract.test.js
+- v5_21_0_extensions_block.contract.test.js
+- v5_21_0_leisure_block.contract.test.js
+- v5_21_0_market_block.contract.test.js
+- v5_21_0_money_block.contract.test.js
+- v5_21_0_profile_block.contract.test.js
+- v5_21_0_search_block.contract.test.js
+- v5_21_0_yaayz_block.contract.test.js
+- v5_21_1_admin_disputes_route.contract.test.js
+- v5_22_0_home_visual_fidelity.contract.test.js
+- v5_46_0_b83_navigation_add.contract.test.js
+- v5_47_0_b84_navigation_integrity.contract.test.js
+- v5_48_0_b85_navigation_shell.contract.test.js
+- v5_49_0_b86_navigation_final.contract.test.js
+- v5_49_0_b86_navigation_slice1.contract.test.js
+- v5_49_0_b86_navigation_slice2.contract.test.js
+- v5_49_0_b86_navigation_slice3.contract.test.js
+- v5_53_0_b90_recovery.contract.test.js
+- v5_54_0_b91_http_hardening.contract.test.js
+- v5_54_1.contract.test.js
+- v5_54_7_governance.contract.test.js
+- v5_55_0_auth_slice1.contract.test.js
+- v5_55_0_navigation_responsive.contract.test.js
+- v5_71_0_verification.contract.test.js
+- v5_92_0_production_api_config.contract.test.js
+- v5_94_0_navigation_continuity.contract.test.js
+- v5_98_11_major_roadmap.contract.test.js
+- v5_98_12_launch_readiness.contract.test.js
+- v5_98_13_runtime_readiness.contract.test.js
+- v5_98_14_major_roadmap.contract.test.js
+- v5_98_15_launch_environment.contract.test.js
+- v5_98_15_major_roadmap.contract.test.js
+- v5_98_16_major_roadmap.contract.test.js
+- v5_98_19_age_transfer_privacy.contract.test.js
+- v5_98_23_current_state.contract.test.js
+- v5_98_24_release_identity.contract.test.js
+- v5_98_25_current_state.contract.test.js
+- v5_98_26_current_state.contract.test.js
+- v5_98_27_current_state.contract.test.js
+- v5_98_30_current_state.contract.test.js
+- v5_98_31_current_state.contract.test.js
+- v5_98_32_current_state.contract.test.js
+- v5_98_33_current_state.contract.test.js
+- v5_98_44_current_state.contract.test.js
+- v5_98_45_marketplace_storefront_completion.contract.test.js
+- v5_98_48_marketplace_reviews_runtime.test.js
+- v5_98_61_b209_skymoney_unification.contract.test.js
+- v5_98_63_b211_aami_only_terminology.contract.test.js
+- v5_98_72_b220_interaction.contract.test.js
+- v5_98_73_b221_stabilization.contract.test.js
+- v5_98_74_b222_reconciliation.contract.test.js
+- v5_98_75_b223_launch_readiness.contract.test.js
+- v5_98_76_b224_legal_pages.contract.test.js
+- v5_98_77_b225_release.contract.test.js
+- v5_98_78_b226_subscription_centre.contract.test.js
+- v5_98_79_b227_release_navigation.contract.test.js
+- v5_98_80_b228_release_identity.contract.test.js
+- v5_98_81_b229_launch_readiness.contract.test.js
+- v5_98_82_b230_launch_integrity.contract.test.js
+- v5_98_83_b231_navigation_major.contract.test.js
+- v5_98_84_b232_navigation_authority.contract.test.js
+- v5_98_86_b233_major_navigation.contract.test.js
+- v5_98_88_b235_vendor_ai_lifecycle.contract.test.js
+- v5_98_89_b236_vendor_ai_preview_integrity.contract.test.js
+- v5_98_90_b237_subscription_centre.contract.test.js
+- v5_98_91_b238_release_navigation.contract.test.js
+- v5_98_92_b239_navigation_authority.contract.test.js
+- v5_98_93_b240_subscription_structure.contract.test.js
+- v5_98_95_b242_subscription_fee_authority.contract.test.js
+- v5_98_96_b243_subscription_fee_presentation.contract.test.js
+- v5_98_97_b244_subscription_structure_integrity.contract.test.js
+- v5_98_98_b245_subscription_navigation.contract.test.js
+- v5_99_0_marketplace_storefront.contract.test.js
+- v5_99_1_b247_release_identity.contract.test.js
+- v5_99_2_b248_subscription_navigation_authority.contract.test.js
+- v5_99_3_b249_build_identity.contract.test.js
+- v5_99_4_b250_reading_comfort.contract.test.js
+- yaayz_b64.test.js
+- yaayz_discovery_feed.test.js
+
+## Not tested
+Phone, EAS, Playwright, Docker, and anything needing node_modules. No app behaviour changed.

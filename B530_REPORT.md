@@ -1,0 +1,8 @@
+# B530 — Admin AAMI company-scoped guard wiring
+
+## V6.1.84 B530 summary — Admin AAMI company guard wiring
+
+- Added fail-closed authenticated middleware registration for the dedicated `/api/admin-aami/nexa/*` and `/api/admin-aami/lordgistics/*` namespaces. Each namespace checks the matching active, activation-confirmed `admin-aami` grant and allowlisted Administrative Director roles; company tiles and client-selected scope are not authorization. Added regression coverage proving pending grants fail and a NEXA grant cannot authorize LORDGISTICS (and vice versa).
+- Focused Admin AAMI + Central privileged-access tests: 15/15 PASS. Devil's Walk: 903/903 JavaScript syntax, 227 TypeScript files scanned, 774/774 relative imports, 56/56 route targets; roadmap check: 10 sequential blocks / 250 milestone slots PASS; release identity PASS.
+- Full `npm run verify:contract`: 1209 passed, 1 failed, 1 skipped. The failure is the existing unrelated `server/growthLifecycle.test.js` activation qualification assertion (`0 !== 1` at line 38); it is not part of Admin AAMI scope. Full Main server suite and dependency-backed typecheck remain NOT TESTED because dependencies could not be installed (npm registry DNS returned `EAI_AGAIN`).
+- **Still NOT COMPLETE:** these guarded namespaces currently have no actual company business route handlers, and the Admin UI still uses legacy `/api/admin/*` endpoints. Do not treat this as complete operational company-scoped authorization or login. Actual Central→Main runtime delivery, Admin activation/login in a browser, and Vendor→Staff browser acceptance remain NOT TESTED. No production URLs/keys, deployment, device or launch actions were used. This checkpoint is unsealed.

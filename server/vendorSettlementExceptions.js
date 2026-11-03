@@ -1,0 +1,4 @@
+"use strict";
+function summarize(rows=[]){const out={total:0,verified:0,pending:0,failed:0,exceptions:0};for(const r of Array.isArray(rows)?rows:[]){out.total++;if(Number(r.providerVerified)){out.verified++;}else if(String(r.orderStatus||r.status)==="cancelled"){out.failed++;out.exceptions++;}else{out.pending++;out.exceptions++;}}return out;}
+function sla(rows=[],now=Date.now(),thresholdHours=48){const threshold=Math.max(1,Number(thresholdHours)||48)*3600000;return (Array.isArray(rows)?rows:[]).map(r=>{const created=Date.parse(r.createdAt||"");const age=Number.isFinite(created)?Math.max(0,now-created):0;const open=!['delivered','cancelled','completed'].includes(String(r.status||r.orderStatus));return {orderId:String(r.orderId||""),status:String(r.status||r.orderStatus||"unknown"),ageHours:Number((age/3600000).toFixed(1)),breached:open&&age>=threshold};});}
+module.exports={summarize,sla};

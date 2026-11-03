@@ -1,0 +1,1984 @@
+TAP version 13
+# Subtest: account closure is explicit, password-gated and revokes sessions
+ok 1 - account closure is explicit, password-gated and revokes sessions
+  ---
+  duration_ms: 0.901427
+  type: 'test'
+  ...
+# Subtest: closure never includes credential-bearing account tables in export cleanup
+ok 2 - closure never includes credential-bearing account tables in export cleanup
+  ---
+  duration_ms: 1.257083
+  type: 'test'
+  ...
+# Subtest: account portability V2 includes Dami personalization and supports V1 migration
+ok 3 - account portability V2 includes Dami personalization and supports V1 migration
+  ---
+  duration_ms: 1.715483
+  type: 'test'
+  ...
+# Subtest: newer or malformed account export versions fail closed
+ok 4 - newer or malformed account export versions fail closed
+  ---
+  duration_ms: 0.341687
+  type: 'test'
+  ...
+# Subtest: preference lifecycle exposes authenticated reset endpoints
+ok 5 - preference lifecycle exposes authenticated reset endpoints
+  ---
+  duration_ms: 0.239945
+  type: 'test'
+  ...
+# Subtest: personalization API client exposes reset controls
+ok 6 - personalization API client exposes reset controls
+  ---
+  duration_ms: 0.218614
+  type: 'test'
+  ...
+# Subtest: account portability has an explicit safe export allowlist
+ok 7 - account portability has an explicit safe export allowlist
+  ---
+  duration_ms: 0.765505
+  type: 'test'
+  ...
+# Subtest: account export/import routes are authenticated
+ok 8 - account export/import routes are authenticated
+  ---
+  duration_ms: 0.158415
+  type: 'test'
+  ...
+# Subtest: portable import is size-limited and refuses cross-account identifier collisions
+ok 9 - portable import is size-limited and refuses cross-account identifier collisions
+  ---
+  duration_ms: 0.097024
+  type: 'test'
+  ...
+# Subtest: Dami voice/language preference is explicitly portable
+ok 10 - Dami voice/language preference is explicitly portable
+  ---
+  duration_ms: 0.230682
+  type: 'test'
+  ...
+# Subtest: Dami is the sealed NEXA AI assistant identity
+ok 11 - Dami is the sealed NEXA AI assistant identity
+  ---
+  duration_ms: 1.712198
+  type: 'test'
+  ...
+# Subtest: Dami branding is present in the assistant surface and Home entry
+ok 12 - Dami branding is present in the assistant surface and Home entry
+  ---
+  duration_ms: 0.3507
+  type: 'test'
+  ...
+# Subtest: the product identity contract explicitly keeps NEXA as platform and Dami as assistant
+ok 13 - the product identity contract explicitly keeps NEXA as platform and Dami as assistant
+  ---
+  duration_ms: 0.201859
+  type: 'test'
+  ...
+# Subtest: workflow accepts supported local task and note steps
+ok 14 - workflow accepts supported local task and note steps
+  ---
+  duration_ms: 0.717403
+  type: 'test'
+  ...
+# Subtest: workflow rejects unsupported or unsafe step types
+ok 15 - workflow rejects unsupported or unsafe step types
+  ---
+  duration_ms: 0.211703
+  type: 'test'
+  ...
+# Subtest: workflow rejects empty and oversized step lists
+ok 16 - workflow rejects empty and oversized step lists
+  ---
+  duration_ms: 0.158375
+  type: 'test'
+  ...
+# Subtest: workflow rejects blank step content
+ok 17 - workflow rejects blank step content
+  ---
+  duration_ms: 0.139347
+  type: 'test'
+  ...
+# Subtest: AI workspace exposes owner-scoped lifecycle operations
+ok 18 - AI workspace exposes owner-scoped lifecycle operations
+  ---
+  duration_ms: 0.849309
+  type: 'test'
+  ...
+# Subtest: workflow lifecycle keeps explicit confirmation on execution
+ok 19 - workflow lifecycle keeps explicit confirmation on execution
+  ---
+  duration_ms: 0.118225
+  type: 'test'
+  ...
+# Subtest: AI memory settings update and clearing are atomic
+ok 20 - AI memory settings update and clearing are atomic
+  ---
+  duration_ms: 0.722311
+  type: 'test'
+  ...
+# Subtest: AI memory creation checks the enabled state and 100-item limit inside one transaction
+ok 21 - AI memory creation checks the enabled state and 100-item limit inside one transaction
+  ---
+  duration_ms: 0.187448
+  type: 'test'
+  ...
+# Subtest: AI plan creation claims the 100-plan limit inside the write transaction
+ok 22 - AI plan creation claims the 100-plan limit inside the write transaction
+  ---
+  duration_ms: 0.17501
+  type: 'test'
+  ...
+# Subtest: API version negotiation accepts supported and rejects unsupported versions
+ok 23 - API version negotiation accepts supported and rejects unsupported versions
+  ---
+  duration_ms: 1.086961
+  type: 'test'
+  ...
+# Subtest: HTTP surface applies the negotiated version and fail-closed error
+ok 24 - HTTP surface applies the negotiated version and fail-closed error
+  ---
+  duration_ms: 0.198104
+  type: 'test'
+  ...
+# Subtest: Expo Router is the single active frontend entry surface
+ok 25 - Expo Router is the single active frontend entry surface
+  ---
+  duration_ms: 0.738074
+  type: 'test'
+  ...
+# Subtest: legacy app shell is explicitly documented as recoverable, not active
+ok 26 - legacy app shell is explicitly documented as recoverable, not active
+  ---
+  duration_ms: 0.430278
+  type: 'test'
+  ...
+# Subtest: legacy shell remains present until route dependency audit permits retirement
+ok 27 - legacy shell remains present until route dependency audit permits retirement
+  ---
+  duration_ms: 0.136262
+  type: 'test'
+  ...
+# Subtest: App Builder pipeline contracts are present
+ok 28 - App Builder pipeline contracts are present
+  ---
+  duration_ms: 2.020355
+  type: 'test'
+  ...
+# Subtest: Builder pipeline preserves the Royal Dark reference and current primary architecture
+ok 29 - Builder pipeline preserves the Royal Dark reference and current primary architecture
+  ---
+  duration_ms: 0.384931
+  type: 'test'
+  ...
+# Subtest: DM thread creation is transaction-safe against concurrent unique-pair creation
+ok 30 - DM thread creation is transaction-safe against concurrent unique-pair creation
+  ---
+  duration_ms: 0.694018
+  type: 'test'
+  ...
+# Subtest: DM send rechecks friendship/block state inside the write transaction
+ok 31 - DM send rechecks friendship/block state inside the write transaction
+  ---
+  duration_ms: 0.125135
+  type: 'test'
+  ...
+# Subtest: room join claims capacity inside the write transaction
+ok 32 - room join claims capacity inside the write transaction
+  ---
+  duration_ms: 0.136562
+  type: 'test'
+  ...
+# Subtest: room message write rechecks active membership at mutation time
+ok 33 - room message write rechecks active membership at mutation time
+  ---
+  duration_ms: 0.140208
+  type: 'test'
+  ...
+# Subtest: online checkout publishes deferred vendor notifications only after payment initialization succeeds
+ok 34 - online checkout publishes deferred vendor notifications only after payment initialization succeeds
+  ---
+  duration_ms: 1.714111
+  type: 'test'
+  ...
+# Subtest: charge.success webhook must not fulfill a cancelled online order
+ok 35 - charge.success webhook must not fulfill a cancelled online order
+  ---
+  duration_ms: 0.867075
+  type: 'test'
+  ...
+# Subtest: online orders cannot be cancelled after payment initialization has assigned a provider reference
+ok 36 - online orders cannot be cancelled after payment initialization has assigned a provider reference
+  ---
+  duration_ms: 1.411232
+  type: 'test'
+  ...
+# Subtest: AI-confirmed order cancellation uses the same online payment initialization guard
+ok 37 - AI-confirmed order cancellation uses the same online payment initialization guard
+  ---
+  duration_ms: 0.679688
+  type: 'test'
+  ...
+# Subtest: AI-confirmed cancellation re-reads authoritative order and item state inside its write transaction
+ok 38 - AI-confirmed cancellation re-reads authoritative order and item state inside its write transaction
+  ---
+  duration_ms: 1.436769
+  type: 'test'
+  ...
+# Subtest: AI-confirmed cancellation converts stale concurrent changes into a safe conflict
+ok 39 - AI-confirmed cancellation converts stale concurrent changes into a safe conflict
+  ---
+  duration_ms: 0.635041
+  type: 'test'
+  ...
+# Subtest: buyer cancellation conditionally mutates only still-placed unpaid items
+ok 40 - buyer cancellation conditionally mutates only still-placed unpaid items
+  ---
+  duration_ms: 0.990068
+  type: 'test'
+  ...
+# Subtest: AI friend-request action checks block/friendship state atomically before inserting
+ok 41 - AI friend-request action checks block/friendship state atomically before inserting
+  ---
+  duration_ms: 0.680559
+  type: 'test'
+  ...
+# Subtest: AI friend-request action returns a conflict instead of leaking a duplicate-insert error
+ok 42 - AI friend-request action returns a conflict instead of leaking a duplicate-insert error
+  ---
+  duration_ms: 1.020312
+  type: 'test'
+  ...
+# Subtest: contract version and stable error model are deterministic
+ok 43 - contract version and stable error model are deterministic
+  ---
+  duration_ms: 1.2954
+  type: 'test'
+  ...
+# Subtest: webhook contract provides stable id/type/version envelope
+ok 44 - webhook contract provides stable id/type/version envelope
+  ---
+  duration_ms: 0.704193
+  type: 'test'
+  ...
+# Subtest: manifest exposes the version headers and core contract groups
+ok 45 - manifest exposes the version headers and core contract groups
+  ---
+  duration_ms: 0.13514
+  type: 'test'
+  ...
+# Subtest: cross-module authenticated journey has the expected application boundaries
+ok 46 - cross-module authenticated journey has the expected application boundaries
+  ---
+  duration_ms: 1.384883
+  type: 'test'
+  ...
+# Subtest: user data entry points remain server-authenticated
+ok 47 - user data entry points remain server-authenticated
+  ---
+  duration_ms: 0.566219
+  type: 'test'
+  ...
+# Subtest: Dami-to-Mall routing retains the read-only tool and navigation boundary
+ok 48 - Dami-to-Mall routing retains the read-only tool and navigation boundary
+  ---
+  duration_ms: 0.212926
+  type: 'test'
+  ...
+# Subtest: payment-to-order flow keeps ownership and provider verification checks
+ok 49 - payment-to-order flow keeps ownership and provider verification checks
+  ---
+  duration_ms: 0.393654
+  type: 'test'
+  ...
+# Subtest: Dami prompt explicitly covers every supported intent
+ok 50 - Dami prompt explicitly covers every supported intent
+  ---
+  duration_ms: 1.150115
+  type: 'test'
+  ...
+# Subtest: Dami intent fixtures cover commerce, money, social-risk and content paths
+ok 51 - Dami intent fixtures cover commerce, money, social-risk and content paths
+  ---
+  duration_ms: 0.299374
+  type: 'test'
+  ...
+# Subtest: consequential actions remain confirmation-gated
+ok 52 - consequential actions remain confirmation-gated
+  ---
+  duration_ms: 0.18847
+  type: 'test'
+  ...
+# Subtest: Dami language catalog is unique, explicit, and includes Nigerian languages
+ok 53 - Dami language catalog is unique, explicit, and includes Nigerian languages
+  ---
+  duration_ms: 0.689462
+  type: 'test'
+  ...
+# Subtest: legacy language preferences normalize without changing voice selection
+ok 54 - legacy language preferences normalize without changing voice selection
+  ---
+  duration_ms: 0.126718
+  type: 'test'
+  ...
+# Subtest: selected language is propagated into Dami chat and realtime voice instructions
+ok 55 - selected language is propagated into Dami chat and realtime voice instructions
+  ---
+  duration_ms: 0.198084
+  type: 'test'
+  ...
+# Subtest: Dami orchestration accepts open-ended model plans without phrase matching
+ok 56 - Dami orchestration accepts open-ended model plans without phrase matching
+  ---
+  duration_ms: 1.277934
+  type: 'test'
+  ...
+# Subtest: Dami orchestration caps model chains and rejects unknown capabilities
+ok 57 - Dami orchestration caps model chains and rejects unknown capabilities
+  ---
+  duration_ms: 0.196401
+  type: 'test'
+  ...
+# Subtest: open-ended entities and constraints are bounded without phrase lists
+ok 58 - open-ended entities and constraints are bounded without phrase lists
+  ---
+  duration_ms: 0.170493
+  type: 'test'
+  ...
+# Subtest: specialist summaries are compact and structured for downstream orchestration
+ok 59 - specialist summaries are compact and structured for downstream orchestration
+  ---
+  duration_ms: 0.24304
+  type: 'test'
+  ...
+# Subtest: personalization is bounded and user-controlled
+ok 60 - personalization is bounded and user-controlled
+  ---
+  duration_ms: 1.218907
+  type: 'test'
+  ...
+# Subtest: invalid personalization falls back to safe defaults
+ok 61 - invalid personalization falls back to safe defaults
+  ---
+  duration_ms: 0.12117
+  type: 'test'
+  ...
+# Subtest: personalization contract is wired to authenticated server routes and chat
+ok 62 - personalization contract is wired to authenticated server routes and chat
+  ---
+  duration_ms: 0.82952
+  type: 'test'
+  ...
+# Subtest: Dami voice preferences are user-scoped and expose a selectable language catalog
+ok 63 - Dami voice preferences are user-scoped and expose a selectable language catalog
+  ---
+  duration_ms: 0.827776
+  type: 'test'
+  ...
+# Subtest: Dami voice generation uses the selected language instruction
+ok 64 - Dami voice generation uses the selected language instruction
+  ---
+  duration_ms: 0.240066
+  type: 'test'
+  ...
+# Subtest: Dami chat honors the selected language without exposing credentials
+ok 65 - Dami chat honors the selected language without exposing credentials
+  ---
+  duration_ms: 0.20912
+  type: 'test'
+  ...
+# Subtest: legacy Naija language preferences normalize safely to the new language codes
+ok 66 - legacy Naija language preferences normalize safely to the new language codes
+  ---
+  duration_ms: 0.41813
+  type: 'test'
+  ...
+# Subtest: workflow validation allows dependent cross-module steps and marks consequential capabilities
+ok 67 - workflow validation allows dependent cross-module steps and marks consequential capabilities
+  ---
+  duration_ms: 1.218425
+  type: 'test'
+  ...
+# Subtest: workflow rejects forward or self dependencies
+ok 68 - workflow rejects forward or self dependencies
+  ---
+  duration_ms: 0.123283
+  type: 'test'
+  ...
+# Subtest: memory context is bounded and current instructions have priority
+ok 69 - memory context is bounded and current instructions have priority
+  ---
+  duration_ms: 0.282118
+  type: 'test'
+  ...
+# Subtest: retention windows are bounded and deterministic
+ok 70 - retention windows are bounded and deterministic
+  ---
+  duration_ms: 0.928996
+  type: 'test'
+  ...
+# Subtest: user notification purge is ownership-scoped
+ok 71 - user notification purge is ownership-scoped
+  ---
+  duration_ms: 0.696322
+  type: 'test'
+  ...
+# Subtest: Dami/Mall simulated E2E resolves cheapest top and preserves confirmation boundary
+ok 72 - Dami/Mall simulated E2E resolves cheapest top and preserves confirmation boundary
+  ---
+  duration_ms: 2.477673
+  type: 'test'
+  ...
+# Subtest: complete cross-module simulated E2E carries Mall -> payment -> refund -> notifications
+ok 73 - complete cross-module simulated E2E carries Mall -> payment -> refund -> notifications
+  ---
+  duration_ms: 1.062445
+  type: 'test'
+  ...
+# Subtest: extension simulated E2E enforces consent, scope isolation and revocation
+ok 74 - extension simulated E2E enforces consent, scope isolation and revocation
+  ---
+  duration_ms: 0.259635
+  type: 'test'
+  ...
+# Subtest: event correlation normalizes metadata and strips credential-like fields
+ok 75 - event correlation normalizes metadata and strips credential-like fields
+  ---
+  duration_ms: 1.343091
+  type: 'test'
+  ...
+# Subtest: event correlation persists and retrieves events by request ID
+ok 76 - event correlation persists and retrieves events by request ID
+  ---
+  duration_ms: 0.910349
+  type: 'test'
+  ...
+# Subtest: read adapters expose only supported read scopes
+ok 77 - read adapters expose only supported read scopes
+  ---
+  duration_ms: 1.305966
+  type: 'test'
+  ...
+# Subtest: notification adapter validates payload and never accepts an injected token
+ok 78 - notification adapter validates payload and never accepts an injected token
+  ---
+  duration_ms: 0.925572
+  type: 'test'
+  ...
+# Subtest: notification adapter fails closed without a delivery provider
+ok 79 - notification adapter fails closed without a delivery provider
+  ---
+  duration_ms: 0.173637
+  type: 'test'
+  ...
+# Subtest: capability lifecycle is fail-closed for revoked, disabled, and incompatible extensions
+ok 80 - capability lifecycle is fail-closed for revoked, disabled, and incompatible extensions
+  ---
+  duration_ms: 0.248809
+  type: 'test'
+  ...
+# Subtest: extension API keys are high-entropy, prefixed, and one-way verifiable
+ok 81 - extension API keys are high-entropy, prefixed, and one-way verifiable
+  ---
+  duration_ms: 1.208812
+  type: 'test'
+  ...
+# Subtest: identity records never contain the raw API key
+ok 82 - identity records never contain the raw API key
+  ---
+  duration_ms: 1.222091
+  type: 'test'
+  ...
+# Subtest: identity records track last-used metadata without storing credentials
+ok 83 - identity records track last-used metadata without storing credentials
+  ---
+  duration_ms: 0.567101
+  type: 'test'
+  ...
+# Subtest: extension identity rate limiter allows the configured burst and blocks excess requests
+ok 84 - extension identity rate limiter allows the configured burst and blocks excess requests
+  ---
+  duration_ms: 0.199045
+  type: 'test'
+  ...
+# Subtest: extension identity creation checks extension status inside the same transaction as insert
+ok 85 - extension identity creation checks extension status inside the same transaction as insert
+  ---
+  duration_ms: 0.742551
+  type: 'test'
+  ...
+# Subtest: extension identity rotation atomically checks extension, revokes the expected active key, and inserts the replacement
+ok 86 - extension identity rotation atomically checks extension, revokes the expected active key, and inserts the replacement
+  ---
+  duration_ms: 0.151775
+  type: 'test'
+  ...
+# Subtest: extension registration claims slug uniqueness inside the transaction
+ok 87 - extension registration claims slug uniqueness inside the transaction
+  ---
+  duration_ms: 0.73567
+  type: 'test'
+  ...
+# Subtest: extension enable rechecks consent and status inside the same write transaction
+ok 88 - extension enable rechecks consent and status inside the same write transaction
+  ---
+  duration_ms: 0.155861
+  type: 'test'
+  ...
+# Subtest: extension scopes reject unknown permissions and remove duplicates
+ok 89 - extension scopes reject unknown permissions and remove duplicates
+  ---
+  duration_ms: 1.327267
+  type: 'test'
+  ...
+# Subtest: public configuration cannot carry secret-bearing keys
+ok 90 - public configuration cannot carry secret-bearing keys
+  ---
+  duration_ms: 0.50588
+  type: 'test'
+  ...
+# Subtest: registration normalizes metadata and consent gates activation
+ok 91 - registration normalizes metadata and consent gates activation
+  ---
+  duration_ms: 0.281327
+  type: 'test'
+  ...
+# Subtest: audit records are structured and timestamped
+ok 92 - audit records are structured and timestamped
+  ---
+  duration_ms: 0.658296
+  type: 'test'
+  ...
+# Subtest: framework manifest states the execution and security boundary
+ok 93 - framework manifest states the execution and security boundary
+  ---
+  duration_ms: 0.217603
+  type: 'test'
+  ...
+# Subtest: granted scope requires an enabled extension and must be requested
+ok 94 - granted scope requires an enabled extension and must be requested
+  ---
+  duration_ms: 0.157974
+  type: 'test'
+  ...
+# Subtest: editable extension metadata is normalized and secret config remains blocked
+ok 95 - editable extension metadata is normalized and secret config remains blocked
+  ---
+  duration_ms: 0.300155
+  type: 'test'
+  ...
+# Subtest: developer manifest validates safe extension manifests
+ok 96 - developer manifest validates safe extension manifests
+  ---
+  duration_ms: 0.928405
+  type: 'test'
+  ...
+# Subtest: developer capability catalog exposes controlled endpoints only
+ok 97 - developer capability catalog exposes controlled endpoints only
+  ---
+  duration_ms: 0.361836
+  type: 'test'
+  ...
+# Subtest: compatibility ranges accept the current platform only when inside the declared range
+ok 98 - compatibility ranges accept the current platform only when inside the declared range
+  ---
+  duration_ms: 0.468825
+  type: 'test'
+  ...
+# Subtest: V3.99 fee previews are server-issued, time-bound, user-scoped and exact-action bound
+ok 99 - V3.99 fee previews are server-issued, time-bound, user-scoped and exact-action bound
+  ---
+  duration_ms: 0.756622
+  type: 'test'
+  ...
+# Subtest: Metered fee settlement cannot proceed without a matching preview
+ok 100 - Metered fee settlement cannot proceed without a matching preview
+  ---
+  duration_ms: 0.166277
+  type: 'test'
+  ...
+# Subtest: Wallet actions carry the exact preview into server settlement
+ok 101 - Wallet actions carry the exact preview into server settlement
+  ---
+  duration_ms: 0.106438
+  type: 'test'
+  ...
+# Subtest: Marketplace, Yaayz, Kitchen and Store Ajo persist the preview boundary
+ok 102 - Marketplace, Yaayz, Kitchen and Store Ajo persist the preview boundary
+  ---
+  duration_ms: 0.252634
+  type: 'test'
+  ...
+# Subtest: Client confirmation sends the server-issued preview identifier
+ok 103 - Client confirmation sends the server-issued preview identifier
+  ---
+  duration_ms: 0.125296
+  type: 'test'
+  ...
+# Subtest: blocking atomically severs friendship, cancels pending requests, and creates the block
+ok 104 - blocking atomically severs friendship, cancels pending requests, and creates the block
+  ---
+  duration_ms: 0.716732
+  type: 'test'
+  ...
+# Subtest: block endpoint no longer separates friendship/request cleanup from block creation
+ok 105 - block endpoint no longer separates friendship/request cleanup from block creation
+  ---
+  duration_ms: 0.199136
+  type: 'test'
+  ...
+# Subtest: friend request creation re-reads block/friendship/request state inside the write transaction
+ok 106 - friend request creation re-reads block/friendship/request state inside the write transaction
+  ---
+  duration_ms: 0.628732
+  type: 'test'
+  ...
+# Subtest: friend request creation converts duplicate pending inserts into a controlled conflict
+ok 107 - friend request creation converts duplicate pending inserts into a controlled conflict
+  ---
+  duration_ms: 0.180428
+  type: 'test'
+  ...
+# Subtest: friend request acceptance re-reads pending state and blocks inside the transaction
+ok 108 - friend request acceptance re-reads pending state and blocks inside the transaction
+  ---
+  duration_ms: 0.189951
+  type: 'test'
+  ...
+# Subtest: friend request acceptance uses expected pending state and idempotent friendship inserts
+ok 109 - friend request acceptance uses expected pending state and idempotent friendship inserts
+  ---
+  duration_ms: 0.129172
+  type: 'test'
+  ...
+# Subtest: frontend route ownership is explicit for every active route file
+ok 110 - frontend route ownership is explicit for every active route file
+  ---
+  duration_ms: 1.512171
+  type: 'test'
+  ...
+# Subtest: active Expo Router surface does not import the quarantined legacy app shell
+ok 111 - active Expo Router surface does not import the quarantined legacy app shell
+  ---
+  duration_ms: 1.375168
+  type: 'test'
+  ...
+# Subtest: legacy shell is still recoverable but cannot become the package entrypoint
+ok 112 - legacy shell is still recoverable but cannot become the package entrypoint
+  ---
+  duration_ms: 0.276099
+  type: 'test'
+  ...
+# Subtest: group split settle-up produces the minimum clearing payments
+ok 113 - group split settle-up produces the minimum clearing payments
+  ---
+  duration_ms: 1.208701
+  type: 'test'
+  ...
+# Subtest: group split settle-up handles multiple creditors and debtors
+ok 114 - group split settle-up handles multiple creditors and debtors
+  ---
+  duration_ms: 0.190312
+  type: 'test'
+  ...
+# Subtest: group split settle-up ignores already-cleared members
+ok 115 - group split settle-up ignores already-cleared members
+  ---
+  duration_ms: 0.100619
+  type: 'test'
+  ...
+# Subtest: group entry creation re-reads membership and group state inside the write transaction
+ok 116 - group entry creation re-reads membership and group state inside the write transaction
+  ---
+  duration_ms: 0.651866
+  type: 'test'
+  ...
+# Subtest: normal group join handles concurrent membership creation as a safe conflict
+ok 117 - normal group join handles concurrent membership creation as a safe conflict
+  ---
+  duration_ms: 0.270361
+  type: 'test'
+  ...
+# Subtest: placeholder claim is atomic and converts duplicate membership into a controlled conflict
+ok 118 - placeholder claim is atomic and converts duplicate membership into a controlled conflict
+  ---
+  duration_ms: 0.133678
+  type: 'test'
+  ...
+# Subtest: member removal checks history inside the same transaction as deletion
+ok 119 - member removal checks history inside the same transaction as deletion
+  ---
+  duration_ms: 0.115521
+  type: 'test'
+  ...
+# Subtest: entry void re-reads the current entry and uses an expected-state update
+ok 120 - entry void re-reads the current entry and uses an expected-state update
+  ---
+  duration_ms: 0.12114
+  type: 'test'
+  ...
+# Subtest: malformed JSON maps to a safe 400 response
+ok 121 - malformed JSON maps to a safe 400 response
+  ---
+  duration_ms: 0.643013
+  type: 'test'
+  ...
+# Subtest: oversized request maps to 413
+ok 122 - oversized request maps to 413
+  ---
+  duration_ms: 0.134099
+  type: 'test'
+  ...
+# Subtest: disallowed CORS origin maps to 403
+ok 123 - disallowed CORS origin maps to 403
+  ---
+  duration_ms: 0.095882
+  type: 'test'
+  ...
+# Subtest: unexpected errors do not leak internal messages
+ok 124 - unexpected errors do not leak internal messages
+  ---
+  duration_ms: 0.125656
+  type: 'test'
+  ...
+# Subtest: previousPeriod creates an equal-length preceding period
+ok 125 - previousPeriod creates an equal-length preceding period
+  ---
+  duration_ms: 1.34268
+  type: 'test'
+  ...
+# Subtest: comparison explains current versus previous spending
+ok 126 - comparison explains current versus previous spending
+  ---
+  duration_ms: 0.195269
+  type: 'test'
+  ...
+# Subtest: unusual spending flags a statistical daily-spend signal
+ok 127 - unusual spending flags a statistical daily-spend signal
+  ---
+  duration_ms: 6.762852
+  type: 'test'
+  ...
+# Subtest: goal explanations are informational
+ok 128 - goal explanations are informational
+  ---
+  duration_ms: 0.438861
+  type: 'test'
+  ...
+# Subtest: buildIntelligence exposes source context and safety boundaries
+ok 129 - buildIntelligence exposes source context and safety boundaries
+  ---
+  duration_ms: 0.354335
+  type: 'test'
+  ...
+# Subtest: V3.98.0 Kitchen fee boundary uses the shared service engine
+ok 130 - V3.98.0 Kitchen fee boundary uses the shared service engine
+  ---
+  duration_ms: 1.756354
+  type: 'test'
+  ...
+# Subtest: Kitchen fee preview is server-priced from submitted menu items
+ok 131 - Kitchen fee preview is server-priced from submitted menu items
+  ---
+  duration_ms: 0.976538
+  type: 'test'
+  ...
+# Subtest: Kitchen orders persist provider verification and fee settlement state
+ok 132 - Kitchen orders persist provider verification and fee settlement state
+  ---
+  duration_ms: 1.575124
+  type: 'test'
+  ...
+# Subtest: Kitchen payment verification requires provider verification before fee settlement
+ok 133 - Kitchen payment verification requires provider verification before fee settlement
+  ---
+  duration_ms: 0.950069
+  type: 'test'
+  ...
+# Subtest: Kitchen fee failure remains pending instead of falsely charging or rejecting provider payment
+ok 134 - Kitchen fee failure remains pending instead of falsely charging or rejecting provider payment
+  ---
+  duration_ms: 1.685668
+  type: 'test'
+  ...
+# Subtest: Kitchen has an authenticated fee retry boundary
+ok 135 - Kitchen has an authenticated fee retry boundary
+  ---
+  duration_ms: 0.822049
+  type: 'test'
+  ...
+# Subtest: Kitchen webhook settlement also applies the NEXA fee boundary
+ok 136 - Kitchen webhook settlement also applies the NEXA fee boundary
+  ---
+  duration_ms: 1.14693
+  type: 'test'
+  ...
+# Subtest: Kitchen UI requires fee preview before order confirmation
+ok 137 - Kitchen UI requires fee preview before order confirmation
+  ---
+  duration_ms: 0.151245
+  type: 'test'
+  ...
+# Subtest: Kitchen UI exposes pending fee retry without exposing fee control to the client
+ok 138 - Kitchen UI exposes pending fee retry without exposing fee control to the client
+  ---
+  duration_ms: 0.2832
+  type: 'test'
+  ...
+# Subtest: Kitchen price and fee remain separate
+ok 139 - Kitchen price and fee remain separate
+  ---
+  duration_ms: 0.375587
+  type: 'test'
+  ...
+# Subtest: V3.87.1 L.A. and Kitchen surfaces are wired into the active Expo shell
+ok 140 - V3.87.1 L.A. and Kitchen surfaces are wired into the active Expo shell
+  ---
+  duration_ms: 1.875349
+  type: 'test'
+  ...
+# Subtest: Kitchen menu and order validation are server-side
+ok 141 - Kitchen menu and order validation are server-side
+  ---
+  duration_ms: 0.756121
+  type: 'test'
+  ...
+# Subtest: Kitchen referral rules and cashback rate are explicit
+ok 142 - Kitchen referral rules and cashback rate are explicit
+  ---
+  duration_ms: 3.484955
+  type: 'test'
+  ...
+# Subtest: AI receipts are authenticated and order-specific
+ok 143 - AI receipts are authenticated and order-specific
+  ---
+  duration_ms: 1.422308
+  type: 'test'
+  ...
+# Subtest: Kitchen referral deep links use the NEXA scheme
+ok 144 - Kitchen referral deep links use the NEXA scheme
+  ---
+  duration_ms: 0.95822
+  type: 'test'
+  ...
+# Subtest: expired AI memories are removed only by expiry timestamp
+ok 145 - expired AI memories are removed only by expiry timestamp
+  ---
+  duration_ms: 1.661192
+  type: 'test'
+  ...
+# Subtest: workflow run retention is bounded
+ok 146 - workflow run retention is bounded
+  ---
+  duration_ms: 0.208218
+  type: 'test'
+  ...
+# Subtest: admin access accepts configured email and rejects non-admin email
+ok 147 - admin access accepts configured email and rejects non-admin email
+  ---
+  duration_ms: 0.718494
+  type: 'test'
+  ...
+# Subtest: admin access accepts configured user id
+ok 148 - admin access accepts configured user id
+  ---
+  duration_ms: 0.128931
+  type: 'test'
+  ...
+# Subtest: Dami cheapest-top request becomes a deterministic fashion price search
+ok 149 - Dami cheapest-top request becomes a deterministic fashion price search
+  ---
+  duration_ms: 1.417981
+  type: 'test'
+  ...
+# Subtest: ordinary Mall requests keep relevance ordering
+ok 150 - ordinary Mall requests keep relevance ordering
+  ---
+  duration_ms: 0.429456
+  type: 'test'
+  ...
+# Subtest: explicit category is preserved
+ok 151 - explicit category is preserved
+  ---
+  duration_ms: 0.163132
+  type: 'test'
+  ...
+# Subtest: Mall normalizer supports compound price and category constraints without canned phrases
+ok 152 - Mall normalizer supports compound price and category constraints without canned phrases
+  ---
+  duration_ms: 1.683716
+  type: 'test'
+  ...
+# Subtest: Mall normalizer supports descending price and similar-product language
+ok 153 - Mall normalizer supports descending price and similar-product language
+  ---
+  duration_ms: 0.485189
+  type: 'test'
+  ...
+# Subtest: Mall normalizer preserves explicit category and min/max range
+ok 154 - Mall normalizer preserves explicit category and min/max range
+  ---
+  duration_ms: 0.166897
+  type: 'test'
+  ...
+# Subtest: Market Insights stays information-only and broker-free
+ok 155 - Market Insights stays information-only and broker-free
+  ---
+  duration_ms: 0.671174
+  type: 'test'
+  ...
+# Subtest: Market data can use the official NGX API without exposing the token to the client
+ok 156 - Market data can use the official NGX API without exposing the token to the client
+  ---
+  duration_ms: 0.124325
+  type: 'test'
+  ...
+# Subtest: Market Insights can use the user's logged spending only as a research-theme context
+ok 157 - Market Insights can use the user's logged spending only as a research-theme context
+  ---
+  duration_ms: 0.763732
+  type: 'test'
+  ...
+# Subtest: Market Insights has no broker, order, custody, or transfer capability
+ok 158 - Market Insights has no broker, order, custody, or transfer capability
+  ---
+  duration_ms: 0.189852
+  type: 'test'
+  ...
+# Subtest: Market Intelligence exposes source/timestamp/data-status metadata
+ok 159 - Market Intelligence exposes source/timestamp/data-status metadata
+  ---
+  duration_ms: 1.398813
+  type: 'test'
+  ...
+# Subtest: Historical statistics calculate 30-point change and volatility context
+ok 160 - Historical statistics calculate 30-point change and volatility context
+  ---
+  duration_ms: 0.20912
+  type: 'test'
+  ...
+# Subtest: Market summary produces separate gainers and losers without trade execution
+ok 161 - Market summary produces separate gainers and losers without trade execution
+  ---
+  duration_ms: 0.361937
+  type: 'test'
+  ...
+# Subtest: Market Intelligence has user-controlled privacy/display preferences and account cleanup
+ok 162 - Market Intelligence has user-controlled privacy/display preferences and account cleanup
+  ---
+  duration_ms: 0.161259
+  type: 'test'
+  ...
+# Subtest: Default market preferences are conservative and do not expose provider secrets
+ok 163 - Default market preferences are conservative and do not expose provider secrets
+  ---
+  duration_ms: 0.616153
+  type: 'test'
+  ...
+# Subtest: Marketplace exposes a preview-before-confirmation service-fee flow
+ok 164 - Marketplace exposes a preview-before-confirmation service-fee flow
+  ---
+  duration_ms: 0.713417
+  type: 'test'
+  ...
+# Subtest: Marketplace checkout recalculates the server-owned fee and settles direct-seller fees atomically
+ok 165 - Marketplace checkout recalculates the server-owned fee and settles direct-seller fees atomically
+  ---
+  duration_ms: 0.784303
+  type: 'test'
+  ...
+# Subtest: Online Marketplace payment keeps provider verification separate from Wallet fee settlement
+ok 166 - Online Marketplace payment keeps provider verification separate from Wallet fee settlement
+  ---
+  duration_ms: 0.26323
+  type: 'test'
+  ...
+# Subtest: Mall orders persist provider and fee settlement state
+ok 167 - Mall orders persist provider and fee settlement state
+  ---
+  duration_ms: 0.226816
+  type: 'test'
+  ...
+# Subtest: Marketplace fee state remains user-scoped in payment verification
+ok 168 - Marketplace fee state remains user-scoped in payment verification
+  ---
+  duration_ms: 0.204784
+  type: 'test'
+  ...
+# Subtest: marketplace inquiry idempotency claim and message creation share one transaction
+ok 169 - marketplace inquiry idempotency claim and message creation share one transaction
+  ---
+  duration_ms: 0.707669
+  type: 'test'
+  ...
+# Subtest: marketplace inquiry idempotency duplicate path returns before creating another message
+ok 170 - marketplace inquiry idempotency duplicate path returns before creating another message
+  ---
+  duration_ms: 0.29707
+  type: 'test'
+  ...
+# Subtest: marketplace inquiry status uses an expected-state update inside a transaction
+ok 171 - marketplace inquiry status uses an expected-state update inside a transaction
+  ---
+  duration_ms: 0.117073
+  type: 'test'
+  ...
+# Subtest: marketplace inquiry messages re-read open status and mutate inside one transaction
+ok 172 - marketplace inquiry messages re-read open status and mutate inside one transaction
+  ---
+  duration_ms: 0.764263
+  type: 'test'
+  ...
+# Subtest: marketplace inquiry message transaction fails closed on block changes
+ok 173 - marketplace inquiry message transaction fails closed on block changes
+  ---
+  duration_ms: 0.158085
+  type: 'test'
+  ...
+# Subtest: Money aggregates payment-bearing NEXA modules without replacing core Money records
+ok 174 - Money aggregates payment-bearing NEXA modules without replacing core Money records
+  ---
+  duration_ms: 1.753569
+  type: 'test'
+  ...
+# Subtest: Payment authorization URLs are actionable in Yaayz and Kitchen
+ok 175 - Payment authorization URLs are actionable in Yaayz and Kitchen
+  ---
+  duration_ms: 0.26983
+  type: 'test'
+  ...
+# Subtest: notification actions are allowlisted and identifiers are bounded
+ok 176 - notification actions are allowlisted and identifiers are bounded
+  ---
+  duration_ms: 1.088383
+  type: 'test'
+  ...
+# Subtest: created notifications cannot carry arbitrary navigation targets
+ok 177 - created notifications cannot carry arbitrary navigation targets
+  ---
+  duration_ms: 1.09966
+  type: 'test'
+  ...
+# Subtest: enqueue is durable and deduplicates event/device pairs
+ok 178 - enqueue is durable and deduplicates event/device pairs
+  ---
+  duration_ms: 2.214632
+  type: 'test'
+  ...
+# Subtest: successful delivery is marked delivered
+ok 179 - successful delivery is marked delivered
+  ---
+  duration_ms: 0.725305
+  type: 'test'
+  ...
+# Subtest: transient failures back off and become terminal after bounded attempts
+ok 180 - transient failures back off and become terminal after bounded attempts
+  ---
+  duration_ms: 0.588412
+  type: 'test'
+  ...
+# Subtest: dead Expo tokens are pruned
+ok 181 - dead Expo tokens are pruned
+  ---
+  duration_ms: 0.318332
+  type: 'test'
+  ...
+# Subtest: queued delivery is not sent after a push token is reassigned or unregistered
+ok 182 - queued delivery is not sent after a push token is reassigned or unregistered
+  ---
+  duration_ms: 0.269709
+  type: 'test'
+  ...
+# Subtest: notification event creation strips secret-like fields and bounds text
+ok 183 - notification event creation strips secret-like fields and bounds text
+  ---
+  duration_ms: 2.640964
+  type: 'test'
+  ...
+# Subtest: notification list is user scoped and unread count is correct
+ok 184 - notification list is user scoped and unread count is correct
+  ---
+  duration_ms: 0.332533
+  type: 'test'
+  ...
+# Subtest: mark read only changes the owning user notification
+ok 185 - mark read only changes the owning user notification
+  ---
+  duration_ms: 0.210873
+  type: 'test'
+  ...
+# Subtest: mark all read is user scoped
+ok 186 - mark all read is user scoped
+  ---
+  duration_ms: 0.153438
+  type: 'test'
+  ...
+# Subtest: notification category filtering and unread counts remain user scoped
+ok 187 - notification category filtering and unread counts remain user scoped
+  ---
+  duration_ms: 0.167629
+  type: 'test'
+  ...
+# Subtest: invalid notification category falls back to all categories
+ok 188 - invalid notification category falls back to all categories
+  ---
+  duration_ms: 0.142441
+  type: 'test'
+  ...
+# Subtest: operational readiness detects missing schema instead of reporting false readiness
+ok 189 - operational readiness detects missing schema instead of reporting false readiness
+  ---
+  duration_ms: 0.739966
+  type: 'test'
+  ...
+# Subtest: operational readiness requires explicit persistent DB configuration
+ok 190 - operational readiness requires explicit persistent DB configuration
+  ---
+  duration_ms: 0.300325
+  type: 'test'
+  ...
+# Subtest: database backup refuses overwrite and uses an explicit destination
+ok 191 - database backup refuses overwrite and uses an explicit destination
+  ---
+  duration_ms: 1.413485
+  type: 'test'
+  ...
+# Subtest: operational diagnostics expose actionable bounded checks
+ok 192 - operational diagnostics expose actionable bounded checks
+  ---
+  duration_ms: 0.645266
+  type: 'test'
+  ...
+# Subtest: database backup verification checks SQLite integrity and required schema
+ok 193 - database backup verification checks SQLite integrity and required schema
+  ---
+  duration_ms: 0.538178
+  type: 'test'
+  ...
+# Subtest: vendor order cancellation checks initialized online payment before cancellation mutation
+ok 194 - vendor order cancellation checks initialized online payment before cancellation mutation
+  ---
+  duration_ms: 0.80299
+  type: 'test'
+  ...
+# Subtest: vendor online cancellation guard is limited to the cancellation transition
+ok 195 - vendor online cancellation guard is limited to the cancellation transition
+  ---
+  duration_ms: 0.230972
+  type: 'test'
+  ...
+# Subtest: vendor cancellation re-reads online payment state inside the write transaction
+ok 196 - vendor cancellation re-reads online payment state inside the write transaction
+  ---
+  duration_ms: 0.135251
+  type: 'test'
+  ...
+# Subtest: payment verification protects the cancellation race inside a transaction
+ok 197 - payment verification protects the cancellation race inside a transaction
+  ---
+  duration_ms: 0.149372
+  type: 'test'
+  ...
+# Subtest: Paystack charge-success fulfillment re-reads cancellation/payment boundary inside a transaction
+ok 198 - Paystack charge-success fulfillment re-reads cancellation/payment boundary inside a transaction
+  ---
+  duration_ms: 0.152156
+  type: 'test'
+  ...
+# Subtest: buyer cancellation re-reads payment and order-item state inside its write transaction
+ok 199 - buyer cancellation re-reads payment and order-item state inside its write transaction
+  ---
+  duration_ms: 0.675711
+  type: 'test'
+  ...
+# Subtest: vendor order transition re-reads current vendor lines before mutation
+ok 200 - vendor order transition re-reads current vendor lines before mutation
+  ---
+  duration_ms: 0.192966
+  type: 'test'
+  ...
+# Subtest: buyer cancellation does not notify again when a concurrent request already cancelled the order
+ok 201 - buyer cancellation does not notify again when a concurrent request already cancelled the order
+  ---
+  duration_ms: 0.171394
+  type: 'test'
+  ...
+# Subtest: vendor order transition does not notify again when the requested state was already reached concurrently
+ok 202 - vendor order transition does not notify again when the requested state was already reached concurrently
+  ---
+  duration_ms: 0.144284
+  type: 'test'
+  ...
+# Subtest: vendor payment toggles are allowed only for direct/offline payment orders
+ok 203 - vendor payment toggles are allowed only for direct/offline payment orders
+  ---
+  duration_ms: 0.743021
+  type: 'test'
+  ...
+# Subtest: payment verification requires success, exact currency, exact minor-unit amount, and matching reference when supplied
+ok 204 - payment verification requires success, exact currency, exact minor-unit amount, and matching reference when supplied
+  ---
+  duration_ms: 0.275969
+  type: 'test'
+  ...
+# Subtest: payment webhook fulfillment requires an online-payment order
+ok 205 - payment webhook fulfillment requires an online-payment order
+  ---
+  duration_ms: 0.119467
+  type: 'test'
+  ...
+# Subtest: Paystack webhook signature accepts exact HMAC and rejects tampering
+ok 206 - Paystack webhook signature accepts exact HMAC and rejects tampering
+  ---
+  duration_ms: 0.638727
+  type: 'test'
+  ...
+# Subtest: refund provider result must match transaction and requested amount
+ok 207 - refund provider result must match transaction and requested amount
+  ---
+  duration_ms: 0.179987
+  type: 'test'
+  ...
+# Subtest: refund validation enforces ownership-ready payment state, reason, and positive amount
+ok 208 - refund validation enforces ownership-ready payment state, reason, and positive amount
+  ---
+  duration_ms: 0.62048
+  type: 'test'
+  ...
+# Subtest: dispute validation bounds and validates the buyer-provided reason
+ok 209 - dispute validation bounds and validates the buyer-provided reason
+  ---
+  duration_ms: 0.223681
+  type: 'test'
+  ...
+# Subtest: refund claim is atomic and blocks a concurrent active refund
+ok 210 - refund claim is atomic and blocks a concurrent active refund
+  ---
+  duration_ms: 0.353684
+  type: 'test'
+  ...
+# Subtest: dispute claim is atomic and blocks a concurrent open dispute
+ok 211 - dispute claim is atomic and blocks a concurrent open dispute
+  ---
+  duration_ms: 0.384209
+  type: 'test'
+  ...
+# Subtest: refund finalization only changes the claimed processing row
+ok 212 - refund finalization only changes the claimed processing row
+  ---
+  duration_ms: 0.371621
+  type: 'test'
+  ...
+# Subtest: refund lifecycle does not regress a more advanced state
+ok 213 - refund lifecycle does not regress a more advanced state
+  ---
+  duration_ms: 0.269449
+  type: 'test'
+  ...
+# Subtest: payment verification order guard requires an online order and exact stored reference
+ok 214 - payment verification order guard requires an online order and exact stored reference
+  ---
+  duration_ms: 0.142311
+  type: 'test'
+  ...
+# Subtest: dispute transitions are atomic and only move from the expected lifecycle state
+ok 215 - dispute transitions are atomic and only move from the expected lifecycle state
+  ---
+  duration_ms: 0.334135
+  type: 'test'
+  ...
+# Subtest: dispute transition rejects unsupported states and empty source state
+ok 216 - dispute transition rejects unsupported states and empty source state
+  ---
+  duration_ms: 0.091986
+  type: 'test'
+  ...
+# Subtest: summarizeExpenses filters by inclusive period and groups categories
+ok 217 - summarizeExpenses filters by inclusive period and groups categories
+  ---
+  duration_ms: 1.129924
+  type: 'test'
+  ...
+# Subtest: budgetProgress calculates remaining, percentage, and category scope
+ok 218 - budgetProgress calculates remaining, percentage, and category scope
+  ---
+  duration_ms: 0.2491
+  type: 'test'
+  ...
+# Subtest: goalProgress never invents transfers and caps remaining at zero
+ok 219 - goalProgress never invents transfers and caps remaining at zero
+  ---
+  duration_ms: 0.212885
+  type: 'test'
+  ...
+# Subtest: validatePeriod rejects malformed and reversed periods
+ok 220 - validatePeriod rejects malformed and reversed periods
+  ---
+  duration_ms: 0.191474
+  type: 'test'
+  ...
+# Subtest: preview fixtures are explicitly gated and never seed deterministic credentials by default
+ok 221 - preview fixtures are explicitly gated and never seed deterministic credentials by default
+  ---
+  duration_ms: 0.780917
+  type: 'test'
+  ...
+# Subtest: preview fixture identities are isolated to the nexa.local development domain
+ok 222 - preview fixture identities are isolated to the nexa.local development domain
+  ---
+  duration_ms: 0.198805
+  type: 'test'
+  ...
+# Subtest: profile accepts bounded bio, HTTPS avatar, and supported visibility
+ok 223 - profile accepts bounded bio, HTTPS avatar, and supported visibility
+  ---
+  duration_ms: 0.78906
+  type: 'test'
+  ...
+# Subtest: profile rejects oversized bio
+ok 224 - profile rejects oversized bio
+  ---
+  duration_ms: 0.201028
+  type: 'test'
+  ...
+# Subtest: profile rejects unsupported visibility
+ok 225 - profile rejects unsupported visibility
+  ---
+  duration_ms: 0.093549
+  type: 'test'
+  ...
+# Subtest: profile rejects non-HTTPS avatar URL
+ok 226 - profile rejects non-HTTPS avatar URL
+  ---
+  duration_ms: 0.112196
+  type: 'test'
+  ...
+# Subtest: profile accepts empty avatar URL as null
+ok 227 - profile accepts empty avatar URL as null
+  ---
+  duration_ms: 0.132046
+  type: 'test'
+  ...
+# Subtest: release metadata stays synchronized across package, server, Expo, and VERSION.md
+ok 228 - release metadata stays synchronized across package, server, Expo, and VERSION.md
+  ---
+  duration_ms: 0.886865
+  type: 'test'
+  ...
+# Subtest: server health and boot diagnostics do not carry stale hard-coded release versions
+ok 229 - server health and boot diagnostics do not carry stale hard-coded release versions
+  ---
+  duration_ms: 1.330773
+  type: 'test'
+  ...
+# Subtest: Expo Router is the active UI architecture and legacy root shell is explicitly quarantined
+ok 230 - Expo Router is the active UI architecture and legacy root shell is explicitly quarantined
+  ---
+  duration_ms: 0.469616
+  type: 'test'
+  ...
+# Subtest: normalizes and bounds search input
+ok 231 - normalizes and bounds search input
+  ---
+  duration_ms: 1.224385
+  type: 'test'
+  ...
+# Subtest: ranking favors exact and prefix matches
+ok 232 - ranking favors exact and prefix matches
+  ---
+  duration_ms: 0.199105
+  type: 'test'
+  ...
+# Subtest: searchAll enforces minimum query and returns filtered authorized categories
+ok 233 - searchAll enforces minimum query and returns filtered authorized categories
+  ---
+  duration_ms: 12.309864
+  type: 'test'
+  ...
+# Subtest: searchAll exposes bounded cursor pagination
+ok 234 - searchAll exposes bounded cursor pagination
+  ---
+  duration_ms: 0.16223
+  type: 'test'
+  ...
+# Subtest: search normalization caps token count and cursor encoding is stable across equal titles
+ok 235 - search normalization caps token count and cursor encoding is stable across equal titles
+  ---
+  duration_ms: 0.340785
+  type: 'test'
+  ...
+# Subtest: consequential commerce actions remain fail-closed on malformed identifiers and state
+ok 236 - consequential commerce actions remain fail-closed on malformed identifiers and state
+  ---
+  duration_ms: 1.216563
+  type: 'test'
+  ...
+# Subtest: server source retains user scoping on sensitive cross-module routes
+ok 237 - server source retains user scoping on sensitive cross-module routes
+  ---
+  duration_ms: 0.293596
+  type: 'test'
+  ...
+# Subtest: security headers and request correlation reject unsafe ambient browser behavior
+ok 238 - security headers and request correlation reject unsafe ambient browser behavior
+  ---
+  duration_ms: 0.153528
+  type: 'test'
+  ...
+# Subtest: extension capability and API-key boundaries remain explicit
+ok 239 - extension capability and API-key boundaries remain explicit
+  ---
+  duration_ms: 0.132276
+  type: 'test'
+  ...
+# Subtest: expired session cleanup is bounded to expiry timestamp
+ok 240 - expired session cleanup is bounded to expiry timestamp
+  ---
+  duration_ms: 1.493674
+  type: 'test'
+  ...
+# Subtest: Store Ajo locks an item price, reserves one unit, zero interest and zero discount
+ok 241 - Store Ajo locks an item price, reserves one unit, zero interest and zero discount
+  ---
+  duration_ms: 0.664615
+  type: 'test'
+  ...
+# Subtest: Store Ajo term is strictly 2 to 6 months
+ok 242 - Store Ajo term is strictly 2 to 6 months
+  ---
+  duration_ms: 0.2495
+  type: 'test'
+  ...
+# Subtest: Store Ajo only unlocks pickup after full contribution
+ok 243 - Store Ajo only unlocks pickup after full contribution
+  ---
+  duration_ms: 0.11479
+  type: 'test'
+  ...
+# Subtest: Store Ajo contribution verifies reference, currency and exact amount
+ok 244 - Store Ajo contribution verifies reference, currency and exact amount
+  ---
+  duration_ms: 0.141029
+  type: 'test'
+  ...
+# Subtest: Store Ajo is exposed from Money UI and preserves existing group Ajo
+ok 245 - Store Ajo is exposed from Money UI and preserves existing group Ajo
+  ---
+  duration_ms: 0.121019
+  type: 'test'
+  ...
+# Subtest: Store Ajo contribution exposes the same server-authoritative fee preview and Wallet-backed fee boundary
+ok 246 - Store Ajo contribution exposes the same server-authoritative fee preview and Wallet-backed fee boundary
+  ---
+  duration_ms: 0.137945
+  type: 'test'
+  ...
+# Subtest: Store Ajo does not silently bundle the service fee into the item price
+ok 247 - Store Ajo does not silently bundle the service fee into the item price
+  ---
+  duration_ms: 0.151074
+  type: 'test'
+  ...
+# Subtest: subscription tiers expose Free, Regular, Premium and VIP with the intended monthly targets
+ok 248 - subscription tiers expose Free, Regular, Premium and VIP with the intended monthly targets
+  ---
+  duration_ms: 0.997228
+  type: 'test'
+  ...
+# Subtest: subscription fee catalog is fixed server-side and tier-aware
+ok 249 - subscription fee catalog is fixed server-side and tier-aware
+  ---
+  duration_ms: 0.503006
+  type: 'test'
+  ...
+# Subtest: subscription state and charges are authenticated through the shared NEXA router
+ok 250 - subscription state and charges are authenticated through the shared NEXA router
+  ---
+  duration_ms: 0.124624
+  type: 'test'
+  ...
+# Subtest: subscription charges debit the existing append-only Wallet ledger instead of creating a second balance
+ok 251 - subscription charges debit the existing append-only Wallet ledger instead of creating a second balance
+  ---
+  duration_ms: 0.200087
+  type: 'test'
+  ...
+# Subtest: auto-pay is explicit and renewals fail closed on insufficient funds
+ok 252 - auto-pay is explicit and renewals fail closed on insufficient funds
+  ---
+  duration_ms: 0.126618
+  type: 'test'
+  ...
+# Subtest: account closure removes subscription state while leaving wallet financial anchors intact
+ok 253 - account closure removes subscription state while leaving wallet financial anchors intact
+  ---
+  duration_ms: 0.160337
+  type: 'test'
+  ...
+# Subtest: subscription navigation is additive and preserves the existing Wallet route
+ok 254 - subscription navigation is additive and preserves the existing Wallet route
+  ---
+  duration_ms: 0.240627
+  type: 'test'
+  ...
+# Subtest: current release metadata remains synchronized
+ok 255 - current release metadata remains synchronized
+  ---
+  duration_ms: 1.027783
+  type: 'test'
+  ...
+# Subtest: search scalability safeguards are bounded and cursor ordering is fully deterministic
+ok 256 - search scalability safeguards are bounded and cursor ordering is fully deterministic
+  ---
+  duration_ms: 0.215129
+  type: 'test'
+  ...
+# Subtest: notification delivery lifecycle has durable deduplication, retry, and terminal states
+ok 257 - notification delivery lifecycle has durable deduplication, retry, and terminal states
+  ---
+  duration_ms: 0.999221
+  type: 'test'
+  ...
+# Subtest: account closure and maintenance cover the new notification delivery state
+ok 258 - account closure and maintenance cover the new notification delivery state
+  ---
+  duration_ms: 0.756371
+  type: 'test'
+  ...
+# Subtest: 28: cross-module consequential boundaries remain authenticated
+ok 259 - 28: cross-module consequential boundaries remain authenticated
+  ---
+  duration_ms: 0.879874
+  type: 'test'
+  ...
+# Subtest: 28: payment/notification handoff cannot become an autonomous payment action
+ok 260 - 28: payment/notification handoff cannot become an autonomous payment action
+  ---
+  duration_ms: 0.317751
+  type: 'test'
+  ...
+# Subtest: 30: sensitive lookups retain explicit ownership predicates
+ok 261 - 30: sensitive lookups retain explicit ownership predicates
+  ---
+  duration_ms: 0.26319
+  type: 'test'
+  ...
+# Subtest: 30: malformed and untrusted navigation input remains bounded
+ok 262 - 30: malformed and untrusted navigation input remains bounded
+  ---
+  duration_ms: 0.165866
+  type: 'test'
+  ...
+# Subtest: 29: stale in-flight notification work is recoverable after worker interruption
+ok 263 - 29: stale in-flight notification work is recoverable after worker interruption
+  ---
+  duration_ms: 1.967136
+  type: 'test'
+  ...
+# Subtest: 29: notification delivery exposes a bounded in-flight claim and recovery window
+ok 264 - 29: notification delivery exposes a bounded in-flight claim and recovery window
+  ---
+  duration_ms: 0.22299
+  type: 'test'
+  ...
+# Subtest: 29: maintenance remains bounded and includes notification lifecycle cleanup
+ok 265 - 29: maintenance remains bounded and includes notification lifecycle cleanup
+  ---
+  duration_ms: 0.142531
+  type: 'test'
+  ...
+# Subtest: current release metadata is synchronized
+ok 266 - current release metadata is synchronized
+  ---
+  duration_ms: 1.016917
+  type: 'test'
+  ...
+# Subtest: V3.69.1 cross-module E2E/security contracts are present
+ok 267 - V3.69.1 cross-module E2E/security contracts are present
+  ---
+  duration_ms: 0.218334
+  type: 'test'
+  ...
+# Subtest: V3.69.1 notification recovery is wired
+ok 268 - V3.69.1 notification recovery is wired
+  ---
+  duration_ms: 1.068113
+  type: 'test'
+  ...
+# Subtest: dependency preflight enforces reproducibility prerequisites without pretending missing infrastructure is installed
+ok 269 - dependency preflight enforces reproducibility prerequisites without pretending missing infrastructure is installed
+  ---
+  duration_ms: 29.709761
+  type: 'test'
+  ...
+# Subtest: root and server dependency manifests stay aligned
+ok 270 - root and server dependency manifests stay aligned
+  ---
+  duration_ms: 0.798434
+  type: 'test'
+  ...
+# Subtest: Expo Router remains the sole active package entrypoint
+ok 271 - Expo Router remains the sole active package entrypoint
+  ---
+  duration_ms: 0.9847
+  type: 'test'
+  ...
+# Subtest: active route tree has no imports into quarantined legacy app shell
+ok 272 - active route tree has no imports into quarantined legacy app shell
+  ---
+  duration_ms: 1.421647
+  type: 'test'
+  ...
+# Subtest: legacy shell remains recoverable and explicitly non-active
+ok 273 - legacy shell remains recoverable and explicitly non-active
+  ---
+  duration_ms: 0.263641
+  type: 'test'
+  ...
+# Subtest: V3.72.1 release contracts are recorded in the roadmap and readiness boundary
+ok 274 - V3.72.1 release contracts are recorded in the roadmap and readiness boundary
+  ---
+  duration_ms: 1.267759
+  type: 'test'
+  ...
+# Subtest: release audit script uses current package version
+ok 275 - release audit script uses current package version
+  ---
+  duration_ms: 0.254898
+  type: 'test'
+  ...
+# Subtest: release gate is version-agnostic and includes environment-bound dependency reporting
+ok 276 - release gate is version-agnostic and includes environment-bound dependency reporting
+  ---
+  duration_ms: 0.812224
+  type: 'test'
+  ...
+# Subtest: release audit rejects stale hard-coded versions and credential literals
+ok 277 - release audit rejects stale hard-coded versions and credential literals
+  ---
+  duration_ms: 0.258834
+  type: 'test'
+  ...
+# Subtest: release metadata remains synchronized for the current release
+ok 278 - release metadata remains synchronized for the current release
+  ---
+  duration_ms: 0.80334
+  type: 'test'
+  ...
+# Subtest: dependency preflight enforces the declared Node 20.19.0 minimum
+ok 279 - dependency preflight enforces the declared Node 20.19.0 minimum
+  ---
+  duration_ms: 0.769531
+  type: 'test'
+  ...
+# Subtest: notification delivery has a bounded provider timeout and abort path
+ok 280 - notification delivery has a bounded provider timeout and abort path
+  ---
+  duration_ms: 0.256651
+  type: 'test'
+  ...
+# Subtest: production frontend API configuration cannot silently fall back to localhost
+ok 281 - production frontend API configuration cannot silently fall back to localhost
+  ---
+  duration_ms: 0.182941
+  type: 'test'
+  ...
+# Subtest: V3.73.1 release contracts are recorded
+ok 282 - V3.73.1 release contracts are recorded
+  ---
+  duration_ms: 1.112369
+  type: 'test'
+  ...
+# Subtest: release gate runs dependency preflight and the V3.73.1 hardening contracts
+ok 283 - release gate runs dependency preflight and the V3.73.1 hardening contracts
+  ---
+  duration_ms: 0.193046
+  type: 'test'
+  ...
+# Subtest: notification delivery verifies token ownership at send time to prevent account-switch leakage
+ok 284 - notification delivery verifies token ownership at send time to prevent account-switch leakage
+  ---
+  duration_ms: 0.707619
+  type: 'test'
+  ...
+# Subtest: Paystack provider calls have an abortable timeout
+ok 285 - Paystack provider calls have an abortable timeout
+  ---
+  duration_ms: 0.219966
+  type: 'test'
+  ...
+# Subtest: OpenAI server calls have bounded SDK and realtime timeouts
+ok 286 - OpenAI server calls have bounded SDK and realtime timeouts
+  ---
+  duration_ms: 0.737503
+  type: 'test'
+  ...
+# Subtest: voice upload temp filenames use cryptographic randomness instead of millisecond timestamps
+ok 287 - voice upload temp filenames use cryptographic randomness instead of millisecond timestamps
+  ---
+  duration_ms: 0.789319
+  type: 'test'
+  ...
+# Subtest: V3.76.1 release contracts are recorded
+ok 288 - V3.76.1 release contracts are recorded
+  ---
+  duration_ms: 0.980212
+  type: 'test'
+  ...
+# Subtest: release gate includes the V3.76.1 hardening contracts
+ok 289 - release gate includes the V3.76.1 hardening contracts
+  ---
+  duration_ms: 0.234447
+  type: 'test'
+  ...
+# Subtest: release gate reports a missing package-lock as an environment blocker
+ok 290 - release gate reports a missing package-lock as an environment blocker
+  ---
+  duration_ms: 0.139116
+  type: 'test'
+  ...
+# Subtest: invite codes use cryptographic randomness across staff, rooms, and groups
+ok 291 - invite codes use cryptographic randomness across staff, rooms, and groups
+  ---
+  duration_ms: 1.075785
+  type: 'test'
+  ...
+# Subtest: vendor staff capacity is checked inside the invitation write transaction
+ok 292 - vendor staff capacity is checked inside the invitation write transaction
+  ---
+  duration_ms: 0.861196
+  type: 'test'
+  ...
+# Subtest: owned money-group cap is checked inside the group creation transaction
+ok 293 - owned money-group cap is checked inside the group creation transaction
+  ---
+  duration_ms: 0.225034
+  type: 'test'
+  ...
+# Subtest: marketplace order cursor includes id tie-breaker and remains backward compatible
+ok 294 - marketplace order cursor includes id tie-breaker and remains backward compatible
+  ---
+  duration_ms: 1.366265
+  type: 'test'
+  ...
+# Subtest: marketplace order pagination compares both createdAt and id
+ok 295 - marketplace order pagination compares both createdAt and id
+  ---
+  duration_ms: 0.217473
+  type: 'test'
+  ...
+# Subtest: V3.79.1 release contracts are recorded
+ok 296 - V3.79.1 release contracts are recorded
+  ---
+  duration_ms: 0.917089
+  type: 'test'
+  ...
+# Subtest: release gate includes V3.79.1 contracts
+ok 297 - release gate includes V3.79.1 contracts
+  ---
+  duration_ms: 0.160227
+  type: 'test'
+  ...
+# Subtest: extension runtime rejects closed owners even when an API identity was previously issued
+ok 298 - extension runtime rejects closed owners even when an API identity was previously issued
+  ---
+  duration_ms: 1.32216
+  type: 'test'
+  ...
+# Subtest: extension capability availability requires at least one granted requested scope
+ok 299 - extension capability availability requires at least one granted requested scope
+  ---
+  duration_ms: 3.512445
+  type: 'test'
+  ...
+# Subtest: vendor manual payment mutation is transactionally bounded by current order state
+ok 300 - vendor manual payment mutation is transactionally bounded by current order state
+  ---
+  duration_ms: 0.865994
+  type: 'test'
+  ...
+# Subtest: V3.82.1 release contracts are recorded
+ok 301 - V3.82.1 release contracts are recorded
+  ---
+  duration_ms: 1.076305
+  type: 'test'
+  ...
+# Subtest: release gate includes V3.82.1 contracts
+ok 302 - release gate includes V3.82.1 contracts
+  ---
+  duration_ms: 0.155541
+  type: 'test'
+  ...
+# Subtest: V3.83.1 release metadata and royal theme are aligned
+ok 303 - V3.83.1 release metadata and royal theme are aligned
+  ---
+  duration_ms: 1.427285
+  type: 'test'
+  ...
+# Subtest: V3.83.1 primary navigation is five focused destinations
+ok 304 - V3.83.1 primary navigation is five focused destinations
+  ---
+  duration_ms: 0.284162
+  type: 'test'
+  ...
+# Subtest: V3.83.1 root shell uses dark status bar and route transition
+ok 305 - V3.83.1 root shell uses dark status bar and route transition
+  ---
+  duration_ms: 0.167769
+  type: 'test'
+  ...
+# Subtest: embedded product identity keeps NEXA backbone, Dami native, Zeeza and Dream Marketplace distinct
+ok 306 - embedded product identity keeps NEXA backbone, Dami native, Zeeza and Dream Marketplace distinct
+  ---
+  duration_ms: 0.18214
+  type: 'test'
+  ...
+# Subtest: user-facing social search label is Zeeza while backend type remains people
+ok 307 - user-facing social search label is Zeeza while backend type remains people
+  ---
+  duration_ms: 0.986602
+  type: 'test'
+  ...
+# Subtest: Sentry wiring is optional and does not expose credentials
+ok 308 - Sentry wiring is optional and does not expose credentials
+  ---
+  duration_ms: 0.325112
+  type: 'test'
+  ...
+# Subtest: release tree has no stale roadmap backup artifact
+ok 309 - release tree has no stale roadmap backup artifact
+  ---
+  duration_ms: 0.099588
+  type: 'test'
+  ...
+# Subtest: preview smoke enforces the buyer/admin authorization boundary
+ok 310 - preview smoke enforces the buyer/admin authorization boundary
+  ---
+  duration_ms: 0.15512
+  type: 'test'
+  ...
+# Subtest: vendor product update re-reads the product inside its write transaction
+ok 311 - vendor product update re-reads the product inside its write transaction
+  ---
+  duration_ms: 0.721409
+  type: 'test'
+  ...
+# Subtest: vendor product update scopes the mutation to the authenticated vendor and fails on a stale write
+ok 312 - vendor product update scopes the mutation to the authenticated vendor and fails on a stale write
+  ---
+  duration_ms: 0.210843
+  type: 'test'
+  ...
+# Subtest: Wallet uses an append-only ledger rather than a mutable balance field
+ok 313 - Wallet uses an append-only ledger rather than a mutable balance field
+  ---
+  duration_ms: 1.413094
+  type: 'test'
+  ...
+# Subtest: Wallet transactions are authenticated, idempotent and user-scoped
+ok 314 - Wallet transactions are authenticated, idempotent and user-scoped
+  ---
+  duration_ms: 0.162551
+  type: 'test'
+  ...
+# Subtest: Wallet transfers are restricted to accepted Zeeza friends and are atomic
+ok 315 - Wallet transfers are restricted to accepted Zeeza friends and are atomic
+  ---
+  duration_ms: 0.143643
+  type: 'test'
+  ...
+# Subtest: Sandbox wallet clearly separates simulated funds from provider-backed money
+ok 316 - Sandbox wallet clearly separates simulated funds from provider-backed money
+  ---
+  duration_ms: 0.167348
+  type: 'test'
+  ...
+# Subtest: Wallet is a dedicated route linked from Money without replacing Money
+ok 317 - Wallet is a dedicated route linked from Money without replacing Money
+  ---
+  duration_ms: 0.156872
+  type: 'test'
+  ...
+# Subtest: Wallet transfer and withdrawal expose a server-calculated fee preview before confirmation
+ok 318 - Wallet transfer and withdrawal expose a server-calculated fee preview before confirmation
+  ---
+  duration_ms: 0.155611
+  type: 'test'
+  ...
+# Subtest: Wallet fee integration is atomic and idempotency-scoped
+ok 319 - Wallet fee integration is atomic and idempotency-scoped
+  ---
+  duration_ms: 0.148831
+  type: 'test'
+  ...
+# Subtest: Wallet UI requires a fee preview before confirming metered transfers or withdrawals
+ok 320 - Wallet UI requires a fee preview before confirming metered transfers or withdrawals
+  ---
+  duration_ms: 0.088381
+  type: 'test'
+  ...
+# Subtest: workflow execution requires an idempotency key and persists it atomically
+ok 321 - workflow execution requires an idempotency key and persists it atomically
+  ---
+  duration_ms: 0.709602
+  type: 'test'
+  ...
+# Subtest: duplicate workflow execution returns the prior result
+ok 322 - duplicate workflow execution returns the prior result
+  ---
+  duration_ms: 0.111906
+  type: 'test'
+  ...
+# Subtest: Yaayz is a permanent primary NEXA destination with adverts and tickets
+ok 323 - Yaayz is a permanent primary NEXA destination with adverts and tickets
+  ---
+  duration_ms: 0.855998
+  type: 'test'
+  ...
+# Subtest: standalone Chat is removed from the primary shell while Zeeza messaging remains available
+ok 324 - standalone Chat is removed from the primary shell while Zeeza messaging remains available
+  ---
+  duration_ms: 0.352202
+  type: 'test'
+  ...
+# Subtest: Yaayz ticket server layer validates ticket type, quantity, ownership and payment boundary
+ok 325 - Yaayz ticket server layer validates ticket type, quantity, ownership and payment boundary
+  ---
+  duration_ms: 1.902971
+  type: 'test'
+  ...
+# Subtest: Yaayz account lifecycle does not leave user-owned ticket orders behind
+ok 326 - Yaayz account lifecycle does not leave user-owned ticket orders behind
+  ---
+  duration_ms: 0.151695
+  type: 'test'
+  ...
+# Subtest: Yaayz is searchable through the existing unified search contract
+ok 327 - Yaayz is searchable through the existing unified search contract
+  ---
+  duration_ms: 0.283801
+  type: 'test'
+  ...
+# Subtest: Yaayz ticket checkout previews and settles the server-owned service fee
+ok 328 - Yaayz ticket checkout previews and settles the server-owned service fee
+  ---
+  duration_ms: 1.165617
+  type: 'test'
+  ...
+# Subtest: Yaayz fee settlement remains user-scoped and idempotent
+ok 329 - Yaayz fee settlement remains user-scoped and idempotent
+  ---
+  duration_ms: 1.460555
+  type: 'test'
+  ...
+1..329
+# tests 329
+# suites 0
+# pass 329
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3509.227902

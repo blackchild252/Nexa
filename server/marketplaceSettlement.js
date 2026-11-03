@@ -1,0 +1,4 @@
+"use strict";
+function exceptions(rows=[]){return (Array.isArray(rows)?rows:[]).filter(r=>!Number(r.providerVerified)||['cancelled','rejected'].includes(String(r.status||r.orderStatus))).map(r=>({orderId:String(r.orderId||r.id||""),status:String(r.status||r.orderStatus||"unknown"),providerVerified:Boolean(Number(r.providerVerified))}));}
+function fulfillmentSla(rows=[],now=Date.now(),hours=48){const limit=Math.max(1,Number(hours)||48)*3600000;return (Array.isArray(rows)?rows:[]).map(r=>{const t=Date.parse(r.createdAt||"");const age=Number.isFinite(t)?Math.max(0,now-t):0;const open=!['delivered','cancelled','completed'].includes(String(r.status||r.orderStatus));return {orderId:String(r.orderId||""),breached:open&&age>=limit,ageHours:Number((age/3600000).toFixed(1))};});}
+module.exports={exceptions,fulfillmentSla};

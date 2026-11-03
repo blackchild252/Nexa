@@ -1,0 +1,13 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');
+const root=path.join(__dirname,'..'); const read=(p)=>fs.readFileSync(path.join(root,p),'utf8');
+test('content safety blocks explicit adult text and allows ordinary text',()=>{const m=require('./contentSafety');assert.equal(m.checkText('ordinary gym update').allowed,true);assert.equal(m.checkText('explicit sexual content').allowed,false);});
+test('Yaayz exposes report endpoint and moderation ledger',()=>{assert.match(read('server/aamiEconomy.js'),/yaayz\/social\/posts\/:postId\/report/);assert.match(read('server/trustSafety.js'),/moderation_content_reports/);});
+test('Chase exposes account flagging',()=>assert.match(read('server/friends.js'),/social\/chase\/:userId\/report/));
+test('three confirmed strikes close an account',()=>{const s=read('server/trustSafety.js');assert.match(s,/strikeNumber>=3/);assert.match(s,/accountStatus='closed'/);});
+test('admin moderation actions can remove Yaayz or close Chase accounts',()=>{const s=read('server/adminOps.js');assert.match(s,/yaayz_post/);assert.match(s,/chase_account/);assert.match(s,/\/api\/admin\/moderation\/reports\/\:id\/action/);});
+test('free Shorts are reduced to five and expose 15/25/45 additional tiers',()=>{const s=read('server/youtubeContent.js');assert.match(s,/SHORT_FREE_LIMIT = 5/);assert.match(s,/SHORT_ADDON_TIERS.*15,25,45/);assert.match(s,/ADDITIONAL_VIDEO_TYPES.*short.*long/);});
+test('additional video allocations explicitly support either Shorts or long-form',()=>{const s=read('server/youtubeContent.js');assert.match(s,/additionalVideoTypes:\[\.\.\.ADDITIONAL_VIDEO_TYPES\]/);const ui=read('src/YouTubeBusinessPanel.tsx');assert.match(ui,/Additional video allocations can be either Shorts or long-form/);});
+test('qualified Shorts reward viewer and uploader',()=>{const s=read('server/youtubeContent.js');assert.match(s,/yaayz_short_viewer_reward/);assert.match(s,/yaayz_creator_qualified_views/);});
+test('Fitness library contains male and female guides',()=>{const s=read('src/app/leisure/fitness/index.tsx');assert.match(s,/04_Male_Strength_Basics\.pdf/);assert.match(s,/05_Female_Strength_Basics\.pdf/);assert.match(s,/06_Male_Beginner_Gym_Plan\.pdf/);assert.match(s,/07_Female_Beginner_Gym_Plan\.pdf/);});
+test('Lifestyle accepts photo and video posts',()=>{const s=read('server/lifestyle.js');assert.match(s,/VIDEO_RE/);assert.match(s,/kind/);});
+test('Zeeza voice notes have persistent media fields and route',()=>{assert.match(read('server/zeezaMessaging.js'),/dm\/threads\/:threadId\/voice/);assert.match(read('server/db.js'),/mediaUrl TEXT/);});

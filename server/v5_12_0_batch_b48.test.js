@@ -1,0 +1,13 @@
+"use strict";
+const test=require("node:test"); const assert=require("node:assert/strict");
+const t=require("./trustSafetyMaturity");
+test("B48 bounds moderation list limits",()=>{assert.equal(t.boundedLimit("999"),200);assert.equal(t.boundedLimit("0"),1);});
+test("B48 canonicalizes report and appeal statuses",()=>{assert.equal(t.normalizeReportStatus("TRIAGED"),"triaged");assert.equal(t.normalizeReportStatus("bad"),"open");assert.equal(t.normalizeAppealStatus("under_review"),"under_review");});
+test("B48 redacts sensitive case metadata",()=>{const x=t.redactCaseRow({id:"r1",details:"secret",email:"x",status:"open"});assert.deepEqual(x,{id:"r1",status:"open"});});
+test("B48 deduplicates reports and appeals",()=>{assert.equal(t.dedupeReports([{id:"1"},{id:"1"},{id:"2"}]).length,2);assert.equal(t.dedupeAppeals([{id:"a"},{id:"a"}]).length,1);});
+test("B48 sorts case records newest first",()=>{const x=t.sortNewest([{id:"old",updatedAt:"2026-01-01"},{id:"new",updatedAt:"2026-02-01"}]);assert.equal(x[0].id,"new");});
+test("B48 appeal eligibility remains subject-scoped",()=>{assert.equal(t.appealEligibility({status:"dismissed",targetUserId:"u1"},"u1"),true);assert.equal(t.appealEligibility({status:"open",targetUserId:"u1"},"u1"),false);assert.equal(t.appealEligibility({status:"dismissed",targetUserId:"u1"},"u2"),false);});
+test("B48 appeal window expires safely",()=>{assert.equal(t.appealWindow("2026-09-01",Date.parse("2026-09-20"),30),true);assert.equal(t.appealWindow("2026-08-01",Date.parse("2026-09-20"),30),false);});
+test("B48 moderation summary is bounded and deduplicated",()=>{const x=t.moderationSummary([{id:"1",status:"open"},{id:"1",status:"open"},{id:"2",status:"actioned"}],[{id:"a",status:"open"},{id:"a",status:"open"}]);assert.deepEqual(x,{reports:2,activeReports:1,appeals:1,activeAppeals:1});});
+test("B48 room safety defaults to member reporting",()=>{assert.equal(t.roomSafetyPolicy({discoverable:0}).allowMemberReports,true);assert.equal(t.roomSafetyPolicy({discoverable:1}).discoverable,true);});
+test("B48 report normalization never trusts unknown status",()=>{for(const value of [null,"","deleted","admin"]) assert.equal(t.normalizeReportStatus(value),"open");});

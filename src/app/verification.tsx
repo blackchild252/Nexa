@@ -1,0 +1,1 @@
+import React from 'react'; import {GetVerifiedScreen} from '../GetVerifiedScreen'; import {NexaWorldBackground} from '../NexaWorldBackground'; export default function Verification(){return <NexaWorldBackground world="leisure"><GetVerifiedScreen/></NexaWorldBackground>;}

@@ -1,0 +1,5 @@
+"use strict";
+function parseData(row){try{return JSON.parse(row.data||"{}")}catch(_){return {}}}
+function buildDigest(rows=[],frequency="daily"){const seen=new Set();const grouped=new Map();for(const r of Array.isArray(rows)?rows:[]){const id=String(r.id);if(seen.has(id))continue;seen.add(id);const key=String(r.type||"system");if(!grouped.has(key))grouped.set(key,[]);grouped.get(key).push({id,title:String(r.title),body:String(r.body||""),createdAt:r.createdAt,data:parseData(r)});}const sections=[...grouped.entries()].map(([type,items])=>({type,count:items.length,items:items.slice(0,10)}));return {frequency:String(frequency||"off"),total:seen.size,sections};}
+function withinQuietHours(iso,start,end){if(!start||!end)return false; const d=new Date(iso); if(!Number.isFinite(d.getTime()))return false; const mins=d.getUTCHours()*60+d.getUTCMinutes(); const toMin=s=>{const [h,m]=String(s).split(":").map(Number);return h*60+m}; const a=toMin(start),b=toMin(end); return a===b?false:(a<b?mins>=a&&mins<b:mins>=a||mins<b);}
+module.exports={buildDigest,withinQuietHours};

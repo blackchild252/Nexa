@@ -1,0 +1,7 @@
+"use strict";
+function runHistory(runs=[]){return (Array.isArray(runs)?runs:[]).map(r=>({id:String(r.id||''),workflowId:String(r.workflowId||''),status:String(r.status||'completed'),createdAt:r.createdAt||null,completedAt:r.completedAt||null}));}
+function dependencyGraph(workflow){const steps=Array.isArray(workflow?.steps)?workflow.steps:[];return steps.map((s,i)=>({index:i,title:String(s.title||s.purpose||`Step ${i+1}`).slice(0,160),dependsOn:(Array.isArray(s.dependsOn)?s.dependsOn:[]).map(Number).filter(Number.isInteger)}));}
+function recoveryDecision(run={}){const status=String(run.status||'').trim().toLowerCase();const attempts=Math.max(0,Number(run.attempts)||0);const maxAttempts=Math.max(1,Number(run.maxAttempts)||3);return {retry:status==='failed'&&attempts<maxAttempts,attempts,maxAttempts};}
+function transitionRunState(from,to){const source=String(from||'').trim().toLowerCase(),target=String(to||'').trim().toLowerCase();const allowed={pending:new Set(['running','failed']),running:new Set(['completed','failed']),failed:new Set(['running']),completed:new Set(),};return {ok:Boolean(allowed[source]?.has(target)),from:source,to:target};}
+function confirmationContinuity(steps=[],confirmed=[]){const set=new Set((Array.isArray(confirmed)?confirmed:[]).map(Number));return (Array.isArray(steps)?steps:[]).map((s,i)=>({index:i,requiresConfirmation:Boolean(s.requiresConfirmation),confirmed:set.has(i)}));}
+module.exports={runHistory,dependencyGraph,confirmationContinuity,recoveryDecision,transitionRunState};
